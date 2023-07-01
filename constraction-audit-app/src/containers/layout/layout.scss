@@ -1,0 +1,28 @@
+.header-container{
+    background-color: var(--primary-color);
+    height: 100px;
+    width: 100%;
+
+    .header{
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 1;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    }
+    .nav-links{
+        padding-top: 15px;
+        .link{
+            float: left;
+            padding: 10px;
+            a{
+                color: whitesmoke;
+            }
+        }
+    }
+}
+.body-container{
+    margin:20px;
+}
