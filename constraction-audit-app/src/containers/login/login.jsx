@@ -4,7 +4,7 @@ import "./login.scss"
 const LoginComponent =() =>{
     return (
         <div>
-            Dashboard 
+            Login 
         </div>
     )
 }

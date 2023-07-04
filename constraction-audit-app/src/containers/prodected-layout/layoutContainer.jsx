@@ -4,12 +4,18 @@ import HeaderComponent from "./headerComponent";
 import { useNavigate } from 'react-router-dom';
 import "./layout.scss";
 import ModalComponent from "../../common/modal/modalComponent";
+import { AuthContext } from "../../auth";
 
 const LayoutContainer = () =>{
     const navigate = useNavigate();
+    // const {currentUser} = useContext(AuthContext);
+
     const navigation = (path) =>{
         navigate(path);
     }
+    // if (!currentUser) {
+    //     return <Navigate to="/" />;
+    //   }
     return(
         <div>
             <div className="header-container">

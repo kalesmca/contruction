@@ -1,30 +1,33 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter , Routes, Route } from "react-router-dom";
 
 import { AuthProvider } from './auth';
 import PrivateRoute from './privateRoute';
-import LayoutContainer from './containers/layout/layoutContainer';
+import LayoutContainer from './containers/prodected-layout/layoutContainer';
 import DashboardComponent from './containers/dashboard/dashboardComponent';
 import SummaryListComponent from './containers/summary/summaryListComponent';
 import LoginComponent from './containers/login/login';
-
-
+import { ProtectedRoute } from './ProtectedRoute';
+import HomeLayout from './containers/home/homeLayout';
+import ConfigList from './containers/config/configList';
 function App() {
   return (
-    <AuthProvider>
-    <Router>
-      <div>
-        <PrivateRoute exact path="/" component={LayoutContainer} />
-        <PrivateRoute exact path="/dashboard" component={DashboardComponent} />
-        <PrivateRoute exact path="/summary-list" component={SummaryListComponent} />
+    <BrowserRouter>
+    
+      <Routes>
+          <Route path="/" element={<LayoutContainer />}>
+                <Route index element={<LoginComponent />} />
+                <Route path="dashboard" element={<DashboardComponent />} />
+                <Route path="summary-list" element={<SummaryListComponent />} />
+                <Route path="config" element={<ConfigList />} />
 
+                {/* <Route path="*" element={<NotFoundComponent />} /> */}
+                
+          </Route>
 
-        <Route exact path="/login" component={LoginComponent} />
-        {/* <Route exact path="/signup" component={SignUp} /> */}
-      </div>
-    </Router>
-  </AuthProvider>
+        </Routes>
+    </BrowserRouter>
   );
 }
 

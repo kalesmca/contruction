@@ -6,12 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from "react-redux";
 import store from './redux/store';
+import { ModalProvider } from './utils/contexts';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
- <React.StrictMode>
+  <React.StrictMode>
     <Provider store={store}>
-          <App />
-      
+      <ModalProvider>
+        <App />
+      </ModalProvider>
+
+
     </Provider>
   </React.StrictMode>
 );
