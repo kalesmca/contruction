@@ -6,5 +6,5 @@ export const POPUP_INIT_STATE = {
 
 export const DB = {
     entyrList:"ENTRY_LIST",
-    configList:"CONFIG_LIST"
+    configList:"configList"
 }
