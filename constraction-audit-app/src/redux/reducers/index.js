@@ -1,9 +1,9 @@
-import players from './players'
+import appConfig from './appConfig';
 
 import {combineReducers} from 'redux';
 
 const rootReducer = combineReducers({
-    players
+     appConfig
 })
 
 export default rootReducer;

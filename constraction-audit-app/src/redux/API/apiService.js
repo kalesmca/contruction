@@ -12,10 +12,10 @@ import {
 import { async } from "@firebase/util";
 
 
-export const  getUserList = async() =>{
-  const usersCollectionRef = collection(db, DB.USERS);
+export const  getDataListByDBName =(dbName)=> async() =>{
+  const collectionRef = collection(db, dbName);
 
-  const data = await getDocs(usersCollectionRef);
+  const data = await getDocs(collectionRef);
   const dataList = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   return dataList;
       

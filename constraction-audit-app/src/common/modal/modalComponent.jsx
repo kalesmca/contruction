@@ -1,6 +1,6 @@
 import React,{useContext} from "react";
 import Modal from 'react-bootstrap/Modal';
-import ConfigComponent from "../../containers/config/createConfig";
+import ConfigComponent from "../../containers/constructionConfig/createConfig";
 import EntryComponent from "../../containers/summary/entryComponent";
 import { ModalContext } from "../../utils/contexts";
 

@@ -3,3 +3,8 @@ export const POPUP_INIT_STATE = {
     componentName: "",
     title:"DEFAULT"
 }
+
+export const DB = {
+    entyrList:"ENTRY_LIST",
+    configList:"CONFIG_LIST"
+}

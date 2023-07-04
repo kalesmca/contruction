@@ -3,14 +3,13 @@ import './App.css';
 import { BrowserRouter , Routes, Route } from "react-router-dom";
 
 import { AuthProvider } from './auth';
-import PrivateRoute from './privateRoute';
 import LayoutContainer from './containers/prodected-layout/layoutContainer';
 import DashboardComponent from './containers/dashboard/dashboardComponent';
 import SummaryListComponent from './containers/summary/summaryListComponent';
 import LoginComponent from './containers/login/login';
 import { ProtectedRoute } from './ProtectedRoute';
 import HomeLayout from './containers/home/homeLayout';
-import ConfigList from './containers/config/configList';
+import ConfigList from './containers/constructionConfig/configList';
 function App() {
   return (
     <BrowserRouter>
