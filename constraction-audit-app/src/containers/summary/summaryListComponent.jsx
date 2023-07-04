@@ -7,8 +7,10 @@ import "./summary.scss"
 const SummaryListComponent =() =>{
     const modalState = useContext(ModalContext);
     const newEntry = () => {
+        
         let temp = modalState.obj;
         temp.showPopup = true;
+        temp.componentName = "entry"
         modalState.setObj({...modalState.obj, ...temp})
     }
     return (
