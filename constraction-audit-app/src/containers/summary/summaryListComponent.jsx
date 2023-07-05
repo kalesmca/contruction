@@ -1,6 +1,8 @@
 import React,{useContext} from "react";
 import { ModalContext } from "../../utils/contexts";
 import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
+import Table from 'react-bootstrap/Table';
 
 import "./summary.scss"
 
@@ -15,8 +17,51 @@ const SummaryListComponent =() =>{
     }
     return (
         <div>
-            SummaryListComponent 
-            <Button variant="primary" onClick={()=>{newEntry()}}>Primary</Button>{' '}
+            <div className="query-header">
+
+                {/* <div>
+                    <Dropdown className="d-inline mx-2" value={selectedEntryType} >
+                        <Dropdown.Toggle id="dropdown-autoclose-true">
+                            {selectedEntryType}
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            {
+                                Object.keys(entryTypes).map((key, kIndex) => {
+                                    return (<Dropdown.Item key={kIndex} index={kIndex} value={entryTypes[key]} onClick={(e) => { setEntryType(entryTypes[key]) }}>{entryTypes[key]}</Dropdown.Item>)
+                                })
+                            }
+
+                            
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div> */}
+                <div>
+                    <Button variant="primary" onClick={() => { newEntry() }}>+</Button>{' '}
+                </div>
+
+            </div>
+            <div>
+                <Table responsive="sm">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Type</th>
+                            <th>data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                                <tr>
+
+                                    <td colSpan={3}><center>No Data Found</center></td>
+                                </tr>
+                            
+
+
+                    </tbody>
+                </Table>
+            </div>
 
         </div>
     )

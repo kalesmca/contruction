@@ -28,3 +28,21 @@ export const INIT_CONFIG_STATE = {
     configId:getDynamicId()
     
 }
+
+export const entryStatus = {
+    settled:"SETTLED",
+    notSettled:"NOT_SETTLED"
+}
+
+export const INIT_ENTRY = {
+    entryType:entryType.wages,
+    wageType:"",
+    materialType:"",
+    wageName:"",
+    shopName:"",
+    natureOfWork:"",
+    billAmount:"",
+    paidAmountList:[],
+    pendingAmount:0,
+    status:""
+}
