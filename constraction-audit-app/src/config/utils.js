@@ -13,3 +13,7 @@ export const formatAppDate = (date) => {
     return [year, month, day].join('-');
 }
 
+export const getDynamicId = () =>{
+    return new Date().getTime();
+}
+

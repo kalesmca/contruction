@@ -1,13 +1,17 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Outlet, Link } from "react-router-dom";
 import HeaderComponent from "./headerComponent";
 import { useNavigate } from 'react-router-dom';
 import "./layout.scss";
 import ModalComponent from "../../common/modal/modalComponent";
 import { AuthContext } from "../../auth";
+import { ModalContext } from "../../utils/contexts";
+
 
 const LayoutContainer = () =>{
     const navigate = useNavigate();
+    const modalContext = useContext(ModalContext)
+
     // const {currentUser} = useContext(AuthContext);
 
     const navigation = (path) =>{
@@ -24,7 +28,10 @@ const LayoutContainer = () =>{
             <div className="body-container">
                 <Outlet />
             </div>
-            <ModalComponent />
+            {
+                modalContext.obj.showPopup && (<ModalComponent />)
+            }
+            
 
         </div>
     )

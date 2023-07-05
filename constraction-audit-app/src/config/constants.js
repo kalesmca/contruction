@@ -1,3 +1,4 @@
+import { getDynamicId } from "./utils"
 export const POPUP_INIT_STATE = {
     showPopup: false,
     componentName: "",
@@ -18,7 +19,10 @@ export const INIT_CONFIG_STATE = {
     entryType: entryType.materials,
     wageName: "",
     shopName:"",
-    natureOfWork: [{materialType:"", wageType:"", id:"", work:""}],
-    id:""
+    natureOfWork: [],
+    id:"",
+    materialType:"",
+    wageType:"",
+    configId:getDynamicId()
     
 }
