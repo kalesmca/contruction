@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 const HeaderComponent = () => {
     return (
-        <div>Header
+        <div>
+            <div>Kalees Gardening</div>
             <div>
                 <div className="nav-links">
 

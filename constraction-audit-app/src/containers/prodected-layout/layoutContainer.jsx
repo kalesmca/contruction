@@ -6,7 +6,7 @@ import "./layout.scss";
 import ModalComponent from "../../common/modal/modalComponent";
 import { AuthContext } from "../../auth";
 import { ModalContext } from "../../utils/contexts";
-
+import ToastComponent from "../../common/toast/toastComponent";
 
 const LayoutContainer = () =>{
     const navigate = useNavigate();
@@ -32,7 +32,7 @@ const LayoutContainer = () =>{
                 modalContext.obj.showPopup && (<ModalComponent />)
             }
             
-
+            <ToastComponent />
         </div>
     )
 }

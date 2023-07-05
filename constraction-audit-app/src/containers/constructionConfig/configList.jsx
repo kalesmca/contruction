@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ModalContext } from "../../utils/contexts";
 import { useSelector, useDispatch } from 'react-redux';
-import { getConfigList } from '../../redux/actions/appConfig';
+import { getConfigList, updateToast } from '../../redux/actions/appConfig';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -13,6 +13,8 @@ const ConfigList = () => {
     const configState = useSelector((state) => state.appConfig)
     const [selectedEntryType, setEntryType] = useState(entryTypes.materials)
     const dispatch = useDispatch()
+    let index = 0;
+
     console.log('configState :', configState)
     useEffect(() => {
         dispatch(getConfigList())
@@ -24,9 +26,25 @@ const ConfigList = () => {
         temp.componentName = "config"
         modalState.setObj({ ...modalState.obj, ...temp })
     }
+    
+
+    const selectConfig = (config) =>{
+        modalState.setObj({...modalState.obj, selectedConfig: config,componentName:"config", showPopup: true})
+    }
+    // const toast =() =>{
+    //     const obj ={
+    //         showToast:true,
+    //         title: "SUCCESS TEst",
+    //         content:"UPDATED SUCCESSFULLY"
+    //     }
+    //     dispatch(updateToast(obj))
+    
+    // }
     return (
-        <div>
-            <div>
+        <div className="config-list-container">
+            <div className="query-header">
+            {/* <Button variant="primary" onClick={() => { toast() }}>===</Button>{' '} */}
+
 
                 <div>
                     <Dropdown className="d-inline mx-2" value={selectedEntryType} >
@@ -63,11 +81,13 @@ const ConfigList = () => {
                     </thead>
                     <tbody>
                         {
+                            
                             configState.configList?.length ? configState.configList.map((config, cIndex) => {
                                 if (config.entryType === selectedEntryType) {
+                                    index = index +1;
                                     return (
-                                        <tr key={cIndex}>
-                                            <td>{cIndex + 1}</td>
+                                        <tr key={cIndex} onClick={()=>{selectConfig(config)}}>
+                                            <td>{index}</td>
                                             <td>{selectedEntryType === entryTypes.materials ? config.materialType : config.wageType}</td>
                                             <td>{selectedEntryType === entryTypes.materials ? config.shopName : config.wageName}</td>
                                         </tr>

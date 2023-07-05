@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { entryType, INIT_CONFIG_STATE } from '../../config/constants';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -6,12 +6,17 @@ import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { getDynamicId } from "../../config/utils";
-import { addNewConfig } from "../../redux/actions/appConfig";
+import { addNewConfig, updateConfig } from "../../redux/actions/appConfig";
 import {useDispatch, useSelector} from 'react-redux'
 import './config.scss';
+import { ModalContext } from "../../utils/contexts";
+// import { updateConfig } from "../../redux/API/apiService";
 
 const ConfigComponent = () => {
-    const [configObj, setConfigObj] = useState(INIT_CONFIG_STATE);
+    const modalContext = useContext(ModalContext)
+
+    const [configObj, setConfigObj] = useState(modalContext?.obj?.selectedConfig?.configId ?modalContext.obj.selectedConfig:INIT_CONFIG_STATE);
+    console.log('configObj : ', configObj)
     const [work, setWork] = useState("");
     const dispatch = useDispatch();
 
@@ -25,11 +30,15 @@ const ConfigComponent = () => {
         setWork("")
     }
     const submit =() =>{
-        dispatch(addNewConfig(configObj))
+        modalContext?.obj?.selectedConfig?.configId ? dispatch(updateConfig(configObj)) : dispatch(addNewConfig(configObj));
+        
+        modalContext.setObj({...modalContext.obj, showPopup:false})  
+        setConfigObj(INIT_CONFIG_STATE)
     }
 
     const cancel = () =>{
-
+        modalContext.setObj({...modalContext.obj, showPopup:false})  
+        setConfigObj(INIT_CONFIG_STATE)
     }
 
     return (
@@ -127,7 +136,7 @@ const ConfigComponent = () => {
                         </Table>
                 </Row>
                     <div className="bottom">
-                    <Button variant="primary" onClick={() => { submit() }}>Save</Button>{' '}
+                    <Button variant="primary" onClick={() => { submit() }}>{modalContext.obj?.selectedConfig?.configId ? "Update" : "Save"}</Button>{' '}
 
                     <Button variant="primary" onClick={() => { cancel() }}>Cancel</Button>{' '}
 

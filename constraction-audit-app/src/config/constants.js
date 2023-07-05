@@ -2,7 +2,9 @@ import { getDynamicId } from "./utils"
 export const POPUP_INIT_STATE = {
     showPopup: false,
     componentName: "",
-    title:"DEFAULT"
+    title:"DEFAULT",
+    selectedConfig: {},
+    selectedEntry:{}
 }
 
 export const DB = {

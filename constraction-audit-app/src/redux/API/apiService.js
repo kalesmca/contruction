@@ -21,8 +21,8 @@ export const  getDataListByDBName =(dbName)=> async() =>{
       
 }
 
-export const  updateUser = async(newObj) =>{
-    const userDoc = doc(db, DB.players, newObj.id);
+export const  updateConfig = async(newObj) =>{
+    const userDoc = doc(db, DB.configList, newObj.id);
     await updateDoc(userDoc, newObj); 
   
      
