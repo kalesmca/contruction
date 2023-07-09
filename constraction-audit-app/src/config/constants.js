@@ -40,9 +40,19 @@ export const INIT_ENTRY = {
     materialType:"",
     wageName:"",
     shopName:"",
-    natureOfWork:"",
+    natureOfWorks:[],
+    selectedNatureOfWork:{},
     billAmount:"",
     paidAmountList:[],
     pendingAmount:0,
-    status:""
+    status:"",
+    discount:0
+}
+
+export const INIT_PAID_OBJ = {
+    id:getDynamicId(),
+    paidDate: "",
+    paidAmt:"",
+    balaceAmt:"", 
+    modeOfPay:""
 }
