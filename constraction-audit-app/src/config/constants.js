@@ -53,6 +53,6 @@ export const INIT_PAID_OBJ = {
     id:getDynamicId(),
     paidDate: "",
     paidAmt:"",
-    balaceAmt:"", 
+    balanceAmt:"", 
     modeOfPay:""
 }

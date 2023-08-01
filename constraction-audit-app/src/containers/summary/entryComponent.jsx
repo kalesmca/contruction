@@ -23,6 +23,7 @@ const EntryComponent = () => {
         if (!configState.configList?.length) {
             dispatch(getConfigList());
         }
+        console.log('obj:', entryObj)
     })
 
     const setEntryType = (selectedConfig) => {
@@ -32,24 +33,27 @@ const EntryComponent = () => {
             setEntryObj({ ...entryObj, materialType: selectedConfig.materialType, shopName: selectedConfig.shopName, natureOfWorks: selectedConfig.natureOfWork })
         }
     }
-    const addList = () =>{
-        setEntryObj({...entryObj, paidAmountList: [...entryObj.paidAmountList, ...paidAmtObj]})
+    const addList = () => {
+        let obj = JSON.parse(JSON.stringify(paidAmtObj))
+        obj.date = new Date()
+        setEntryObj({ ...entryObj, paidAmountList: [...entryObj.paidAmountList, ...[paidAmtObj]] })
+
         setPaidAmtObj(INIT_PAID_OBJ);
-        paidCalculation();
+        // paidCalculation();
     }
-    const paidCalculation = () =>{
+    const paidCalculation = () => {
         let totolPayidAmt = 0;
-        if(entryObj.paidAmountList?.length){
-            entryObj.paidAmountList.map((paidAmt) =>{
+        if (entryObj.paidAmountList?.length) {
+            entryObj.paidAmountList.map((paidAmt) => {
                 totolPayidAmt = totolPayidAmt + parseInt(paidAmt)
             })
         }
-        setEntryObj({...entryObj, balaceAmt: parseInt(entryObj.billAmount)-(totolPayidAmt+entryObj.discount), status: (totolPayidAmt+entryObj.discount)< parseInt(entryObj.billAmount) ? entryStatus.notSettled : entryStatus.settled})
+        setEntryObj({ ...entryObj, balanceAmt: parseInt(entryObj.billAmount) - (totolPayidAmt + entryObj.discount), status: (totolPayidAmt + entryObj.discount) < parseInt(entryObj.billAmount) ? entryStatus.notSettled : entryStatus.settled })
     }
 
-    const balanceCalc = () =>{
-        entryObj.paidAmountList?.length ? setPaidAmtObj({...paidAmtObj, balaceAmt:entryObj.paidAmountList[entryObj.paidAmountList.length-1].balaceAmt - parseInt(paidAmtObj.paidAmt)}) 
-                                         : setPaidAmtObj({...paidAmtObj, balaceAmt: parseInt(entryObj.billAmount) - parseInt(paidAmtObj.paidAmt)})
+    const balanceCalc = () => {
+        entryObj.paidAmountList?.length ? setPaidAmtObj({ ...paidAmtObj, balanceAmt: entryObj.paidAmountList[entryObj.paidAmountList.length - 1].balanceAmt - parseInt(paidAmtObj.paidAmt) })
+            : setPaidAmtObj({ ...paidAmtObj, balanceAmt: parseInt(entryObj.billAmount) - parseInt(paidAmtObj.paidAmt) })
     }
 
     return (
@@ -149,7 +153,7 @@ const EntryComponent = () => {
 
                                 <Form.Label>Bill Amount</Form.Label>
                                 <Form.Control type="number" value={entryObj.billAmount}
-                                onChange ={(e)=> {setEntryObj({...entryObj, billAmount: e.target.value})}}
+                                    onChange={(e) => { setEntryObj({ ...entryObj, billAmount: e.target.value }) }}
                                 />
                             </Form.Group>
 
@@ -158,52 +162,62 @@ const EntryComponent = () => {
                     ) : ""
                 }
                 {
-                    entryObj.selectedNatureOfWork? (
+                    entryObj.selectedNatureOfWork ? (
                         <Table responsive>
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>Date</th>
-                            <th>Mode_of_Pay</th>
-                            <th>Paid Amount</th>
-                            <th>Balance</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                entryObj.paidAmountList?.length ? (
-                                    <tr></tr>
-                                ) : <tr>
-                                    <td colSpan={5}><center>No Data Found</center></td>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Date</th>
+                                    <th>Mode_of_Pay</th>
+                                    <th>Paid Amount</th>
+                                    <th>Balance</th>
                                 </tr>
-                            }
-                            <tr>
-                                <td colSpan={2}>
-                                <Form.Control type="date" value={paidAmtObj.paidDate} placeholder={"Paid Date"}
-                                onChange ={(e)=> {setPaidAmtObj({...paidAmtObj, paidDate: e.target.value})}}
-                                />
-                                </td>
-                                <td>
-                                <Form.Control type="text" value={paidAmtObj.modeOfPay} placeholder={"Mode of Pay"}
-                                onChange ={(e)=> {setPaidAmtObj({...paidAmtObj, modeOfPay: e.target.value})}}
-                                />
-                                </td>
-                                <td>
-                                <Form.Control type="number" value={paidAmtObj.paidAmt} placeholder={"Paid Amount"}
-                                onChange ={(e)=> {setPaidAmtObj({...paidAmtObj, paidAmt: e.target.value})}}
-                                onBlur={()=>{balanceCalc()}}
-                                />
-                                </td>
-                                <td>
-                                {paidAmtObj.balaceAmt} <span><button onClick={()=> {addList()}}>+</button></span>
-                                </td>
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                         
-                        </tbody>
-                      </Table>
+                            </thead>
+                            <tbody>
+                                {
+                                    entryObj.paidAmountList?.length ? entryObj.paidAmountList.map((paidObj, entryIndex) => {
+                                        return (
+                                            <tr>
+                                                <td>{entryIndex + 1}</td>
+                                                <td>{paidObj.paidDate}</td>
+                                                <td>{paidObj.modeOfPay}</td>
+                                                <td>{paidObj.paidAmt}</td>
+                                                <td>{paidObj.balanceAmt}</td>
+                                            </tr>
+                                        )
+                                    }) : <tr>
+                                        <td colSpan={5}><center>No Data Found</center></td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td colSpan={2}>
+                                        <Form.Control type="date" value={paidAmtObj.paidDate} placeholder={"Paid Date"}
+                                            onChange={(e) => { setPaidAmtObj({ ...paidAmtObj, paidDate: e.target.value }) }}
+                                        />
+                                    </td>
+                                    <td>
+                                        <Form.Control type="text" value={paidAmtObj.modeOfPay} placeholder={"Mode of Pay"}
+                                            onChange={(e) => { setPaidAmtObj({ ...paidAmtObj, modeOfPay: e.target.value }) }}
+                                        />
+                                    </td>
+                                    <td>
+                                        <Form.Control type="number" value={paidAmtObj.paidAmt} placeholder={"Paid Amount"}
+                                            onChange={(e) => { setPaidAmtObj({ ...paidAmtObj, paidAmt: e.target.value }) }}
+                                            onBlur={() => { balanceCalc() }}
+                                        />
+                                    </td>
+                                    <td>
+                                        {paidAmtObj.balanceAmt} <span>
+                                            <Button variant="primary" onClick={() => { addList() }}>+</Button>{' '}
+                                        </span>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </Table>
                     ) : ""
                 }
 
