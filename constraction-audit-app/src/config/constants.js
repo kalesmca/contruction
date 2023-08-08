@@ -8,7 +8,7 @@ export const POPUP_INIT_STATE = {
 }
 
 export const DB = {
-    entyrList:"ENTRY_LIST",
+    entyrList:"entryList",
     configList:"configList"
 }
 
@@ -46,7 +46,8 @@ export const INIT_ENTRY = {
     paidAmountList:[],
     pendingAmount:0,
     status:"",
-    discount:0
+    discount:0,
+    totalPaidAmt:0
 }
 
 export const INIT_PAID_OBJ = {

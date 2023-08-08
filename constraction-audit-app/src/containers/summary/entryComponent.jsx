@@ -9,7 +9,8 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { useSelector, useDispatch } from 'react-redux';
-
+import Alert from 'react-bootstrap/Alert';
+import { addNewEntry } from "../../redux/actions/entry";
 import { getConfigList } from '../../redux/actions/appConfig';
 import "./summary.scss"
 
@@ -18,7 +19,7 @@ const EntryComponent = () => {
     const dispatch = useDispatch()
     const [entryObj, setEntryObj] = useState(INIT_ENTRY);
     const [paidAmtObj, setPaidAmtObj] = useState(INIT_PAID_OBJ)
-
+    
     useEffect(() => {
         if (!configState.configList?.length) {
             dispatch(getConfigList());
@@ -34,27 +35,39 @@ const EntryComponent = () => {
         }
     }
     const addList = () => {
-        let obj = JSON.parse(JSON.stringify(paidAmtObj))
-        obj.date = new Date()
-        setEntryObj({ ...entryObj, paidAmountList: [...entryObj.paidAmountList, ...[paidAmtObj]] })
 
-        setPaidAmtObj(INIT_PAID_OBJ);
-        // paidCalculation();
-    }
-    const paidCalculation = () => {
-        let totolPayidAmt = 0;
-        if (entryObj.paidAmountList?.length) {
-            entryObj.paidAmountList.map((paidAmt) => {
-                totolPayidAmt = totolPayidAmt + parseInt(paidAmt)
-            })
+        if (paidAmtObj?.paidAmt && paidAmtObj.paidDate) {
+            let paidAmt = 0
+            if (entryObj.paidAmountList?.length) {
+                paidAmt = paidAmtObj.paidAmt;
+                entryObj.paidAmountList.forEach((paidObj) => {
+                    paidAmt = parseInt(paidAmt) + parseInt(paidObj.paidAmt);
+                })
+                setEntryObj({ ...entryObj, paidAmountList: [...entryObj.paidAmountList, ...[paidAmtObj]], totalPaidAmt: paidAmt, pendingAmount: parseInt(entryObj.billAmount) - parseInt(paidAmt) })
+            } else {
+                setEntryObj({ ...entryObj, paidAmountList: [...entryObj.paidAmountList, ...[paidAmtObj]], totalPaidAmt: paidAmtObj.paidAmt, pendingAmount: parseInt(entryObj.billAmount) - parseInt(paidAmtObj.paidAmt) })
+            }
+            setPaidAmtObj(INIT_PAID_OBJ);
         }
-        setEntryObj({ ...entryObj, balanceAmt: parseInt(entryObj.billAmount) - (totolPayidAmt + entryObj.discount), status: (totolPayidAmt + entryObj.discount) < parseInt(entryObj.billAmount) ? entryStatus.notSettled : entryStatus.settled })
+
     }
 
-    const balanceCalc = () => {
-        entryObj.paidAmountList?.length ? setPaidAmtObj({ ...paidAmtObj, balanceAmt: entryObj.paidAmountList[entryObj.paidAmountList.length - 1].balanceAmt - parseInt(paidAmtObj.paidAmt) })
-            : setPaidAmtObj({ ...paidAmtObj, balanceAmt: parseInt(entryObj.billAmount) - parseInt(paidAmtObj.paidAmt) })
+
+    // const balanceCalc = () => {
+    //     setPaidAmtObj({ ...paidAmtObj, balanceAmt: entryObj.pendingAmount - parseInt(paidAmtObj.paidAmt) })
+    //     setEntryObj({...entryObj, pendingAmount: entryObj.pendingAmount- parseInt(paidAmtObj.paidAmt)})
+    // }
+
+    // const setInitialPendingAmt = () =>{
+    //     setEntryObj({...entryObj, pendingAmount: entryObj.billAmount})
+    // }
+
+    const saveEntry =() =>{
+        dispatch(addNewEntry(entryObj));
+
     }
+
+
 
     return (
         <div className="entry-container">
@@ -170,19 +183,17 @@ const EntryComponent = () => {
                                     <th>Date</th>
                                     <th>Mode_of_Pay</th>
                                     <th>Paid Amount</th>
-                                    <th>Balance</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
                                     entryObj.paidAmountList?.length ? entryObj.paidAmountList.map((paidObj, entryIndex) => {
                                         return (
-                                            <tr>
+                                            <tr key={entryIndex}>
                                                 <td>{entryIndex + 1}</td>
                                                 <td>{paidObj.paidDate}</td>
                                                 <td>{paidObj.modeOfPay}</td>
                                                 <td>{paidObj.paidAmt}</td>
-                                                <td>{paidObj.balanceAmt}</td>
                                             </tr>
                                         )
                                     }) : <tr>
@@ -203,12 +214,11 @@ const EntryComponent = () => {
                                     <td>
                                         <Form.Control type="number" value={paidAmtObj.paidAmt} placeholder={"Paid Amount"}
                                             onChange={(e) => { setPaidAmtObj({ ...paidAmtObj, paidAmt: e.target.value }) }}
-                                            onBlur={() => { balanceCalc() }}
                                         />
                                     </td>
                                     <td>
-                                        {paidAmtObj.balanceAmt} <span>
-                                            <Button variant="primary" onClick={() => { addList() }}>+</Button>{' '}
+                                        <span>
+                                            <Button variant="primary" onClick={() => { paidAmtObj.paidAmt && addList() }}>+</Button>{' '}
                                         </span>
                                     </td>
                                     <td>
@@ -220,6 +230,35 @@ const EntryComponent = () => {
                         </Table>
                     ) : ""
                 }
+
+                <Row className="mb-3">
+                    <Form.Group as={Col} controlId="pending">
+                        <Form.Label>Paid Amount</Form.Label>
+                        <Form.Control type="text" placeholder="0" disabled={true} value={entryObj.totalPaidAmt} />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="pending">
+                        <Form.Label>Pending Amount</Form.Label>
+                        <Form.Control type="text" placeholder="0" disabled={true} value={entryObj.pendingAmount} />
+                    </Form.Group>
+
+                    {/* <Form.Group as={Col} controlId="formGridPassword">
+          <Form.Label>Status</Form.Label>
+          {
+            entryObj.status ? (<Alert variant={"warning"}>
+            <div>Pending</div>
+        </Alert>) : <Alert variant={"primary"}>
+            <div>Done</div>
+        </Alert>
+          }
+          
+        </Form.Group>  */}
+                </Row>
+                <Row className="mb-3">
+                    <center>
+                    <Button variant="primary" onClick={() => {saveEntry() }}>+</Button>{' '}
+
+                    </center>
+                </Row>
 
 
 

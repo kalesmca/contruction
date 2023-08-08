@@ -1,13 +1,28 @@
-import React,{useContext} from "react";
+import React,{useContext, useEffect} from "react";
 import { ModalContext } from "../../utils/contexts";
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Table from 'react-bootstrap/Table';
-
+import {useSelector, useDispatch} from 'react-redux';
+import { getConfigList } from "../../redux/actions/appConfig";
+import { getEntryList } from "../../redux/actions/entry";
 import "./summary.scss"
 
 const SummaryListComponent =() =>{
     const modalState = useContext(ModalContext);
+    const dispatch = useDispatch();
+    const appState = useSelector((state)=> state)
+    useEffect(()=>{
+        if (!appState?.entry?.entryList?.length) {
+            dispatch(getConfigList());
+            dispatch(getEntryList())
+        }
+
+    })
+    useEffect(()=>{
+        console.log('appState :', appState)
+    })
+
     const newEntry = () => {
         
         let temp = modalState.obj;
