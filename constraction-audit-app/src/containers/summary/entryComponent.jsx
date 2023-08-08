@@ -18,14 +18,14 @@ const EntryComponent = () => {
     const configState = useSelector((state) => state.appConfig)
     const dispatch = useDispatch()
     const [entryObj, setEntryObj] = useState(INIT_ENTRY);
-    const [paidAmtObj, setPaidAmtObj] = useState(INIT_PAID_OBJ)
+    const [paidAmtObj, setPaidAmtObj] = useState(INIT_PAID_OBJ);
     
     useEffect(() => {
         if (!configState.configList?.length) {
             dispatch(getConfigList());
         }
         console.log('obj:', entryObj)
-    })
+    },[])
 
     const setEntryType = (selectedConfig) => {
         if (entryObj.entryType === entryType.wages) {
@@ -72,7 +72,14 @@ const EntryComponent = () => {
     return (
         <div className="entry-container">
             <Form >
-                <Form.Label>Config Type : </Form.Label>
+            <div className="work-date">
+            <Form.Control type="date" value={entryObj.workDate} placeholder={"Work Date"}
+                                            onChange={(e) => { setEntryObj({ ...entryObj, workDate: e.target.value }) }}
+                                        />
+            </div>
+            
+               
+                <Form.Label><b>Type</b> </Form.Label>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="gender">
 
@@ -255,7 +262,7 @@ const EntryComponent = () => {
                 </Row>
                 <Row className="mb-3">
                     <center>
-                    <Button variant="primary" onClick={() => {saveEntry() }}>+</Button>{' '}
+                    <Button variant="primary" onClick={() => {saveEntry() }}>Save</Button>{' '}
 
                     </center>
                 </Row>

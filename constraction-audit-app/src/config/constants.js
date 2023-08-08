@@ -42,12 +42,13 @@ export const INIT_ENTRY = {
     shopName:"",
     natureOfWorks:[],
     selectedNatureOfWork:{},
-    billAmount:"",
+    billAmount:0,
     paidAmountList:[],
     pendingAmount:0,
     status:"",
     discount:0,
-    totalPaidAmt:0
+    totalPaidAmt:0,
+    workDate: new Date()
 }
 
 export const INIT_PAID_OBJ = {
@@ -56,4 +57,9 @@ export const INIT_PAID_OBJ = {
     paidAmt:"",
     balanceAmt:"", 
     modeOfPay:""
+}
+export const INIT_TOTAL_OBJ = {
+    billAmt:0,
+    pendingAmt:0,
+    paidAmt:0
 }

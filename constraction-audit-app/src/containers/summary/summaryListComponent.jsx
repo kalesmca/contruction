@@ -1,34 +1,58 @@
-import React,{useContext, useEffect} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ModalContext } from "../../utils/contexts";
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Table from 'react-bootstrap/Table';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { getConfigList } from "../../redux/actions/appConfig";
 import { getEntryList } from "../../redux/actions/entry";
+import { INIT_TOTAL_OBJ } from "../../config/constants";
 import "./summary.scss"
 
-const SummaryListComponent =() =>{
+const SummaryListComponent = () => {
     const modalState = useContext(ModalContext);
     const dispatch = useDispatch();
-    const appState = useSelector((state)=> state)
-    useEffect(()=>{
+    const appState = useSelector((state) => state);
+    const entryState = useSelector((state) => state.entry)
+    const [entryList, setEntryList] = useState([])
+    const [totalObj, setTotalObj] = useState(INIT_TOTAL_OBJ)
+
+    useEffect(() => {
         if (!appState?.entry?.entryList?.length) {
-            dispatch(getConfigList());
             dispatch(getEntryList())
         }
+        if (!appState?.appConfig?.configList?.length) {
+            dispatch(getConfigList());
+        }
 
-    })
-    useEffect(()=>{
+    }, [])
+    useEffect(() => {
         console.log('appState :', appState)
-    })
+        setEntryList(entryState?.entryList);
+    }, [entryState])
+    useEffect(() => {
+        totalCalc()
+    }, [entryList])
 
     const newEntry = () => {
-        
+
         let temp = modalState.obj;
         temp.showPopup = true;
         temp.componentName = "entry"
-        modalState.setObj({...modalState.obj, ...temp})
+        modalState.setObj({ ...modalState.obj, ...temp })
+    }
+    const totalCalc = () => {
+        let obj = {
+            billAmt: 0,
+            pendingAmt: 0,
+            paidAmt: 0
+        };
+        entryList.forEach((entry) => {
+            obj.paidAmt = entry.totalPaidAmt + obj.paidAmt;
+            obj.billAmt = parseInt(entry.billAmount) + parseInt(obj.billAmt)
+            obj.pendingAmt = entry.pendingAmount + obj.pendingAmt
+        })
+        setTotalObj(obj)
     }
     return (
         <div>
@@ -61,17 +85,45 @@ const SummaryListComponent =() =>{
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Type</th>
-                            <th>data</th>
+                            <th>Date</th>
+                            <th>Work</th>
+                            <th>Bill Amt</th>
+                            <th>Paid Amt</th>
+                            <th>Pending Amt</th>
                         </tr>
                     </thead>
                     <tbody>
-                        
-                                <tr>
+                        {
+                            entryList?.length ? entryList.map((entry, entryIndex) => {
+                                return (
+                                    <tr key={entryIndex}>
 
-                                    <td colSpan={3}><center>No Data Found</center></td>
+                                        <td>{entryIndex + 1}</td>
+                                        <td>{entry.workDate}</td>
+                                        <td>{entry?.selectedNatureOfWork?.work}</td>
+                                        <td>{entry.billAmount}</td>
+                                        <td>{entry.totalPaidAmt}</td>
+                                        <td>{entry.pendingAmount}</td>
+                                    </tr>
+                                )
+                            }) : (<tr>
+
+                                <td colSpan={6}><center>No Data Found</center></td>
+                            </tr>)
+                        }
+                        {
+                            entryList?.length && (
+                                <tr>
+                                    <td colSpan={3}><center><b>Total</b></center> </td>
+                                    <td>{totalObj.billAmt}</td>
+                                    <td>{totalObj.paidAmt}</td>
+                                    <td>{totalObj.pendingAmt}</td>
                                 </tr>
-                            
+                            )
+                        }
+
+
+
 
 
                     </tbody>
