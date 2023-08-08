@@ -11,6 +11,7 @@ import {
     updateDoc
 } from "firebase/firestore";
 import { async } from '@firebase/util';
+console.log('env:', process.env, process.env?.NODE_ENV)
 const CollectionRef = collection(db, DB.configList);
 export const getConfigList = () => async(dispatch, getState) =>{
     try{
