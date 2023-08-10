@@ -89,7 +89,15 @@ const ConfigList = () => {
                                         <tr key={cIndex} onClick={()=>{selectConfig(config)}}>
                                             <td>{index}</td>
                                             <td>{selectedEntryType === entryTypes.materials ? config.materialType : config.wageType}</td>
-                                            <td>{selectedEntryType === entryTypes.materials ? config.shopName : config.wageName}</td>
+                                            <td>{selectedEntryType === entryTypes.materials ? config?.shopNames?.map((shopName, sindex) =>{
+                                                return(
+                                                    <span key={sindex}>{shopName + ", "}</span>
+                                                )
+                                            }) : config.wageNames?.map((wage, wIndex)=>{
+                                                return(
+                                                    <span key={wIndex}>{wage + ", "} </span>
+                                                )
+                                            })}</td>
                                         </tr>
                                     )
                                 }
