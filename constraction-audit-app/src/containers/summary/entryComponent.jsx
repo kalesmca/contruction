@@ -19,19 +19,19 @@ const EntryComponent = () => {
     const dispatch = useDispatch()
     const [entryObj, setEntryObj] = useState(INIT_ENTRY);
     const [paidAmtObj, setPaidAmtObj] = useState(INIT_PAID_OBJ);
-    
+
     useEffect(() => {
         if (!configState.configList?.length) {
             dispatch(getConfigList());
         }
         console.log('obj:', entryObj)
-    },[])
+    }, [])
 
     const setEntryType = (selectedConfig) => {
         if (entryObj.entryType === entryType.wages) {
             setEntryObj({ ...entryObj, wageType: selectedConfig.wageType, wageName: selectedConfig.wageName, natureOfWorks: selectedConfig.natureOfWork })
         } else {
-            setEntryObj({ ...entryObj, materialType: selectedConfig.materialType, shopName: selectedConfig.shopName, natureOfWorks: selectedConfig.natureOfWork })
+            setEntryObj({ ...entryObj, materialType: selectedConfig.materialType, shopList: selectedConfig.shopNames, natureOfWorks: selectedConfig.natureOfWork })
         }
     }
     const addList = () => {
@@ -62,7 +62,7 @@ const EntryComponent = () => {
     //     setEntryObj({...entryObj, pendingAmount: entryObj.billAmount})
     // }
 
-    const saveEntry =() =>{
+    const saveEntry = () => {
         dispatch(addNewEntry(entryObj));
 
     }
@@ -72,13 +72,13 @@ const EntryComponent = () => {
     return (
         <div className="entry-container">
             <Form >
-            <div className="work-date">
-            <Form.Control type="date" value={entryObj.workDate} placeholder={"Work Date"}
-                                            onChange={(e) => { setEntryObj({ ...entryObj, workDate: e.target.value }) }}
-                                        />
-            </div>
-            
-               
+                <div className="work-date">
+                    <Form.Control type="date" value={entryObj.workDate} placeholder={"Work Date"}
+                        onChange={(e) => { setEntryObj({ ...entryObj, workDate: e.target.value }) }}
+                    />
+                </div>
+
+
                 <Form.Label><b>Type</b> </Form.Label>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="gender">
@@ -126,18 +126,53 @@ const EntryComponent = () => {
                                     })
                                 }
 
-                                {/* <Dropdown.Divider />
-                            <Dropdown.Item value={"ALL"} onClick={(e) => { categoryQuery("ALL") }}>ALL</Dropdown.Item> */}
+
 
                             </Dropdown.Menu>
                         </Dropdown>
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridEmail" style={{ marginTop: "-30px" }}>
+                        {
+                            entryObj.entryType === entryType.wages ? (<>
+                                <Form.Label>{entryObj.entryType === entryType.wages ? "Wage Name" : "Shop Name"}</Form.Label>
+                                <Form.Control type="text" disabled={true} value={entryObj.entryType === entryType.wages ? entryObj.wageName : entryObj.shopName}
+                                />
+                            </>
 
-                        <Form.Label>{entryObj.entryType === entryType.wages ? "Wage Name" : "Shop Name"}</Form.Label>
-                        <Form.Control type="text" disabled={true} value={entryObj.entryType === entryType.wages ? entryObj.wageName : entryObj.shopName}
-                        />
+                            ) : (
+                                <>
+                                    <Form.Label> Shop Name</Form.Label>
+                                    <Form.Group as={Col} controlId="shopname">
+                                        <Dropdown className="d-inline mx-2" value={entryObj.shopName} >
+                                            <Dropdown.Toggle id="dropdown-autoclose-true">
+                                                {entryObj.shopName ? entryObj.shopName : "Select"}
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                                {
+                                                    entryObj?.shopList?.length && entryObj?.shopList?.map((shop, kIndex) => {
+
+                                                        return (<Dropdown.Item key={kIndex} index={kIndex}
+                                                            value={entryObj.shopName}
+                                                            onClick={(e) => { setEntryObj({ ...entryObj, shopName: shop }) }}
+                                                        >{shop}
+                                                        </Dropdown.Item>)
+
+                                                    })
+                                                }
+
+
+
+                                            </Dropdown.Menu>
+                                        </Dropdown>
+                                    </Form.Group>
+
+                                </>
+
+                            )
+                        }
+
                     </Form.Group>
 
                 </Row>
@@ -262,7 +297,7 @@ const EntryComponent = () => {
                 </Row>
                 <Row className="mb-3">
                     <center>
-                    <Button variant="primary" onClick={() => {saveEntry() }}>Save</Button>{' '}
+                        <Button variant="primary" onClick={() => { saveEntry() }}>Save</Button>{' '}
 
                     </center>
                 </Row>

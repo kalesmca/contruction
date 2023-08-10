@@ -41,6 +41,20 @@ const ConfigComponent = () => {
         setConfigObj(INIT_CONFIG_STATE)
     }
 
+    const shopNamChange = (e, index) =>{
+        let temp = configObj.shopNames;
+        temp[index] = e.target.value;
+        setConfigObj({...configObj, shopNames:temp})
+    }
+
+    const addShop = () =>{
+        if(configObj.shopNames[configObj.shopNames.length-1]){
+            let temp = configObj.shopNames;
+            temp.push("")
+            setConfigObj({...configObj, shopNames:temp})
+        }
+        
+    }
     return (
         <div className="create-container">
             <Form >
@@ -72,10 +86,12 @@ const ConfigComponent = () => {
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridEmail">
                         {
-                            configObj.entryType === entryType.materials ? (<> <Form.Label>Shop Name</Form.Label>
-                                <Form.Control type="text" placeholder=" Name" value={configObj.shopName}
-                                    onChange={(e) => { setConfigObj({ ...configObj, shopName: e.target.value }) }}
-                                /></>) : (<> <Form.Label>Wage Name</Form.Label>
+                            configObj.entryType === entryType.materials ? (<div>Shop Names <Button variant="primary" onClick={() => { addShop() }}>+</Button>{configObj.shopNames.map((shopName, shopIndex)=>{
+                                return(<> 
+                                <Form.Control type="text" placeholder=" Shop Name" value={shopName}
+                                    onChange={(e) => { shopNamChange(e, shopIndex)}}
+                                /></>) 
+                            })} </div>) : (<> <Form.Label>Wage Name</Form.Label>
                                     <Form.Control type="text" placeholder=" Name" value={configObj.wageName}
                                         onChange={(e) => { setConfigObj({ ...configObj, wageName: e.target.value }) }}
                                     /></>)
