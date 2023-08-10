@@ -26,7 +26,8 @@ export const INIT_CONFIG_STATE = {
     materialType:"",
     wageType:"",
     configId:getDynamicId(),
-    shopNames:['']
+    shopNames:[''],
+    wageNames:['']
     
 }
 
@@ -42,6 +43,7 @@ export const INIT_ENTRY = {
     wageName:"",
     shopName:"",
     shopList:"",
+    wageList:"",
     natureOfWorks:[],
     selectedNatureOfWork:{},
     billAmount:0,

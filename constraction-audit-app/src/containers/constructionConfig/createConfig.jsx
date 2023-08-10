@@ -47,6 +47,12 @@ const ConfigComponent = () => {
         setConfigObj({...configObj, shopNames:temp})
     }
 
+    const wageNamChange = (e, index) =>{
+        let temp = configObj.wageNames;
+        temp[index] = e.target.value;
+        setConfigObj({...configObj, wageNames:temp})
+    }
+
     const addShop = () =>{
         if(configObj.shopNames[configObj.shopNames.length-1]){
             let temp = configObj.shopNames;
@@ -54,6 +60,13 @@ const ConfigComponent = () => {
             setConfigObj({...configObj, shopNames:temp})
         }
         
+    }
+    const addWage = () =>{
+        if(configObj.wageNames[configObj.wageNames.length-1]){
+            let temp = configObj.wageNames;
+            temp.push("")
+            setConfigObj({...configObj, wageNames:temp})
+        }
     }
     return (
         <div className="create-container">
@@ -91,10 +104,14 @@ const ConfigComponent = () => {
                                 <Form.Control type="text" placeholder=" Shop Name" value={shopName}
                                     onChange={(e) => { shopNamChange(e, shopIndex)}}
                                 /></>) 
-                            })} </div>) : (<> <Form.Label>Wage Name</Form.Label>
-                                    <Form.Control type="text" placeholder=" Name" value={configObj.wageName}
-                                        onChange={(e) => { setConfigObj({ ...configObj, wageName: e.target.value }) }}
-                                    /></>)
+                            })} </div>) : 
+                            (<div>Wage Names <Button variant="primary" onClick={() => { addWage() }}>+</Button>{configObj.wageNames.map((wageName, wIndex)=>{
+                                return(<> 
+                                <Form.Control type="text" placeholder=" Wage Name" value={wageName}
+                                    onChange={(e) => { wageNamChange(e, wIndex)}}
+                                /></>) 
+                            })} </div>)
+                            
                         }
 
 
@@ -105,7 +122,7 @@ const ConfigComponent = () => {
                             configObj.entryType === entryType.materials ? (<> <Form.Label>Material Type</Form.Label>
                                 <Form.Control type="text" placeholder="ex: Electrical, Cement..." value={configObj.materialType}
                                     onChange={(e) => { setConfigObj({ ...configObj, materialType: e.target.value }) }}
-                                /></>) : (<> <Form.Label>Wage Name</Form.Label>
+                                /></>) : (<> <Form.Label>Wage Type</Form.Label>
                                     <Form.Control type="text" placeholder="Ex: Mason, Electrician" value={configObj.wageType}
                                         onChange={(e) => { setConfigObj({ ...configObj, wageType: e.target.value }) }}
                                     /></>)

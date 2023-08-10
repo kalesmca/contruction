@@ -29,7 +29,7 @@ const EntryComponent = () => {
 
     const setEntryType = (selectedConfig) => {
         if (entryObj.entryType === entryType.wages) {
-            setEntryObj({ ...entryObj, wageType: selectedConfig.wageType, wageName: selectedConfig.wageName, natureOfWorks: selectedConfig.natureOfWork })
+            setEntryObj({ ...entryObj, wageType: selectedConfig.wageType, wageList: selectedConfig.wageNames, natureOfWorks: selectedConfig.natureOfWork })
         } else {
             setEntryObj({ ...entryObj, materialType: selectedConfig.materialType, shopList: selectedConfig.shopNames, natureOfWorks: selectedConfig.natureOfWork })
         }
@@ -105,12 +105,39 @@ const EntryComponent = () => {
 
                 </Row>
                 <Row className="mb-3">
-                    <Form.Label> {entryObj.entryType === entryType.wages ? "Wages Type" : "Material Type"}</Form.Label>
 
-                    <Form.Group as={Col} controlId="gender">
-                        <Dropdown className="d-inline mx-2" value={entryObj.wageType} >
+                {entryObj.entryType === entryType.wages ? (
+                    <>
+                    <Form.Label> Wages Type </Form.Label>
+                    <Form.Group as={Col} controlId="wages_type">
+                    <Dropdown className="d-inline mx-2" value={entryObj.wageType} >
                             <Dropdown.Toggle id="dropdown-autoclose-true">
-                                {entryObj.wageType ? entryObj.wageType : "Select"}
+                                {!entryObj.wageType ? "Select" : entryObj.wageType}
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                {
+                                    configState.configList.map((config, kIndex) => {
+                                        if (config.entryType === entryObj.entryType) {
+                                            return (<Dropdown.Item key={kIndex} index={kIndex}
+                                                value={entryObj.entryType === entryType.wages ? config.wageType : config.materialType}
+                                                onClick={(e) => { setEntryType(config) }}
+                                            >{entryObj.entryType === entryType.wages ? config.wageType : config.materialType}
+                                            </Dropdown.Item>)
+                                        }
+                                    })
+                                }
+                            </Dropdown.Menu>
+                        </Dropdown>
+
+                    </Form.Group>
+                    </>
+                ) : (
+                    <>
+                        <Form.Label> "Material Type" </Form.Label>
+                        <Form.Group as={Col} controlId="material_type">
+                        <Dropdown className="d-inline mx-2" value={ entryObj.materialType} >
+                            <Dropdown.Toggle id="dropdown-autoclose-true">
+                                {!entryObj.materialType? "Select" : entryObj.materialType}
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
@@ -130,15 +157,41 @@ const EntryComponent = () => {
 
                             </Dropdown.Menu>
                         </Dropdown>
-                    </Form.Group>
+                        </Form.Group>
+                        
+                    </>
+                ) }
 
+                    
                     <Form.Group as={Col} controlId="formGridEmail" style={{ marginTop: "-30px" }}>
                         {
-                            entryObj.entryType === entryType.wages ? (<>
-                                <Form.Label>{entryObj.entryType === entryType.wages ? "Wage Name" : "Shop Name"}</Form.Label>
-                                <Form.Control type="text" disabled={true} value={entryObj.entryType === entryType.wages ? entryObj.wageName : entryObj.shopName}
-                                />
-                            </>
+                            entryObj.entryType === entryType.wages ? (
+                                <>
+                                    <Form.Label> Vendor Name</Form.Label>
+                                    <Form.Group as={Col} controlId="wageName">
+                                        <Dropdown className="d-inline mx-2" value={entryObj.wageName} >
+                                            <Dropdown.Toggle id="dropdown-autoclose-true">
+                                                {entryObj.wageName ? entryObj.wageName : "Select"}
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                                {
+                                                    entryObj?.wageList?.length && entryObj?.wageList?.map((wage, kIndex) => {
+
+                                                        return (<Dropdown.Item key={kIndex} index={kIndex}
+                                                            value={entryObj.wageName}
+                                                            onClick={(e) => { setEntryObj({ ...entryObj, wageName: wage }) }}
+                                                        >{wage}
+                                                        </Dropdown.Item>)
+
+                                                    })
+                                                }
+
+                                            </Dropdown.Menu>
+                                        </Dropdown>
+                                    </Form.Group>
+
+                                </>
 
                             ) : (
                                 <>
