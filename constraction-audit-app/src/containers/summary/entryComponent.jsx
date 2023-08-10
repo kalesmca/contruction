@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { entryType, INIT_ENTRY, INIT_PAID_OBJ, entryStatus } from '../../config/constants';
 
 import Col from 'react-bootstrap/Col';
@@ -12,6 +12,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import Alert from 'react-bootstrap/Alert';
 import { addNewEntry } from "../../redux/actions/entry";
 import { getConfigList } from '../../redux/actions/appConfig';
+import { ModalContext } from "../../utils/contexts";
+
 import "./summary.scss"
 
 const EntryComponent = () => {
@@ -19,6 +21,7 @@ const EntryComponent = () => {
     const dispatch = useDispatch()
     const [entryObj, setEntryObj] = useState(INIT_ENTRY);
     const [paidAmtObj, setPaidAmtObj] = useState(INIT_PAID_OBJ);
+    const modalContext = useContext(ModalContext)
 
     useEffect(() => {
         if (!configState.configList?.length) {
@@ -64,6 +67,9 @@ const EntryComponent = () => {
 
     const saveEntry = () => {
         dispatch(addNewEntry(entryObj));
+        modalContext.setObj({...modalContext.obj, showPopup:false})  
+        setEntryObj(INIT_ENTRY);
+        setPaidAmtObj(INIT_PAID_OBJ);
 
     }
 

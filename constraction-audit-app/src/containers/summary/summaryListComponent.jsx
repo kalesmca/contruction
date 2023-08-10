@@ -48,9 +48,9 @@ const SummaryListComponent = () => {
             paidAmt: 0
         };
         entryList.forEach((entry) => {
-            obj.paidAmt = entry.totalPaidAmt + obj.paidAmt;
+            obj.paidAmt = parseInt(entry.totalPaidAmt) + parseInt(obj.paidAmt);
             obj.billAmt = parseInt(entry.billAmount) + parseInt(obj.billAmt)
-            obj.pendingAmt = entry.pendingAmount + obj.pendingAmt
+            obj.pendingAmt = parseInt(entry.pendingAmount) + parseInt(obj.pendingAmt)
         })
         setTotalObj(obj)
     }
