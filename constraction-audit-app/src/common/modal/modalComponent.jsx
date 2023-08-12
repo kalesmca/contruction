@@ -4,6 +4,7 @@ import ConfigComponent from "../../containers/constructionConfig/createConfig";
 import EntryComponent from "../../containers/summary/entryComponent";
 import { ModalContext } from "../../utils/contexts";
 
+import { POPUP_INIT_STATE } from "../../config/constants";
 const componentObj = {
     entry : EntryComponent,
     config: ConfigComponent
@@ -14,7 +15,7 @@ const ModalComponent = () =>{
     const onClose =()=>{
         let temp = modalContext.obj;
         temp.showPopup = false;
-        modalContext.setObj({...modalContext.obj, ...temp})
+        modalContext.setObj({...modalContext.obj, ...POPUP_INIT_STATE})
     }
     const getComponent = () =>{
     

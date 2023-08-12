@@ -54,6 +54,11 @@ const SummaryListComponent = () => {
         })
         setTotalObj(obj)
     }
+
+    const viewEntry = (selectedEntry) => {
+        modalState.setObj({...modalState.obj, selectedEntry: selectedEntry,componentName:"entry", showPopup: true})
+
+    }
     return (
         <div>
             <div className="query-header">
@@ -96,7 +101,7 @@ const SummaryListComponent = () => {
                         {
                             entryList?.length ? entryList.map((entry, entryIndex) => {
                                 return (
-                                    <tr key={entryIndex}>
+                                    <tr key={entryIndex} onClick={()=>{viewEntry(entry)}}>
 
                                         <td>{entryIndex + 1}</td>
                                         <td>{entry.workDate}</td>

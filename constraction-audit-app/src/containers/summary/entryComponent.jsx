@@ -17,11 +17,13 @@ import { ModalContext } from "../../utils/contexts";
 import "./summary.scss"
 
 const EntryComponent = () => {
+    const modalContext = useContext(ModalContext)
+
     const configState = useSelector((state) => state.appConfig)
     const dispatch = useDispatch()
-    const [entryObj, setEntryObj] = useState(INIT_ENTRY);
+    const [entryObj, setEntryObj] = useState(modalContext?.obj?.selectedEntry?.id ?modalContext.obj.selectedEntry:INIT_ENTRY);
+
     const [paidAmtObj, setPaidAmtObj] = useState(INIT_PAID_OBJ);
-    const modalContext = useContext(ModalContext)
 
     useEffect(() => {
         if (!configState.configList?.length) {
