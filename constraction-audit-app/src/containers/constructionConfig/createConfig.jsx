@@ -21,13 +21,16 @@ const ConfigComponent = () => {
     const dispatch = useDispatch();
 
     const addWork = () => {
-        let obj = {
-            id: getDynamicId(),
-            work: work,
-            configId: configObj.configId
+        if(work){
+            let obj = {
+                id: getDynamicId(),
+                work: work,
+                configId: configObj.configId
+            }
+            setConfigObj({ ...configObj, natureOfWork: [...configObj.natureOfWork, ...[obj]] })
+            setWork("")
         }
-        setConfigObj({ ...configObj, natureOfWork: [...configObj.natureOfWork, ...[obj]] })
-        setWork("")
+        
     }
     const submit =() =>{
         modalContext?.obj?.selectedConfig?.configId ? dispatch(updateConfig(configObj)) : dispatch(addNewConfig(configObj));
