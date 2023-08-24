@@ -8,8 +8,10 @@ export const POPUP_INIT_STATE = {
 }
 
 export const DB = {
-    entyrList:"entries",
-    configList:"configs"
+    // entyrList:"entries",
+    // configList:"configs"
+    entyrList:"liveConfig",
+    configList:"liveEntryList"
 }
 
 export const entryType = {

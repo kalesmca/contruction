@@ -15,7 +15,8 @@ const SummaryListComponent = () => {
     const appState = useSelector((state) => state);
     const entryState = useSelector((state) => state.entry)
     const [entryList, setEntryList] = useState([])
-    const [totalObj, setTotalObj] = useState(INIT_TOTAL_OBJ)
+    const [totalObj, setTotalObj] = useState(INIT_TOTAL_OBJ);
+    const [entryType, setEntryType] = useState()
 
     useEffect(() => {
         if (!appState?.entry?.entryList?.length) {
@@ -63,7 +64,7 @@ const SummaryListComponent = () => {
         <div>
             <div className="query-header">
 
-                {/* <div>
+            {/* <div>
                     <Dropdown className="d-inline mx-2" value={selectedEntryType} >
                         <Dropdown.Toggle id="dropdown-autoclose-true">
                             {selectedEntryType}
@@ -76,7 +77,8 @@ const SummaryListComponent = () => {
                                 })
                             }
 
-                            
+                            <Dropdown.Item value={"ALL"} onClick={(e) => { categoryQuery("ALL") }}>ALL</Dropdown.Item> 
+
                         </Dropdown.Menu>
                     </Dropdown>
                 </div> */}
