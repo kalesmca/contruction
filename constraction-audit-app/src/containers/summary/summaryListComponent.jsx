@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getConfigList } from "../../redux/actions/appConfig";
 import { getEntryList } from "../../redux/actions/entry";
 import { INIT_TOTAL_OBJ } from "../../config/constants";
+import {deleteEntryByDoc} from '../../redux/API/apiService';
 import "./summary.scss"
 
 const SummaryListComponent = () => {
@@ -60,6 +61,9 @@ const SummaryListComponent = () => {
         modalState.setObj({...modalState.obj, selectedEntry: selectedEntry,componentName:"entry", showPopup: true})
 
     }
+    const deleteEntry = (entry) =>{
+        deleteEntryByDoc(entry)
+    }
     return (
         <div>
             <div className="query-header">
@@ -97,13 +101,14 @@ const SummaryListComponent = () => {
                             <th>Bill Amt</th>
                             <th>Paid Amt</th>
                             <th>Pending Amt</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             entryList?.length ? entryList.map((entry, entryIndex) => {
                                 return (
-                                    <tr key={entryIndex} onClick={()=>{viewEntry(entry)}}>
+                                    <tr key={entryIndex} >
 
                                         <td>{entryIndex + 1}</td>
                                         <td>{entry.workDate}</td>
@@ -111,6 +116,7 @@ const SummaryListComponent = () => {
                                         <td>{entry.billAmount}</td>
                                         <td>{entry.totalPaidAmt}</td>
                                         <td>{entry.pendingAmount}</td>
+                                        <td ><span onClick={()=>{deleteEntry(entry)}}>Delete</span><span>::</span><span onClick={()=>{viewEntry(entry)}}>View</span></td>
                                     </tr>
                                 )
                             }) : (<tr>

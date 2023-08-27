@@ -33,10 +33,10 @@ const EntryComponent = () => {
     }, [])
 
     const setEntryType = (selectedConfig) => {
-        if (entryObj.entryType === entryType.wages) {
-            setEntryObj({ ...entryObj, wageType: selectedConfig.wageType, wageList: selectedConfig.wageNames, natureOfWorks: selectedConfig.natureOfWork })
+        if (entryObj.entryType === entryType.vendors) {
+            setEntryObj({ ...entryObj, vendorType: selectedConfig.vendorType, vendorList: selectedConfig.vendorNames, natureOfWorks: selectedConfig.natureOfWork })
         } else {
-            setEntryObj({ ...entryObj, materialType: selectedConfig.materialType, shopList: selectedConfig.shopNames, natureOfWorks: selectedConfig.natureOfWork })
+            setEntryObj({ ...entryObj, materialType: selectedConfig.materialType, shopList: selectedConfig.vendorNames, natureOfWorks: selectedConfig.natureOfWork })
         }
     }
     const addList = () => {
@@ -93,12 +93,12 @@ const EntryComponent = () => {
 
                         <Form.Check
                             inline
-                            label={entryType.wages}
+                            label={entryType.vendors}
                             name="entryType"
                             type={"radio"}
-                            id={`inline-${"wage"}-2`}
-                            defaultChecked={entryObj.entryType === entryType.wages ? true : false}
-                            onClick={(e) => { setEntryObj({ ...entryObj, entryType: entryType.wages }) }}
+                            id={`inline-${"vendor"}-2`}
+                            defaultChecked={entryObj.entryType === entryType.vendors ? true : false}
+                            onClick={(e) => { setEntryObj({ ...entryObj, entryType: entryType.vendors }) }}
                         />
                         <Form.Check
                             inline
@@ -114,22 +114,22 @@ const EntryComponent = () => {
                 </Row>
                 <Row className="mb-3">
 
-                {entryObj.entryType === entryType.wages ? (
+                {entryObj.entryType === entryType.vendors ? (
                     <>
-                    <Form.Label> Wages Type </Form.Label>
-                    <Form.Group as={Col} controlId="wages_type">
-                    <Dropdown className="d-inline mx-2" value={entryObj.wageType} >
+                    <Form.Label> vendors Type </Form.Label>
+                    <Form.Group as={Col} controlId="vendors_type">
+                    <Dropdown className="d-inline mx-2" value={entryObj.vendorType} >
                             <Dropdown.Toggle id="dropdown-autoclose-true">
-                                {!entryObj.wageType ? "Select" : entryObj.wageType}
+                                {!entryObj.vendorType ? "Select" : entryObj.vendorType}
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
                                 {
                                     configState.configList.map((config, kIndex) => {
                                         if (config.entryType === entryObj.entryType) {
                                             return (<Dropdown.Item key={kIndex} index={kIndex}
-                                                value={entryObj.entryType === entryType.wages ? config.wageType : config.materialType}
+                                                value={entryObj.entryType === entryType.vendors ? config.vendorType : config.materialType}
                                                 onClick={(e) => { setEntryType(config) }}
-                                            >{entryObj.entryType === entryType.wages ? config.wageType : config.materialType}
+                                            >{entryObj.entryType === entryType.vendors ? config.vendorType : config.materialType}
                                             </Dropdown.Item>)
                                         }
                                     })
@@ -153,9 +153,9 @@ const EntryComponent = () => {
                                     configState.configList.map((config, kIndex) => {
                                         if (config.entryType === entryObj.entryType) {
                                             return (<Dropdown.Item key={kIndex} index={kIndex}
-                                                value={entryObj.entryType === entryType.wages ? config.wageType : config.materialType}
+                                                value={entryObj.entryType === entryType.vendors ? config.vendorType : config.materialType}
                                                 onClick={(e) => { setEntryType(config) }}
-                                            >{entryObj.entryType === entryType.wages ? config.wageType : config.materialType}
+                                            >{entryObj.entryType === entryType.vendors ? config.vendorType : config.materialType}
                                             </Dropdown.Item>)
                                         }
                                     })
@@ -173,23 +173,23 @@ const EntryComponent = () => {
                     
                     <Form.Group as={Col} controlId="formGridEmail" style={{ marginTop: "-30px" }}>
                         {
-                            entryObj.entryType === entryType.wages ? (
+                            entryObj.entryType === entryType.vendors ? (
                                 <>
                                     <Form.Label> Vendor Name</Form.Label>
-                                    <Form.Group as={Col} controlId="wageName">
-                                        <Dropdown className="d-inline mx-2" value={entryObj.wageName} >
+                                    <Form.Group as={Col} controlId="vendorName">
+                                        <Dropdown className="d-inline mx-2" value={entryObj.vendorName} >
                                             <Dropdown.Toggle id="dropdown-autoclose-true">
-                                                {entryObj.wageName ? entryObj.wageName : "Select"}
+                                                {entryObj.vendorName ? entryObj.vendorName : "Select"}
                                             </Dropdown.Toggle>
 
                                             <Dropdown.Menu>
                                                 {
-                                                    entryObj?.wageList?.length && entryObj?.wageList?.map((wage, kIndex) => {
+                                                    entryObj?.vendorList?.length && entryObj?.vendorList?.map((vendor, kIndex) => {
 
                                                         return (<Dropdown.Item key={kIndex} index={kIndex}
-                                                            value={entryObj.wageName}
-                                                            onClick={(e) => { setEntryObj({ ...entryObj, wageName: wage }) }}
-                                                        >{wage}
+                                                            value={entryObj.vendorName}
+                                                            onClick={(e) => { setEntryObj({ ...entryObj, vendorName: vendor }) }}
+                                                        >{vendor}
                                                         </Dropdown.Item>)
 
                                                     })
@@ -204,10 +204,10 @@ const EntryComponent = () => {
                             ) : (
                                 <>
                                     <Form.Label> Shop Name</Form.Label>
-                                    <Form.Group as={Col} controlId="shopname">
-                                        <Dropdown className="d-inline mx-2" value={entryObj.shopName} >
+                                    <Form.Group as={Col} controlId="vendorName">
+                                        <Dropdown className="d-inline mx-2" value={entryObj.vendorName} >
                                             <Dropdown.Toggle id="dropdown-autoclose-true">
-                                                {entryObj.shopName ? entryObj.shopName : "Select"}
+                                                {entryObj.vendorName ? entryObj.vendorName : "Select"}
                                             </Dropdown.Toggle>
 
                                             <Dropdown.Menu>
@@ -215,8 +215,8 @@ const EntryComponent = () => {
                                                     entryObj?.shopList?.length && entryObj?.shopList?.map((shop, kIndex) => {
 
                                                         return (<Dropdown.Item key={kIndex} index={kIndex}
-                                                            value={entryObj.shopName}
-                                                            onClick={(e) => { setEntryObj({ ...entryObj, shopName: shop }) }}
+                                                            value={entryObj.vendorName}
+                                                            onClick={(e) => { setEntryObj({ ...entryObj, vendorName: shop }) }}
                                                         >{shop}
                                                         </Dropdown.Item>)
 

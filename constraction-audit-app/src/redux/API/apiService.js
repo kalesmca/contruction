@@ -32,8 +32,21 @@ export const  updateEvent = async(newObj) =>{
   const userDoc = doc(db, DB.EVENTS, newObj.id);
   await updateDoc(userDoc, newObj); 
 
-   
+  
 }
+
+export const deleteConfigByDoc = async(obj) =>{
+  const configDocument = doc(db, DB.configList, obj.id);
+  await db.collection(DB.configList).doc(configDocument).delete(); 
+}
+
+export const deleteEntryByDoc = async(obj) =>{
+  const configDocument = doc(db, DB.entyrList, obj.id);
+  // await db.collection(DB.entyrList).doc(configDocument).delete(); 
+  await deleteDoc(configDocument, obj); 
+
+}
+
 
 // const ApiService ={
 //     saveFund: async(param) =>{

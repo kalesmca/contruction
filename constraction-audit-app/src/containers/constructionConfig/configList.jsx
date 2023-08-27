@@ -76,7 +76,7 @@ const ConfigList = () => {
                         <tr>
                             <th>#</th>
                             <th>Type</th>
-                            <th>{selectedEntryType === entryTypes.materials ? "Shop Name" : "Wages-Name"}</th>
+                            <th>{selectedEntryType === entryTypes.materials ? "Shop Name" : "vendors-Name"}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -88,14 +88,14 @@ const ConfigList = () => {
                                     return (
                                         <tr key={cIndex} onClick={()=>{selectConfig(config)}}>
                                             <td>{index}</td>
-                                            <td>{selectedEntryType === entryTypes.materials ? config.materialType : config.wageType}</td>
-                                            <td>{selectedEntryType === entryTypes.materials ? config?.shopNames?.map((shopName, sindex) =>{
+                                            <td>{selectedEntryType === entryTypes.materials ? config.materialType : config.vendorType}</td>
+                                            <td>{selectedEntryType === entryTypes.materials ? config?.vendorNames?.map((vendorName, sindex) =>{
                                                 return(
-                                                    <span key={sindex}>{shopName + ", "}</span>
+                                                    <span key={sindex}>{vendorName + ", "}</span>
                                                 )
-                                            }) : config.wageNames?.map((wage, wIndex)=>{
+                                            }) : config.vendorNames?.map((vendor, wIndex)=>{
                                                 return(
-                                                    <span key={wIndex}>{wage + ", "} </span>
+                                                    <span key={wIndex}>{vendor + ", "} </span>
                                                 )
                                             })}</td>
                                         </tr>

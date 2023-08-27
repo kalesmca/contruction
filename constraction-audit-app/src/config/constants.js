@@ -8,28 +8,29 @@ export const POPUP_INIT_STATE = {
 }
 
 export const DB = {
-    // entyrList:"entries",
-    // configList:"configs"
-    entyrList:"liveConfig",
-    configList:"liveEntryList"
+    entyrList:"entries",
+    configList:"configs"
+    // entyrList:"liveConfig",
+    // configList:"liveEntryList"
 }
 
 export const entryType = {
-    wages:"WAGES",
+    vendors:"vendorS",
     materials:"MATERIALS"
 }
 
 export const INIT_CONFIG_STATE = {
     entryType: entryType.materials,
-    wageName: "",
-    shopName:"",
+    vendorName:"",
     natureOfWork: [],
     id:"",
     materialType:"",
-    wageType:"",
+    vendorType:"",
     configId:getDynamicId(),
-    shopNames:[''],
-    wageNames:['']
+    vendorNames:[''],
+    vendorNames:[''],
+    materials:['']
+    
     
 }
 
@@ -39,13 +40,12 @@ export const entryStatus = {
 }
 
 export const INIT_ENTRY = {
-    entryType:entryType.wages,
-    wageType:"",
+    entryType:entryType.vendors,
+    vendorType:"",
     materialType:"",
-    wageName:"",
-    shopName:"",
+    vendorName:"",
     shopList:"",
-    wageList:"",
+    vendorList:"",
     natureOfWorks:[],
     selectedNatureOfWork:{},
     billAmount:0,
@@ -54,7 +54,8 @@ export const INIT_ENTRY = {
     status:"",
     discount:0,
     totalPaidAmt:0,
-    workDate: new Date()
+    workDate: new Date(),
+    material:""
 }
 
 export const INIT_PAID_OBJ = {

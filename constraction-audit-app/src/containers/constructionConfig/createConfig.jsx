@@ -45,30 +45,30 @@ const ConfigComponent = () => {
     }
 
     const shopNamChange = (e, index) =>{
-        let temp = configObj.shopNames;
+        let temp = configObj.vendorNames;
         temp[index] = e.target.value;
-        setConfigObj({...configObj, shopNames:temp})
+        setConfigObj({...configObj, vendorNames:temp})
     }
 
-    const wageNamChange = (e, index) =>{
-        let temp = configObj.wageNames;
+    const vendorNamChange = (e, index) =>{
+        let temp = configObj.vendorNames;
         temp[index] = e.target.value;
-        setConfigObj({...configObj, wageNames:temp})
+        setConfigObj({...configObj, vendorNames:temp})
     }
 
     const addShop = () =>{
-        if(configObj.shopNames[configObj.shopNames.length-1]){
-            let temp = configObj.shopNames;
+        if(configObj.vendorNames[configObj.vendorNames.length-1]){
+            let temp = configObj.vendorNames;
             temp.push("")
-            setConfigObj({...configObj, shopNames:temp})
+            setConfigObj({...configObj, vendorNames:temp})
         }
         
     }
-    const addWage = () =>{
-        if(configObj.wageNames[configObj.wageNames.length-1]){
-            let temp = configObj.wageNames;
+    const addvendor = () =>{
+        if(configObj.vendorNames[configObj.vendorNames.length-1]){
+            let temp = configObj.vendorNames;
             temp.push("")
-            setConfigObj({...configObj, wageNames:temp})
+            setConfigObj({...configObj, vendorNames:temp})
         }
     }
     return (
@@ -80,12 +80,12 @@ const ConfigComponent = () => {
 
                         <Form.Check
                             inline
-                            label={entryType.wages}
+                            label={entryType.vendors}
                             name="entryType"
                             type={"radio"}
-                            id={`inline-${"wage"}-2`}
-                            defaultChecked={configObj.entryType === entryType.wages ? true : false}
-                            onClick={(e) => { setConfigObj({ ...configObj, entryType: entryType.wages }) }}
+                            id={`inline-${"vendor"}-2`}
+                            defaultChecked={configObj.entryType === entryType.vendors ? true : false}
+                            onClick={(e) => { setConfigObj({ ...configObj, entryType: entryType.vendors }) }}
                         />
                         <Form.Check
                             inline
@@ -102,16 +102,16 @@ const ConfigComponent = () => {
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridEmail">
                         {
-                            configObj.entryType === entryType.materials ? (<div>Shop Names <Button variant="primary" onClick={() => { addShop() }}>+</Button>{configObj.shopNames.map((shopName, shopIndex)=>{
+                            configObj.entryType === entryType.materials ? (<div>Shop Names <Button variant="primary" onClick={() => { addShop() }}>+</Button>{configObj.vendorNames.map((vendorName, shopIndex)=>{
                                 return(<> 
-                                <Form.Control type="text" placeholder=" Shop Name" value={shopName}
+                                <Form.Control type="text" placeholder=" Shop Name" value={vendorName}
                                     onChange={(e) => { shopNamChange(e, shopIndex)}}
                                 /></>) 
                             })} </div>) : 
-                            (<div>Wage Names <Button variant="primary" onClick={() => { addWage() }}>+</Button>{configObj.wageNames.map((wageName, wIndex)=>{
+                            (<div>vendor Names <Button variant="primary" onClick={() => { addvendor() }}>+</Button>{configObj.vendorNames.map((vendorName, wIndex)=>{
                                 return(<> 
-                                <Form.Control type="text" placeholder=" Wage Name" value={wageName}
-                                    onChange={(e) => { wageNamChange(e, wIndex)}}
+                                <Form.Control type="text" placeholder=" vendor Name" value={vendorName}
+                                    onChange={(e) => { vendorNamChange(e, wIndex)}}
                                 /></>) 
                             })} </div>)
                             
@@ -125,9 +125,9 @@ const ConfigComponent = () => {
                             configObj.entryType === entryType.materials ? (<> <Form.Label>Material Type</Form.Label>
                                 <Form.Control type="text" placeholder="ex: Electrical, Cement..." value={configObj.materialType}
                                     onChange={(e) => { setConfigObj({ ...configObj, materialType: e.target.value }) }}
-                                /></>) : (<> <Form.Label>Wage Type</Form.Label>
-                                    <Form.Control type="text" placeholder="Ex: Mason, Electrician" value={configObj.wageType}
-                                        onChange={(e) => { setConfigObj({ ...configObj, wageType: e.target.value }) }}
+                                /></>) : (<> <Form.Label>vendor Type</Form.Label>
+                                    <Form.Control type="text" placeholder="Ex: Mason, Electrician" value={configObj.vendorType}
+                                        onChange={(e) => { setConfigObj({ ...configObj, vendorType: e.target.value }) }}
                                     /></>)
                         }
 
