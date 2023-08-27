@@ -55,7 +55,9 @@ export const INIT_ENTRY = {
     discount:0,
     totalPaidAmt:0,
     workDate: new Date(),
-    material:""
+    material:"",
+    materialAmtList:[],
+    wagesAmtList:[]
 }
 
 export const INIT_PAID_OBJ = {
@@ -69,4 +71,11 @@ export const INIT_TOTAL_OBJ = {
     billAmt:0,
     pendingAmt:0,
     paidAmt:0
+}
+
+export const INIT_MATERIAL_AMT_OBJ = {
+    name:"",
+    qty:0,
+    price:0,
+    amount:0
 }

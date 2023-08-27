@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { entryType, INIT_ENTRY, INIT_PAID_OBJ, entryStatus } from '../../config/constants';
+import { entryType, INIT_ENTRY, INIT_PAID_OBJ, entryStatus, INIT_MATERIAL_AMT_OBJ } from '../../config/constants';
 
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -22,7 +22,7 @@ const EntryComponent = () => {
     const configState = useSelector((state) => state.appConfig)
     const dispatch = useDispatch()
     const [entryObj, setEntryObj] = useState(modalContext?.obj?.selectedEntry?.id ?modalContext.obj.selectedEntry:INIT_ENTRY);
-
+    const [materialAmtObj,setMaterialAmtObj ] = useState(INIT_MATERIAL_AMT_OBJ)
     const [paidAmtObj, setPaidAmtObj] = useState(INIT_PAID_OBJ);
 
     useEffect(() => {
@@ -55,6 +55,18 @@ const EntryComponent = () => {
             setPaidAmtObj(INIT_PAID_OBJ);
         }
 
+    }
+
+    const addMaterial = () =>{
+        if(entryObj.materialAmtList?.length){
+            let billAmt = entryObj.billAmount + parseInt(materialAmtObj.amount);
+            setEntryObj({ ...entryObj, materialAmtList: [...entryObj.materialAmtList, ...[materialAmtObj]], billAmount: billAmt })
+
+        } else {
+            setEntryObj({...entryObj, materialAmtList:[...entryObj.materialAmtList, ...[materialAmtObj]], billAmount: parseInt(materialAmtObj.amount)})
+        }
+        setMaterialAmtObj(INIT_MATERIAL_AMT_OBJ);
+        
     }
 
 
@@ -275,6 +287,70 @@ const EntryComponent = () => {
 
                         </Row>
 
+                    ) : ""
+                }
+                <div>Materials</div>
+                {
+                    entryObj.selectedNatureOfWork ? (
+                        <Table responsive>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Material</th>
+                                    <th>Price</th>
+                                    <th>Qty</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    entryObj.materialAmtList?.length ? entryObj.materialAmtList.map((material, entryIndex) => {
+                                        return (
+                                            <tr key={entryIndex}>
+                                                <td>{entryIndex + 1}</td>
+                                                <td>{material.name}</td>
+                                                <td>{material.price}</td>
+                                                <td>{material.qty}</td>
+                                                <td>{material.amount}</td>
+                                            </tr>
+                                        )
+                                    }) : <tr>
+                                        <td colSpan={5}><center>No Data Found</center></td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td colSpan={2}>
+                                        <Form.Control type="text" value={materialAmtObj.name} placeholder={"Material Name"}
+                                            onChange={(e) => { setMaterialAmtObj({ ...materialAmtObj, name: e.target.value }) }}
+                                        />
+                                    </td>
+                                    <td>
+                                        <Form.Control type="number" value={materialAmtObj.price} placeholder={"Price of Material"}
+                                            onChange={(e) => { setMaterialAmtObj({ ...materialAmtObj, price: e.target.value }) }}
+                                        />
+                                    </td>
+                                    <td>
+                                        <Form.Control type="number" value={materialAmtObj.qty} placeholder={"Quantity"}
+                                            onChange={(e) => { setMaterialAmtObj({ ...materialAmtObj, qty: e.target.value, amount:(parseFloat(e.target.value)* parseInt(materialAmtObj.price)) }) }}
+                                        />
+                                    </td>
+                                    <td>
+                                        <Form.Control type="number" value={materialAmtObj.amount} placeholder={"Amount"} disabled={true}
+                                            onChange={(e) => { setMaterialAmtObj({ ...materialAmtObj, amount: e.target.value }) }}
+                                        />
+                                    </td>
+                                    <td>
+                                        <span>
+                                            <Button variant="primary" onClick={() => { materialAmtObj.amount && addMaterial() }}>+</Button>{' '}
+                                        </span>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </Table>
                     ) : ""
                 }
                 {

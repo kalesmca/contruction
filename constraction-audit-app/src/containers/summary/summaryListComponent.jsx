@@ -111,7 +111,7 @@ const SummaryListComponent = () => {
                                     <tr key={entryIndex} >
 
                                         <td>{entryIndex + 1}</td>
-                                        <td>{entry.workDate}</td>
+                                        <td>{'ss'}</td>
                                         <td>{entry?.selectedNatureOfWork?.work}</td>
                                         <td>{entry.billAmount}</td>
                                         <td>{entry.totalPaidAmt}</td>
