@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { entryType, INIT_CONFIG_STATE } from '../../config/constants';
+import { entryType, INIT_CONFIG_STATE, POPUP_INIT_STATE } from '../../config/constants';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -40,7 +40,7 @@ const ConfigComponent = () => {
     }
 
     const cancel = () =>{
-        modalContext.setObj({...modalContext.obj, showPopup:false})  
+        modalContext.setObj({...modalContext.obj, ...POPUP_INIT_STATE})  
         setConfigObj(INIT_CONFIG_STATE)
     }
 
