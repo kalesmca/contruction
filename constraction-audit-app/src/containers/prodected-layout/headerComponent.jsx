@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { getConfigList } from "../../redux/actions/appConfig";
 import {useSelector, useDispatch} from 'react-redux';
+import { getEntryList } from "../../redux/actions/entry";
 
 const HeaderComponent = () => {
     const navigate = useNavigate();
@@ -13,9 +14,11 @@ const HeaderComponent = () => {
     const navigation = (path) => {
         navigate(path);
     }
-
+    console.log('appState:', appState)
     useEffect(() => {
-        
+        if (!appState?.entry?.entryList?.length) {
+            dispatch(getEntryList())
+        }
         if (!appState?.appConfig?.configList?.length) {
             dispatch(getConfigList());
         }
@@ -23,7 +26,7 @@ const HeaderComponent = () => {
     }, [])
     return (
         <div >
-            <div className="title">Kalees Gardening</div>
+            <div className="title">Sundari Gardening</div>
             <div>
                 {/* <div className="nav-links">
 
@@ -60,7 +63,7 @@ const HeaderComponent = () => {
         
             <NavDropdown.Divider />
 
-            <NavDropdown.Item onClick={()=> navigation("payment")}> Payment </NavDropdown.Item>
+            <NavDropdown.Item onClick={()=> navigation("payment")}> Bulk Payment </NavDropdown.Item>
 
             <NavDropdown.Divider />
 

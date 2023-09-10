@@ -9,8 +9,8 @@ export const POPUP_INIT_STATE = {
 }
 
 export const DB = {
-    entyrList:"entries",
-    configList:"configs"
+    entyrList:"liveEntryList",
+    configList:"liveConfig"
     // entyrList:"liveConfig",
     // configList:"liveEntryList"
 }
@@ -55,10 +55,12 @@ export const INIT_ENTRY = {
     status:"",
     discount:0,
     totalPaidAmt:0,
-    workDate: new Date(),
+    date: new Date(),
     material:"",
     materialAmtList:[],
-    wagesAmtList:[]
+    wagesAmtList:[],
+    comment:"",
+    isSelected:false
 }
 
 export const INIT_PAID_OBJ = {
@@ -78,7 +80,8 @@ export const INIT_MATERIAL_AMT_OBJ = {
     name:"",
     qty:0,
     price:0,
-    amount:0
+    amount:0,
+    charges:0
 }
 
 // New Code=====================================================================================================

@@ -137,7 +137,7 @@ const ConfigComponent = () => {
 
 
                 </Row>
-                <Row>
+                {/* <Row>
                   
 
                         <Table striped bordered hover>
@@ -170,7 +170,7 @@ const ConfigComponent = () => {
 
                             </tbody>
                         </Table>
-                </Row>
+                </Row> */}
                     <div className="bottom">
                     <Button variant="primary" onClick={() => { submit() }}>{modalContext.obj?.selectedConfig?.configId ? "Update" : "Save"}</Button>{' '}
 

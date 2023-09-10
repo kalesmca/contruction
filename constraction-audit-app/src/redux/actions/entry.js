@@ -1,6 +1,6 @@
 import { db } from "../../firebase-config";
 import { UPDATE_ENTRY_LIST, UPDATE_TOAST } from '../../config/actions';
-
+import {formatAppDate} from '../../config/utils';
 import { DB } from '../../config/constants'
 import {
     collection,
@@ -29,6 +29,7 @@ export const getEntryList = () => async(dispatch, getState) =>{
 
 export const addNewEntry = (obj) => async(dispatch, getState) =>{
     try{
+        obj.date = formatAppDate(obj.date)
         await addDoc(CollectionRef, obj).then((docRef) => {
             console.log("Document written with ID: ", docRef?.id);
             dispatch(getEntryList())
