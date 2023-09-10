@@ -65,9 +65,9 @@ const ConfigList = () => {
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
-                <div>
+                {/* <div>
                     <Button variant="primary" onClick={() => { newConfig() }}>+</Button>{' '}
-                </div>
+                </div> */}
 
             </div>
             <div>

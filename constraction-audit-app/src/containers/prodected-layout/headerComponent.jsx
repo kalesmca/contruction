@@ -56,15 +56,17 @@ const HeaderComponent = () => {
     <div className='link link-drop'>
         <NavDropdown title="Audit" id="basic-nav-dropdown">
             <NavDropdown.Item onClick={()=> navigation("new-entry")}>New</NavDropdown.Item>
-            <NavDropdown.Item onClick={()=> navigation("entry-list")}>
-            Entry-List
-            </NavDropdown.Item>
+            <NavDropdown.Item onClick={()=> navigation("entry-list")}>Entry-List</NavDropdown.Item>
+        
             <NavDropdown.Divider />
-           
-            
-            {/* <NavDropdown.Item onClick={()=> navigation("stock-dashboard")}>
-            {global.label.nav.dashboard}
-            </NavDropdown.Item> */}
+
+            <NavDropdown.Item onClick={()=> navigation("payment")}> Payment </NavDropdown.Item>
+
+            <NavDropdown.Divider />
+
+            <NavDropdown.Item onClick={()=> navigation("config")}> Config-List </NavDropdown.Item>
+            <NavDropdown.Item onClick={()=> navigation("new-config")}> New-Config </NavDropdown.Item>
+
             
         </NavDropdown>
         {/* <i className="fas fa-address-card" onClick={() => { navigation("/stock") }}></i>
