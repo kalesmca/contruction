@@ -10,6 +10,8 @@ import LoginComponent from './containers/login/login';
 import { ProtectedRoute } from './ProtectedRoute';
 import HomeLayout from './containers/home/homeLayout';
 import ConfigList from './containers/constructionConfig/configList';
+import NewEntryComponent from './containers/Audit/new-entry';
+import EntryListComponent from './containers/Audit/entry-list';
 function App() {
   return (
     <BrowserRouter>
@@ -18,8 +20,12 @@ function App() {
           <Route path="/" element={<LayoutContainer />}>
                 <Route index element={<LoginComponent />} />
                 <Route path="dashboard" element={<DashboardComponent />} />
-                <Route path="summary-list" element={<SummaryListComponent />} />
+                {/* <Route path="summary-list" element={<SummaryListComponent />} /> */}
                 <Route path="config" element={<ConfigList />} />
+                <Route path="new-entry" element={<NewEntryComponent />} />
+                <Route path="entry-List" element={<EntryListComponent />} />
+
+
 
                 {/* <Route path="*" element={<NotFoundComponent />} /> */}
                 

@@ -1,31 +1,5 @@
 import { getDynamicId } from "./utils";
 
-export const NATURE_OF_WORKS = [
-    {
-        id:"basemate-001",
-        name:"THONDA"
-    },
-    {
-        id:"basemate-002",
-        name:"FILL_PANNA"
-    },
-     {
-        id:"basemate-003",
-        name:"KALVARI"
-    },
-     {
-        id:"new-current-connection-001",
-        name:"NEW_CURRENT_CONNECTION"
-    },
-     {
-        id:"borewell-001",
-        name:"BOREWELL_TRACTER"
-    },
-     {
-        id:"borewell-002",
-        name:"BOREWELL_MOTOR_CONNECTION"
-    }
-]
 export const POPUP_INIT_STATE = {
     showPopup: false,
     componentName: "",
@@ -106,3 +80,32 @@ export const INIT_MATERIAL_AMT_OBJ = {
     price:0,
     amount:0
 }
+
+// New Code=====================================================================================================
+
+export const NATURE_OF_WORKS = [
+    {
+        id:"basemate-001",
+        name:"THONDA"
+    },
+    {
+        id:"basemate-002",
+        name:"BASE_FILL_PANNA"
+    },
+     {
+        id:"basemate-003",
+        name:"KALVARI"
+    },
+     {
+        id:"new-current-connection-001",
+        name:"NEW_CURRENT_CONNECTION"
+    },
+     {
+        id:"borewell-001",
+        name:"BOREWELL_TRACTER"
+    },
+     {
+        id:"borewell-002",
+        name:"BOREWELL_MOTOR_CONNECTION"
+    }
+]
