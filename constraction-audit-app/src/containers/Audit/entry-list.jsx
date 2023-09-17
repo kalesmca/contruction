@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import Table from 'react-bootstrap/Table';
-import { INIT_TOTAL_OBJ } from "../../config/constants";
+import { INIT_TOTAL_OBJ, entryType } from "../../config/constants";
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import 'react-date-range/dist/styles.css'; // main css file
@@ -11,11 +11,14 @@ import { addDays } from 'date-fns';
 import { DateRange } from 'react-date-range';
 import {formatAppDate} from '../../config/utils';
 import { ModalContext } from "../../utils/contexts";
+import Dropdown from 'react-bootstrap/Dropdown';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 const EntryListComponent = () => {
     const modalState = useContext(ModalContext);
-
+    const [selectedEntryType, setEntryType] = useState("MATERIALS")
     const dispatch = useDispatch();
     const appState = useSelector((state) => state);
     const [list, setList] = useState([]);
@@ -44,8 +47,18 @@ const EntryListComponent = () => {
         console.log('totObj:', totalObj)
     },[list])
     useEffect(() => {
-        setList(appState?.entry?.entryList)
+
+        let newEntryState = Object.assign({}, appState?.entry);
+        let newList = newEntryState?.entryList 
+        newList.sort(function(a,b){
+            return new Date(b.date) - new Date(a.date);
+          });
+        setList(newList)
     }, [appState])
+
+    useEffect(()=>{
+        // let tempList = Object.
+    },[selectedEntryType])
     console.log('list:', list, date)
     const onSelectRow = (index, e) => {
         console.log(e)
@@ -70,7 +83,11 @@ const EntryListComponent = () => {
         modalState.setObj({...modalState.obj, selectedEntry: selectedEntry,componentName:"entry", showPopup: true})
 
     }
-
+    function sortByDateDesc(a, b) {
+        return b.date - a.date;
+      }
+      
+      
     return (
         <div>
             <div>
@@ -81,6 +98,24 @@ const EntryListComponent = () => {
                     <Form.Control aria-label="Text input with checkbox" placeholder="Date Filter" disabled={true} value={formatAppDate(date[0]?.startDate) +" -TO- " + date[0]?.endDate }/>
 
                 </InputGroup>
+                <Dropdown className="d-inline mx-2" value={selectedEntryType} >
+                                <Dropdown.Toggle id="dropdown-autoclose-true">
+                                    {selectedEntryType}
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    {
+                                        Object.keys(entryType).map((key, kIndex) => {
+                                            return (<Dropdown.Item index={kIndex} value={entryType[key]} onClick={(e) => { setEntryType(entryType[key]) }}>{entryType[key]}</Dropdown.Item>)
+
+                                        })
+                                    }
+
+                                    <Dropdown.Divider />
+                                    <Dropdown.Item value={"ALL"} onClick={(e) => { setEntryType("ALL") }}>ALL</Dropdown.Item>
+
+                                </Dropdown.Menu>
+                            </Dropdown>
             </div>
             {
                 isDateFilter && (
