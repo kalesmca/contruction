@@ -342,18 +342,19 @@ const NewEntryComponent = () => {
                         </Row>
 
                     
-                <div>Materials</div>
+                <div>Materials/Wages </div>
                 {
                     entryObj.selectedNatureOfWork ? (
                         <Table responsive>
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Material</th>
+                                    <th>Material/Wage</th>
                                     <th>Price</th>
                                     <th>Qty</th>
                                     <th>charges</th>
                                     <th>Total</th>
+                                    <th>Comments</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -397,7 +398,7 @@ const NewEntryComponent = () => {
                                                         </td>
                                                         
                                                         <td>
-                                                            <Form.Control id="comment" type="text" value={material.comment} placeholder={"Comments"} disabled={true}
+                                                            <Form.Control id="comment" type="text" value={material.comment} placeholder={"Comments"} 
                                                             onChange={(e) => { updateMaterial(e, mIndex) }}
                                                                 // onChange={(e) => { updateMaterial({ ...materialAmtObj, comment: e.target.value }) }}
                                                             />
@@ -455,7 +456,7 @@ const NewEntryComponent = () => {
                                         </span>
                                     </td>
                                     <td>
-                                        <Form.Control type="text" value={materialAmtObj.comment} placeholder={"Comments"} disabled={true}
+                                        <Form.Control type="text" value={materialAmtObj.comment} placeholder={"Comments"} 
                                             onChange={(e) => { setMaterialAmtObj({ ...materialAmtObj, comment: e.target.value }) }}
                                         />
                                     </td>
