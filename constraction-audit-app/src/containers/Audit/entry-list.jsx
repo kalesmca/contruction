@@ -100,35 +100,35 @@ const EntryListComponent = () => {
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Selection</th>
+                            {/* <th>Selection</th> */}
                             <th>Date</th>
                             <th>Work</th>
                             <th>Bill Amt</th>
                             <th>Paid Amt</th>
                             <th>Pending Amt</th>
-                            <th>Action</th>
+                            {/* <th>Action</th> */}
                         </tr>
                     </thead>
                     <tbody>
                         {
                             list?.length ? list.map((entry, entryIndex) => {
                                 return (
-                                    <tr key={entryIndex} >
+                                    <tr key={entryIndex}  onClick={()=>{viewEntry(entry)}}>
 
                                         <td>{entryIndex + 1}</td>
-                                        <td>
+                                        {/* <td>
                                             <InputGroup className="mb-3">
                                                 <InputGroup.Checkbox aria-label="Checkbox for following text input" checked={entry.isSelected}
                                                     onChange={(e) => { onSelectRow(entryIndex, e) }}
                                                 />
                                             </InputGroup>
-                                        </td>
+                                        </td> */}
                                         <td>{entry.date}</td>
                                         <td>{entry?.selectedNatureOfWork?.name}</td>
                                         <td>{entry.billAmount}</td>
                                         <td>{entry.totalPaidAmt}</td>
                                         <td>{entry.pendingAmount}</td>
-                                        <td onClick={()=>{viewEntry(entry)}}>View</td>
+                                        {/* <td onClick={()=>{viewEntry(entry)}}>View</td> */}
                                     </tr>
                                 )
                             }) : (<tr>
@@ -139,7 +139,7 @@ const EntryListComponent = () => {
                         {
                             list.length && (
                                 <tr>
-                                    <td colSpan={4}><center><b>Total</b></center> </td>
+                                    <td colSpan={3}><center><b>Total</b></center> </td>
                                     <td>{totalObj.billAmt}</td>
                                     <td>{totalObj.paidAmt}</td>
                                     <td>{totalObj.pendingAmt}</td>
