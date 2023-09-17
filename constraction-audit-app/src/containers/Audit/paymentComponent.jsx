@@ -9,6 +9,7 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { addDays } from 'date-fns';
 import { DateRange } from 'react-date-range';
 import {formatAppDate} from '../../config/utils';
+import { json } from "react-router";
 // import {}
 
 const PaymentComponent = () => {
@@ -27,6 +28,18 @@ const PaymentComponent = () => {
     useEffect(()=>{
         filterByDate()
     },[date])
+    useEffect(()=>{
+        let tempObj = JSON.parse(JSON.stringify(INIT_TOTAL_OBJ)) 
+        list.map((item)=>{
+            tempObj.billAmt += item.billAmount; 
+            tempObj.paidAmt += item.totalPaidAmt; 
+            tempObj.pendingAmt += item.pendingAmount; 
+        })
+        console.log(tempObj);
+       
+        setTotalObj({...totalObj, billAmt:tempObj.billAmt, paidAmt: tempObj.paidAmt, pendingAmt: tempObj.pendingAmt})
+        console.log('totObj:', totalObj)
+    },[list])
     useEffect(() => {
         setList(appState?.entry?.entryList)
     }, [appState])
@@ -118,7 +131,7 @@ const PaymentComponent = () => {
                             </tr>)
                         }
                         {
-                            !list.length && (
+                            list.length && (
                                 <tr>
                                     <td colSpan={4}><center><b>Total</b></center> </td>
                                     <td>{totalObj.billAmt}</td>
