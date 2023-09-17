@@ -110,6 +110,42 @@ const NewEntryComponent = () => {
          setEntryObj(INIT_ENTRY)
     }
 
+    const updateMaterial = (e, index) =>{
+        let newMList = entryObj.materialAmtList.map((material, i)=>{
+            if(i===index){
+                return {...material, [e.target.id]: e.target.value}
+            } else{
+                return material;
+            }
+
+        })
+        setEntryObj({...entryObj, materialAmtList:newMList})
+    }
+
+    const modifyAmount = (index) => {
+        let newList = entryObj.materialAmtList.map((material, i)=>{
+            if(i===index){
+                if (material.price && material.qty) {
+                    return { ...material, amount: parseInt(material.charges) + (parseInt(material.price) * parseInt(material.qty)) }
+                } else {
+                    return material;
+                }
+
+            } else {
+                return material;
+            }
+        })
+        let billAmt = 0;
+        newList.map((data) =>{
+            billAmt += parseInt(data.amount);
+            
+        })
+        let pendingAmount = billAmt - entryObj.totalPaidAmt ;
+        setEntryObj({...entryObj, materialAmtList:newList, pendingAmount: pendingAmount, billAmount: billAmt})
+       
+    }
+    
+
     return (
         <div className="entry-container">
             <Form >
@@ -322,21 +358,70 @@ const NewEntryComponent = () => {
                             </thead>
                             <tbody>
                                 {
-                                    entryObj.materialAmtList?.length ? entryObj.materialAmtList.map((material, entryIndex) => {
-                                        return (
-                                            <tr key={entryIndex}>
-                                                <td>{entryIndex + 1}</td>
-                                                <td>{material.name}</td>
-                                                <td>{material.price}</td>
-                                                <td>{material.qty}</td>
-                                                <td>{material.charges}</td>
+                                    modalContext?.obj?.selectedEntry?.id ?
 
-                                                <td>{material.amount}</td>
-                                            </tr>
-                                        )
-                                    }) : <tr>
-                                        <td colSpan={5}><center>No Data Found</center></td>
-                                    </tr>
+                                        entryObj.materialAmtList.map((material, mIndex) => {
+                                            return (
+                                                    <tr key={mIndex}>
+                                                        <td colSpan={2}>
+                                                            <Form.Control id="name" type="text" value={material.name} placeholder={"Material Name"}
+                                                                onChange={(e) => { updateMaterial(e, mIndex) }}
+                                                            />
+                                                        </td>
+                                                        <td>
+                                                            <Form.Control id="price" type="number" value={material.price} placeholder={"Price of Material"} 
+                                                            onChange={(e) => { updateMaterial(e, mIndex) }}
+                                                            onBlur={()=>{modifyAmount(mIndex)}}
+                                                                // onChange={(e) => { updateMaterial({ ...materialAmtObj, price: e.target.value ? parseInt(e.target.value) : 0 }) }}
+                                                            />
+                                                        </td>
+                                                        <td>
+                                                            <Form.Control id="qty" type="number" value={material.qty} placeholder={"Quantity"}
+                                                            onChange={(e) => { updateMaterial(e, mIndex) }}
+                                                            onBlur={()=>{modifyAmount(mIndex)}}
+                                                                // onChange={(e) => { updateMaterial({ ...materialAmtObj, qty: e.target.value ? parseInt(e.target.value) : 1 }) }} onBlur={() => { updateAmount() }}
+                                                            />
+                                                        </td>
+                                                        <td>
+                                                            <Form.Control id="charges" type="number" value={material.charges} placeholder="Charges"
+                                                            onChange={(e) => { updateMaterial(e, mIndex) }}
+                                                            onBlur={()=>{modifyAmount(mIndex)}}
+                                                                // onChange={(e) => { updateMaterial({ ...materialAmtObj, charges: e.target.value ? parseInt(e.target.value) : 0 }) }} onBlur={() => { updateAmount() }}
+                                                            />
+                                                        </td>
+                                                        <td>
+                                                            <Form.Control id="amount" type="number" value={material.amount} placeholder={"Amount"} disabled={true}
+                                                            onChange={(e) => { updateMaterial(e, mIndex) }}
+                                                                // onChange={(e) => { updateMaterial({ ...materialAmtObj, amount: e.target.value }) }}
+                                                            />
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            <Form.Control id="comment" type="text" value={material.comment} placeholder={"Comments"} disabled={true}
+                                                            onChange={(e) => { updateMaterial(e, mIndex) }}
+                                                                // onChange={(e) => { updateMaterial({ ...materialAmtObj, comment: e.target.value }) }}
+                                                            />
+                                                        </td>
+                                                        <td>
+
+                                                        </td>
+                                                    </tr>
+                                            )
+                                        }) : entryObj.materialAmtList?.length ? entryObj.materialAmtList.map((material, entryIndex) => {
+                                            return (
+                                                <tr key={entryIndex}>
+                                                    <td>{entryIndex + 1}</td>
+                                                    <td>{material.name}</td>
+                                                    <td>{material.price}</td>
+                                                    <td>{material.qty}</td>
+                                                    <td>{material.charges}</td>
+                                                    <td>{material.amount}</td>
+                                                    <td>{material.comment}</td>
+                                                </tr>
+                                            )
+                                        }) : (<tr>
+                                            <td colSpan={5}><center>No Data Found</center></td>
+                                        </tr>)
                                 }
                                 <tr>
                                     <td colSpan={2}>
@@ -368,6 +453,11 @@ const NewEntryComponent = () => {
                                         <span>
                                             <Button variant="primary" onClick={() => { materialAmtObj.amount && addMaterial() }}>+</Button>{' '}
                                         </span>
+                                    </td>
+                                    <td>
+                                        <Form.Control type="text" value={materialAmtObj.comment} placeholder={"Comments"} disabled={true}
+                                            onChange={(e) => { setMaterialAmtObj({ ...materialAmtObj, comment: e.target.value }) }}
+                                        />
                                     </td>
                                     <td>
 

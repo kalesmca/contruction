@@ -81,7 +81,8 @@ export const INIT_MATERIAL_AMT_OBJ = {
     qty:0,
     price:0,
     amount:0,
-    charges:0
+    charges:0,
+    comment:""
 }
 
 // New Code=====================================================================================================
