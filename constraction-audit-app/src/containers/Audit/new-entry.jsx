@@ -10,7 +10,7 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { useSelector, useDispatch } from 'react-redux';
 import Alert from 'react-bootstrap/Alert';
-import { addNewEntry } from "../../redux/actions/entry";
+import { addNewEntry, updateEntry } from "../../redux/actions/entry";
 import { getConfigList } from '../../redux/actions/appConfig';
 import { ModalContext } from "../../utils/contexts";
 import { formatAppDate } from "../../config/utils";
@@ -102,6 +102,12 @@ const NewEntryComponent = () => {
 
         }
 
+    }
+
+    const updateData = () =>{
+         dispatch(updateEntry(entryObj))
+         modalContext.setObj({...modalContext.obj, showPopup:false})  
+         setEntryObj(INIT_ENTRY)
     }
 
     return (
@@ -463,7 +469,10 @@ const NewEntryComponent = () => {
                 </Row>
                 <Row className="mb-3">
                     <center>
-                        <Button variant="primary" onClick={() => { saveEntry() }}>Save</Button>{' '}
+                        {
+                            modalContext?.obj?.selectedEntry?.id ? (<Button variant="primary" onClick={() => { updateData() }}>Update</Button>) : (<Button variant="primary" onClick={() => { saveEntry() }}>Save</Button>)
+                        }
+                        
 
                     </center>
                 </Row>

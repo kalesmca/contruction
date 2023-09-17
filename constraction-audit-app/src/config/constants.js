@@ -110,5 +110,13 @@ export const NATURE_OF_WORKS = [
      {
         id:"borewell-002",
         name:"BOREWELL_MOTOR_CONNECTION"
+    },
+    {
+        id:"septictank-001",
+        name:"SEPTIC_TANK"
+    },
+    {
+        id:"JCP_WORK",
+        name:"JCP_WORK"
     }
 ]

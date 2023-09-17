@@ -28,6 +28,14 @@ export const  updateConfig = async(newObj) =>{
      
 }
 
+export const  updateEntry = async(newObj) =>{
+  const userDoc = doc(db, DB.entyrList, newObj.id);
+  await updateDoc(userDoc, newObj); 
+
+   
+}
+
+
 export const  updateEvent = async(newObj) =>{
   const userDoc = doc(db, DB.EVENTS, newObj.id);
   await updateDoc(userDoc, newObj); 

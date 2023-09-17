@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Table from 'react-bootstrap/Table';
 import { useSelector, useDispatch } from 'react-redux';
 import { getConfigList } from "../../redux/actions/appConfig";
-import { getEntryList } from "../../redux/actions/entry";
+import { getEntryList, updateEntry } from "../../redux/actions/entry";
 import { INIT_TOTAL_OBJ } from "../../config/constants";
 import {deleteEntryByDoc} from '../../redux/API/apiService';
 import "./summary.scss"

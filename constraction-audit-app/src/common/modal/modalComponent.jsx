@@ -3,10 +3,11 @@ import Modal from 'react-bootstrap/Modal';
 import ConfigComponent from "../../containers/constructionConfig/createConfig";
 import EntryComponent from "../../containers/summary/entryComponent";
 import { ModalContext } from "../../utils/contexts";
+import NewEntryComponent from "../../containers/Audit/new-entry";
 
 import { POPUP_INIT_STATE } from "../../config/constants";
 const componentObj = {
-    entry : EntryComponent,
+    entry : NewEntryComponent,
     config: ConfigComponent
   }
 const ModalComponent = () =>{
