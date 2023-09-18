@@ -178,6 +178,15 @@ const NewEntryComponent = () => {
                             onClick={(e) => { setEntryObj({ ...entryObj, entryType: entryType.materials }) }}
                             id={`inline-${'materials'}-2`}
                         />
+                        <Form.Check
+                            inline
+                            label={entryType.others}
+                            name="entryType"
+                            type={"radio"}
+                            defaultChecked={entryObj.entryType === entryType.others ? true : false}
+                            onClick={(e) => { setEntryObj({ ...entryObj, entryType: entryType.others }) }}
+                            id={`inline-${'materials'}-2`}
+                        />
                     </Form.Group>
 
                 </Row>

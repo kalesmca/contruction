@@ -17,7 +17,8 @@ export const DB = {
 
 export const entryType = {
     vendors:"vendorS",
-    materials:"MATERIALS"
+    materials:"MATERIALS",
+    others:"OTHERS"
 }
 
 export const INIT_CONFIG_STATE = {
