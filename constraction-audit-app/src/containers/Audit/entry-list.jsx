@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import Table from 'react-bootstrap/Table';
-import { INIT_TOTAL_OBJ, entryType } from "../../config/constants";
+import { INIT_TOTAL_OBJ, entryType, INIT_DATE_RANGE } from "../../config/constants";
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import 'react-date-range/dist/styles.css'; // main css file
@@ -18,22 +18,15 @@ import Col from 'react-bootstrap/Col';
 
 const EntryListComponent = () => {
     const modalState = useContext(ModalContext);
-    const [selectedEntryType, setEntryType] = useState("MATERIALS")
+    const [selectedEntryType, setEntryType] = useState("ALL")
     const dispatch = useDispatch();
     const appState = useSelector((state) => state);
     const [list, setList] = useState([]);
     const [isDateFilter, setDateFilterFlag] = useState(false)
     const [totalObj, setTotalObj] = useState(INIT_TOTAL_OBJ);
-    const [date, setDate] = useState([
-        {
-            startDate: new Date(),
-            endDate: null,
-            key: 'selection'
-        }
-    ]);
-    useEffect(()=>{
-        filterByDate()
-    },[date])
+    const [date, setDate] = useState(INIT_DATE_RANGE);
+    console.log('date',date)
+   
     useEffect(()=>{
         let tempObj = JSON.parse(JSON.stringify(INIT_TOTAL_OBJ)) 
         list.map((item)=>{
@@ -57,8 +50,8 @@ const EntryListComponent = () => {
     }, [appState])
 
     useEffect(()=>{
-        // let tempList = Object.
-    },[selectedEntryType])
+        queryByList();
+    },[selectedEntryType, date])
     console.log('list:', list, date)
     const onSelectRow = (index, e) => {
         console.log(e)
@@ -83,9 +76,28 @@ const EntryListComponent = () => {
         modalState.setObj({...modalState.obj, selectedEntry: selectedEntry,componentName:"entry", showPopup: true})
 
     }
-    function sortByDateDesc(a, b) {
-        return b.date - a.date;
-      }
+    
+    const queryByList = () =>{
+        let entryState = Object.assign({}, appState?.entry);
+        let queryList = entryState?.entryList; 
+        if(selectedEntryType !== "ALL"){
+            queryList = queryList.filter((data)=>{
+                return data.entryType === selectedEntryType
+            })
+        }
+        if(date[0].endDate){
+             queryList = queryList.filter((data)=> {
+                let entryDate= new Date(data.date)
+                if(entryDate>=date[0].startDate && entryDate<= date[0].endDate)
+                {
+                    return data;
+                }
+            })
+            
+
+        }
+        setList([...queryList]) 
+    }
       
       
     return (

@@ -85,6 +85,14 @@ export const INIT_MATERIAL_AMT_OBJ = {
     comment:""
 }
 
+export const INIT_DATE_RANGE=[
+{
+    startDate: new Date(),
+    endDate: null,
+    key: 'selection'
+}
+]
+
 // New Code=====================================================================================================
 
 export const NATURE_OF_WORKS = [
