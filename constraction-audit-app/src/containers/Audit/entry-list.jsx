@@ -19,6 +19,9 @@ import "./entry-list.scss";
 const EntryListComponent = () => {
     const modalState = useContext(ModalContext);
     const [selectedEntryType, setEntryType] = useState("ALL")
+    const [selectedType, setType] = useState("ALL")
+    const [typeList, setTypeList] = useState([])
+
     const dispatch = useDispatch();
     const appState = useSelector((state) => state);
     const [list, setList] = useState([]);
@@ -49,9 +52,12 @@ const EntryListComponent = () => {
         setList(newList)
     }, [appState])
 
+    
     useEffect(()=>{
+        
         queryByList();
-    },[selectedEntryType, date])
+    },[selectedEntryType, date, selectedType])
+    
     console.log('list:', list, date)
     const onSelectRow = (index, e) => {
         console.log(e)
@@ -93,10 +99,27 @@ const EntryListComponent = () => {
                     return data;
                 }
             })
-            
-
+        }
+        if(selectedType !== "ALL"){
+            queryList = queryList.filter((data)=>{
+                return data.materialType === selectedType || data.vendorType === selectedType
+            })
         }
         setList([...queryList]) 
+    }
+
+    const selectEntry = (data) =>{
+        setEntryType(data);
+        if(data !== 'ALL'){
+            let tempList = [];
+            appState.appConfig.configList.map((config) =>{
+                if(config.entryType === data){
+                    tempList.push(config.materialType? config.materialType:config.vendorType)
+                }
+            })
+            setTypeList(tempList)
+
+        }
     }
       
       
@@ -118,16 +141,39 @@ const EntryListComponent = () => {
                     <Dropdown.Menu>
                         {
                             Object.keys(entryType).map((key, kIndex) => {
-                                return (<Dropdown.Item index={kIndex} value={entryType[key]} onClick={(e) => { setEntryType(entryType[key]) }}>{entryType[key]}</Dropdown.Item>)
+                                return (<Dropdown.Item index={kIndex} value={entryType[key]} onClick={(e) => { selectEntry(entryType[key]) }}>{entryType[key]}</Dropdown.Item>)
 
                             })
                         }
 
                         <Dropdown.Divider />
-                        <Dropdown.Item value={"ALL"} onClick={(e) => { setEntryType("ALL") }}>ALL</Dropdown.Item>
+                        <Dropdown.Item value={"ALL"} onClick={(e) => { selectEntry("ALL") }}>ALL</Dropdown.Item>
 
                     </Dropdown.Menu>
                 </Dropdown>
+                {
+                    typeList?.length ? (
+                        <Dropdown className="d-inline mx-2" value={selectedType} >
+                            <Dropdown.Toggle id="dropdown-autoclose-true">
+                                {selectedType}
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                {
+                                    typeList.map((type, kIndex) => {
+                                        return (<Dropdown.Item index={kIndex} value={type} onClick={(e) => { setType(type) }}>{type}</Dropdown.Item>)
+
+                                    })
+                                }
+
+                                <Dropdown.Divider />
+                                <Dropdown.Item value={"ALL"} onClick={(e) => { setType("ALL") }}>ALL</Dropdown.Item>
+
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    ) : ""
+                }
+                
                 {
                     isDateFilter && (
                         <div className="date-pic">
