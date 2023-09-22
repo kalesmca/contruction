@@ -1,0 +1,12 @@
+.list-container{
+    .query-container{
+        position: relative;
+        .date-pic{
+            position: absolute;
+        }
+    }
+    .table-container{
+        height: 800px;
+        overflow: scroll;
+    }
+}

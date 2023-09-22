@@ -14,7 +14,7 @@ import { ModalContext } from "../../utils/contexts";
 import Dropdown from 'react-bootstrap/Dropdown';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import "./entry-list.scss";
 
 const EntryListComponent = () => {
     const modalState = useContext(ModalContext);
@@ -101,48 +101,49 @@ const EntryListComponent = () => {
       
       
     return (
-        <div>
-            <div>
+        <div className="list-container">
+            <div className="query-container">
                 <InputGroup className="mb-3">
                     <InputGroup.Checkbox aria-label="Checkbox for following text input" checked={isDateFilter}
                         onChange={(e) => { setDateFilterFlag(e.target.checked) }}
-                    /> 
-                    <Form.Control aria-label="Text input with checkbox" placeholder="Date Filter" disabled={true} value={formatAppDate(date[0]?.startDate) +" -TO- " + date[0]?.endDate }/>
+                    />
+                    <Form.Control aria-label="Text input with checkbox" placeholder="Date Filter" disabled={true} value={formatAppDate(date[0]?.startDate) + " -TO- " + date[0]?.endDate} />
 
                 </InputGroup>
                 <Dropdown className="d-inline mx-2" value={selectedEntryType} >
-                                <Dropdown.Toggle id="dropdown-autoclose-true">
-                                    {selectedEntryType}
-                                </Dropdown.Toggle>
+                    <Dropdown.Toggle id="dropdown-autoclose-true">
+                        {selectedEntryType}
+                    </Dropdown.Toggle>
 
-                                <Dropdown.Menu>
-                                    {
-                                        Object.keys(entryType).map((key, kIndex) => {
-                                            return (<Dropdown.Item index={kIndex} value={entryType[key]} onClick={(e) => { setEntryType(entryType[key]) }}>{entryType[key]}</Dropdown.Item>)
+                    <Dropdown.Menu>
+                        {
+                            Object.keys(entryType).map((key, kIndex) => {
+                                return (<Dropdown.Item index={kIndex} value={entryType[key]} onClick={(e) => { setEntryType(entryType[key]) }}>{entryType[key]}</Dropdown.Item>)
 
-                                        })
-                                    }
+                            })
+                        }
 
-                                    <Dropdown.Divider />
-                                    <Dropdown.Item value={"ALL"} onClick={(e) => { setEntryType("ALL") }}>ALL</Dropdown.Item>
+                        <Dropdown.Divider />
+                        <Dropdown.Item value={"ALL"} onClick={(e) => { setEntryType("ALL") }}>ALL</Dropdown.Item>
 
-                                </Dropdown.Menu>
-                            </Dropdown>
+                    </Dropdown.Menu>
+                </Dropdown>
+                {
+                    isDateFilter && (
+                        <div className="date-pic">
+                            <DateRange
+                                editableDateInputs={true}
+                                onChange={item => setDate([item.selection])}
+                                moveRangeOnFirstSelection={false}
+                                ranges={date}
+                            />
+                        </div>
+                    )
+                }
             </div>
-            {
-                isDateFilter && (
-                    <div>
-                <DateRange
-                    editableDateInputs={true}
-                    onChange={item => setDate([item.selection])}
-                    moveRangeOnFirstSelection={false}
-                    ranges={date}
-                />
-            </div>
-                )
-            }
             
-            <div>
+            
+            <div className="table-container">
                 <Table responsive="sm">
                     <thead>
                         <tr>

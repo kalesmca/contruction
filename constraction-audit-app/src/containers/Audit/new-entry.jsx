@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { entryType, INIT_ENTRY, INIT_PAID_OBJ, entryStatus, INIT_MATERIAL_AMT_OBJ, NATURE_OF_WORKS } from '../../config/constants';
+import { entryType, INIT_ENTRY, INIT_PAID_OBJ, entryStatus, INIT_MATERIAL_AMT_OBJ, NATURE_OF_WORKS, PRESELECT_MASON_LIST } from '../../config/constants';
 
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -14,6 +14,7 @@ import { addNewEntry, updateEntry } from "../../redux/actions/entry";
 import { getConfigList } from '../../redux/actions/appConfig';
 import { ModalContext } from "../../utils/contexts";
 import { formatAppDate } from "../../config/utils";
+import InputGroup from 'react-bootstrap/InputGroup';
 
 import "./new-entry.scss"
 
@@ -25,6 +26,7 @@ const NewEntryComponent = () => {
     const [entryObj, setEntryObj] = useState(modalContext?.obj?.selectedEntry?.id ? modalContext.obj.selectedEntry : INIT_ENTRY);
     const [materialAmtObj, setMaterialAmtObj] = useState(INIT_MATERIAL_AMT_OBJ)
     const [paidAmtObj, setPaidAmtObj] = useState(INIT_PAID_OBJ);
+    const [isPreselectMason, setPreselectMason] = useState(false)
     useEffect(() => {
         console.log('entry:', entryObj, materialAmtObj)
     })
@@ -34,6 +36,15 @@ const NewEntryComponent = () => {
         }
         console.log('obj:', entryObj)
     }, [])
+    useEffect(()=>{
+        if(isPreselectMason){
+            addPreselectList()
+        }
+    },[isPreselectMason])
+
+    const addPreselectList = () =>{
+        setEntryObj({...entryObj, materialAmtList:PRESELECT_MASON_LIST, billAmount:1950, pendingAmount:1950 })
+    }
 
     const setEntryType = (selectedConfig) => {
         if (entryObj.entryType === entryType.vendors) {
@@ -126,7 +137,7 @@ const NewEntryComponent = () => {
         let newList = entryObj.materialAmtList.map((material, i)=>{
             if(i===index){
                 if (material.price && material.qty) {
-                    return { ...material, amount: parseInt(material.charges) + (parseInt(material.price) * parseInt(material.qty)) }
+                    return { ...material, amount: parseInt(material.charges) + (parseFloat(material.price) * parseInt(material.qty)) }
                 } else {
                     return material;
                 }
@@ -247,6 +258,19 @@ const NewEntryComponent = () => {
 
                         </>
                     )}
+                    {
+                       entryObj.vendorType==="Mason" ? (
+                            
+                            <InputGroup className="">
+                                <InputGroup.Checkbox aria-label="Checkbox for following text input" checked={isPreselectMason}
+                                    onChange={(e) => { setPreselectMason(e.target.checked) }}
+                                />
+                            </InputGroup>
+                            
+                            
+                        
+                       ) : ""
+                    }
 
 
                     <Form.Group as={Col} controlId="formGridEmail" style={{ marginTop: "-30px" }}>
@@ -368,7 +392,7 @@ const NewEntryComponent = () => {
                             </thead>
                             <tbody>
                                 {
-                                    modalContext?.obj?.selectedEntry?.id ?
+                                    modalContext?.obj?.selectedEntry?.id || isPreselectMason ?
 
                                         entryObj.materialAmtList.map((material, mIndex) => {
                                             return (
@@ -441,7 +465,7 @@ const NewEntryComponent = () => {
                                     </td>
                                     <td>
                                         <Form.Control type="number" value={materialAmtObj.price} placeholder={"Price of Material"} onBlur={() => { updateAmount() }}
-                                            onChange={(e) => { setMaterialAmtObj({ ...materialAmtObj, price: e.target.value ? parseInt(e.target.value) : 0 }) }}
+                                            onChange={(e) => { setMaterialAmtObj({ ...materialAmtObj, price: e.target.value ? parseFloat(e.target.value) : 0 }) }}
                                         />
                                     </td>
                                     <td>
@@ -461,14 +485,15 @@ const NewEntryComponent = () => {
                                     </td>
                                     <td>
                                         <span>
-                                            <Button variant="primary" onClick={() => { materialAmtObj.amount && addMaterial() }}>+</Button>{' '}
-                                        </span>
-                                    </td>
-                                    <td>
                                         <Form.Control type="text" value={materialAmtObj.comment} placeholder={"Comments"} 
                                             onChange={(e) => { setMaterialAmtObj({ ...materialAmtObj, comment: e.target.value }) }}
                                         />
+                                        </span>
+                                        <span>
+                                            <Button variant="primary" onClick={() => { materialAmtObj.amount && addMaterial() }}>+</Button>{' '}
+                                        </span>
                                     </td>
+                                    
                                     <td>
 
                                     </td>

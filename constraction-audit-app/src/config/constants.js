@@ -86,6 +86,33 @@ export const INIT_MATERIAL_AMT_OBJ = {
     comment:""
 }
 
+export const PRESELECT_MASON_LIST = [
+    {
+        name:"Kothanaar",
+        qty:1,
+        price:800,
+        amount:800,
+        charges:0,
+        comment:""
+    },
+    {
+        name:"PeriAal",
+        qty:1,
+        price:700,
+        amount:700,
+        charges:0,
+        comment:""
+    },
+    {
+        name:"SithaAl",
+        qty:1,
+        price:450,
+        amount:450,
+        charges:0,
+        comment:""
+    }
+]
+
 export const INIT_DATE_RANGE=[
 {
     startDate: new Date(),
@@ -128,5 +155,13 @@ export const NATURE_OF_WORKS = [
     {
         id:"JCP_WORK",
         name:"JCP_WORK"
+    },
+    {
+        id:"Sengal-katty",
+        name:"SENGAL_KATTU"
+    },
+    {
+        id:"Belt-Congrete",
+        name:"BELT_CONGRETE_BEEM"
     }
 ]
