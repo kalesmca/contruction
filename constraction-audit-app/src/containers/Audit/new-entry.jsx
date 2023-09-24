@@ -344,7 +344,7 @@ const NewEntryComponent = () => {
                             <Form.Label>Nature of Work</Form.Label>
 
                             <Form.Group as={Col} controlId="workNature">
-                            <Form.Select aria-label="Default select example" value={entryObj.selectedNatureOfWork?.name}>
+                            {/* <Form.Select aria-label="Default select example" value={entryObj.selectedNatureOfWork?.name}>
                                 {
                                     NATURE_OF_WORKS.map((work, wIndex) => {
                                         return(<option key={wIndex} value={work.name} 
@@ -353,8 +353,8 @@ const NewEntryComponent = () => {
                                     })
                                 }
                                 
-                            </Form.Select>
-                                {/* <Dropdown className="d-inline mx-2" value={entryObj.selectedNatureOfWork?.name} >
+                            </Form.Select> */}
+                                <Dropdown className="d-inline mx-2" value={entryObj.selectedNatureOfWork?.name} >
                                     <Dropdown.Toggle id="dropdown-autoclose-true">
                                         {entryObj.selectedNatureOfWork?.name ? entryObj.selectedNatureOfWork.name : "Select"}
                                     </Dropdown.Toggle>
@@ -371,7 +371,7 @@ const NewEntryComponent = () => {
                                             })
                                         }
                                     </Dropdown.Menu>
-                                </Dropdown> */}
+                                </Dropdown>
                             </Form.Group>
 
                             <Form.Group as={Col} controlId="formGridEmail" style={{ marginTop: "-30px" }}>
