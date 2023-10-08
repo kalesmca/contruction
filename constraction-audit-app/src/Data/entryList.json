@@ -1,0 +1,2883 @@
+[
+    {
+      "vendorType": "",
+      "material": "",
+      "totalPaidAmt": 0,
+      "discount": 0,
+      "shopList": "",
+      "paidAmountList": [],
+      "selectedNatureOfWork": {},
+      "natureOfWorks": [],
+      "vendorList": "",
+      "date": "2023-09-27",
+      "status": "",
+      "wagesAmtList": [],
+      "isSelected": false,
+      "comment": "",
+      "vendorName": "",
+      "billAmount": 1860,
+      "materialAmtList": [
+        {
+          "price": 340,
+          "comment": "",
+          "name": "Dalmia",
+          "charges": 40,
+          "amount": 720,
+          "qty": 2
+        },
+        {
+          "charges": 60,
+          "name": "Dalmia DSP",
+          "qty": 3,
+          "price": 360,
+          "amount": 1140,
+          "comment": ""
+        }
+      ],
+      "pendingAmount": 1860,
+      "entryType": "MATERIALS",
+      "materialType": "",
+      "id": "0Gth8FdilPja2RVS8WNN"
+    },
+    {
+      "totalPaidAmt": 0,
+      "materialAmtList": [
+        {
+          "amount": 1480,
+          "comment": "",
+          "qty": 4,
+          "name": "Ramco",
+          "charges": 80,
+          "price": 350
+        }
+      ],
+      "discount": 0,
+      "isSelected": false,
+      "material": "",
+      "selectedNatureOfWork": {
+        "name": "BASE_FILL_PANNA",
+        "id": "basemate-002"
+      },
+      "billAmount": 1480,
+      "vendorType": "",
+      "wagesAmtList": [],
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "paidAmountList": [],
+      "comment": "",
+      "natureOfWorks": [],
+      "status": "",
+      "pendingAmount": 1480,
+      "entryType": "MATERIALS",
+      "vendorName": "PapuRaja_Ramco",
+      "date": "2023-09-04",
+      "vendorList": "",
+      "materialType": "Cement",
+      "id": "0HLwnbAUZp1KFcO8lMXU"
+    },
+    {
+      "selectedNatureOfWork": {
+        "name": "BASE_FILL_PANNA",
+        "id": "basemate-002"
+      },
+      "materialType": "Cement",
+      "vendorList": "",
+      "vendorName": "Arunjunai",
+      "pendingAmount": 370,
+      "date": "2023-09-04",
+      "natureOfWorks": [],
+      "totalPaidAmt": 0,
+      "comment": "",
+      "wagesAmtList": [],
+      "billAmount": 370,
+      "discount": 0,
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        ""
+      ],
+      "paidAmountList": [],
+      "material": "",
+      "materialAmtList": [
+        {
+          "charges": "20",
+          "name": "Dalmia",
+          "price": 350,
+          "amount": 370,
+          "qty": "1"
+        }
+      ],
+      "id": "37scnVtJdqTFQ7uYk5lh",
+      "status": "",
+      "isSelected": false,
+      "vendorType": "",
+      "entryType": "MATERIALS"
+    },
+    {
+      "materialType": "",
+      "entryType": "vendorS",
+      "vendorName": "Suresh",
+      "paidAmountList": [],
+      "materialAmtList": [
+        {
+          "name": "Kothanar",
+          "comment": "",
+          "price": 800,
+          "charges": 0,
+          "qty": 1,
+          "amount": 800
+        },
+        {
+          "qty": 1,
+          "amount": 750,
+          "price": 750,
+          "charges": 0,
+          "comment": "",
+          "name": "Small_Kothanar"
+        },
+        {
+          "price": 700,
+          "amount": 1400,
+          "qty": 2,
+          "charges": 0,
+          "comment": "",
+          "name": "PeriAal"
+        },
+        {
+          "comment": "",
+          "name": "SithaAl",
+          "amount": 1350,
+          "charges": 0,
+          "qty": 3,
+          "price": 450
+        },
+        {
+          "comment": "",
+          "name": "Periya_Kothanar",
+          "qty": 1,
+          "charges": 0,
+          "price": 650,
+          "amount": 650
+        }
+      ],
+      "date": "2023-09-09",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "wagesAmtList": [],
+      "isSelected": false,
+      "comment": "",
+      "shopList": "",
+      "vendorType": "Mason",
+      "natureOfWorks": [],
+      "totalPaidAmt": 0,
+      "pendingAmount": 4950,
+      "selectedNatureOfWork": {
+        "name": "KALVARI",
+        "id": "basemate-003"
+      },
+      "status": "",
+      "material": "",
+      "discount": 0,
+      "billAmount": 4950,
+      "id": "4XqHlLGzfa0xiCIWoCqI"
+    },
+    {
+      "material": "",
+      "status": "",
+      "materialType": "",
+      "paidAmountList": [],
+      "vendorType": "Mason",
+      "shopList": "",
+      "isSelected": false,
+      "natureOfWorks": [],
+      "pendingAmount": 5080,
+      "totalPaidAmt": 0,
+      "wagesAmtList": [],
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "entryType": "vendorS",
+      "selectedNatureOfWork": {
+        "id": "basemate-002",
+        "name": "BASE_FILL_PANNA"
+      },
+      "discount": 0,
+      "vendorName": "Daily_vendor",
+      "materialAmtList": [
+        {
+          "amount": 30,
+          "price": "030",
+          "comment": "satti vadagai",
+          "name": "PeriayaKothanaar",
+          "charges": 0,
+          "qty": "1"
+        },
+        {
+          "comment": "",
+          "amount": 2800,
+          "price": 700,
+          "qty": "4",
+          "charges": 0,
+          "name": "PeriAal"
+        },
+        {
+          "name": "SithaAl",
+          "qty": "5",
+          "amount": 2250,
+          "comment": "",
+          "charges": 0,
+          "price": 450
+        }
+      ],
+      "billAmount": 5080,
+      "date": "2023-08-24",
+      "comment": "",
+      "id": "5LfggwsA60CT5C31kjQ3"
+    },
+    {
+      "billAmount": 2180,
+      "pendingAmount": 2180,
+      "selectedNatureOfWork": {
+        "name": "KALVARI",
+        "id": "basemate-003"
+      },
+      "material": "",
+      "discount": 0,
+      "comment": "",
+      "wagesAmtList": [],
+      "isSelected": false,
+      "vendorName": "PapuRaja_Ramco",
+      "paidAmountList": [],
+      "status": "",
+      "materialType": "Cement",
+      "totalPaidAmt": 0,
+      "vendorType": "",
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "entryType": "MATERIALS",
+      "vendorList": "",
+      "materialAmtList": [
+        {
+          "qty": 6,
+          "charges": 80,
+          "price": 350,
+          "comment": "2 mine",
+          "name": "Ramco",
+          "amount": 2180
+        }
+      ],
+      "date": "2023-09-09",
+      "natureOfWorks": [],
+      "id": "6CsOu2eFUHduFVttaR8V"
+    },
+    {
+      "wagesAmtList": [],
+      "vendorName": "Suresh",
+      "billAmount": 7750,
+      "comment": "",
+      "materialType": "",
+      "status": "",
+      "selectedNatureOfWork": {
+        "name": "KALVARI",
+        "id": "basemate-003"
+      },
+      "totalPaidAmt": 0,
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "shopList": "",
+      "paidAmountList": [],
+      "entryType": "vendorS",
+      "discount": 0,
+      "isSelected": false,
+      "material": "",
+      "date": "2023-09-16",
+      "materialAmtList": [
+        {
+          "qty": "2",
+          "name": "Kothanaar",
+          "charges": 0,
+          "price": 800,
+          "amount": 1600,
+          "comment": ""
+        },
+        {
+          "qty": "5",
+          "amount": 3500,
+          "comment": "",
+          "name": "PeriAal",
+          "price": 700,
+          "charges": 0
+        },
+        {
+          "name": "SithaAl",
+          "charges": 0,
+          "qty": "3",
+          "price": 450,
+          "comment": "",
+          "amount": 1350
+        },
+        {
+          "name": "Periyakothanaar",
+          "price": 1300,
+          "qty": 1,
+          "amount": 1300,
+          "comment": "",
+          "charges": 0
+        }
+      ],
+      "pendingAmount": 7750,
+      "natureOfWorks": [],
+      "vendorType": "Mason",
+      "id": "8y5t4S9Nmq9ZBvSubjNO"
+    },
+    {
+      "paidAmountList": [],
+      "status": "",
+      "pendingAmount": 2500,
+      "materialAmtList": [
+        {
+          "price": 1000,
+          "amount": 2000,
+          "name": "Septic_Tank ",
+          "qty": 2,
+          "charges": 0
+        },
+        {
+          "name": "Room_Base",
+          "price": 500,
+          "charges": 0,
+          "amount": 500,
+          "qty": 1
+        }
+      ],
+      "id": "AUx00Y9OxMUcy4YNRzbY",
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "entryType": "MATERIALS",
+      "isSelected": false,
+      "vendorName": "Kannan",
+      "natureOfWorks": [],
+      "discount": 0,
+      "material": "",
+      "totalPaidAmt": 0,
+      "wagesAmtList": [],
+      "vendorList": "",
+      "selectedNatureOfWork": {
+        "id": "JCP_WORK",
+        "name": "JCP_WORK"
+      },
+      "materialType": "Tracter",
+      "date": "2023-09-14",
+      "vendorType": "",
+      "comment": "1000/per hour total 2.30 hrs",
+      "billAmount": 2500
+    },
+    {
+      "natureOfWorks": [],
+      "vendorList": "",
+      "totalPaidAmt": 0,
+      "vendorName": "Kannan",
+      "discount": 0,
+      "material": "",
+      "isSelected": false,
+      "billAmount": 1000,
+      "date": "2023-09-13",
+      "wagesAmtList": [],
+      "entryType": "MATERIALS",
+      "vendorType": "",
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "paidAmountList": [],
+      "selectedNatureOfWork": {
+        "id": "JCP_WORK",
+        "name": "JCP_WORK"
+      },
+      "materialType": "Tracter",
+      "materialAmtList": [
+        {
+          "amount": 1000,
+          "name": "Samapadutha",
+          "qty": 1,
+          "charges": 0,
+          "price": 1000
+        }
+      ],
+      "status": "",
+      "pendingAmount": 1000,
+      "comment": "First level kalvari completion",
+      "id": "AsWbZL2YV2QpLM46c3N6"
+    },
+    {
+      "date": "2023-09-18",
+      "materialType": "Tracter",
+      "pendingAmount": 3700,
+      "material": "",
+      "discount": 0,
+      "billAmount": 3700,
+      "id": "Ay6mOFm5anBLhxCePIrg",
+      "status": "",
+      "vendorList": "",
+      "comment": "",
+      "vendorName": "Kannan",
+      "natureOfWorks": [],
+      "entryType": "MATERIALS",
+      "selectedNatureOfWork": {
+        "name": "KALVARI",
+        "id": "basemate-003"
+      },
+      "vendorType": "",
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "materialAmtList": [
+        {
+          "charges": 0,
+          "price": 3700,
+          "amount": 3700,
+          "qty": 1,
+          "name": "m-sand-black",
+          "comment": ""
+        }
+      ],
+      "wagesAmtList": [],
+      "paidAmountList": [],
+      "totalPaidAmt": 0,
+      "isSelected": false
+    },
+    {
+      "comment": "",
+      "paidAmountList": [],
+      "entryType": "MATERIALS",
+      "vendorType": "",
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "status": "",
+      "totalPaidAmt": 0,
+      "materialType": "Tracter",
+      "billAmount": 3700,
+      "selectedNatureOfWork": {
+        "id": "basemate-002",
+        "name": "BASE_FILL_PANNA"
+      },
+      "material": "",
+      "natureOfWorks": [],
+      "date": "2023-09-16",
+      "pendingAmount": 3700,
+      "vendorList": "",
+      "discount": 0,
+      "vendorName": "Kannan",
+      "isSelected": false,
+      "materialAmtList": [
+        {
+          "charges": 0,
+          "price": 3700,
+          "amount": 3700,
+          "qty": 1,
+          "name": "m-sand-black"
+        }
+      ],
+      "wagesAmtList": [],
+      "id": "BUfutZmmTxOmdk0Jy0tJ"
+    },
+    {
+      "vendorList": "",
+      "totalPaidAmt": 0,
+      "comment": "2 inch Congrete",
+      "entryType": "MATERIALS",
+      "vendorType": "",
+      "shopList": [
+        "TATA_TISCON_DPM",
+        "AMAN_TRI_Arunjunai",
+        ""
+      ],
+      "isSelected": false,
+      "discount": 0,
+      "paidAmountList": [],
+      "date": "2023-09-26",
+      "materialType": "Steel",
+      "wagesAmtList": [],
+      "material": "",
+      "selectedNatureOfWork": {},
+      "pendingAmount": 5125,
+      "materialAmtList": [
+        {
+          "price": 67,
+          "charges": 100,
+          "name": "8MM",
+          "amount": 5125,
+          "comment": "",
+          "qty": 75
+        }
+      ],
+      "natureOfWorks": [],
+      "status": "",
+      "vendorName": "AMAN_TRI_Arunjunai",
+      "billAmount": 5125,
+      "id": "DNbfxIdAe1hSWgy6GMjB"
+    },
+    {
+      "shopList": [
+        "TATA_TISCON_DPM",
+        ""
+      ],
+      "materialType": "Steel",
+      "vendorType": "",
+      "wagesAmtList": [],
+      "vendorName": "TATA_TISCON_DPM",
+      "vendorList": "",
+      "billAmount": 31064,
+      "material": "",
+      "pendingAmount": 31064,
+      "entryType": "MATERIALS",
+      "comment": "8MM sirags = 10.100 kg 858.50 (85/perkg)\n6mm Sirags = 64.300kg 5787\n",
+      "isSelected": false,
+      "date": "2023-09-19",
+      "natureOfWorks": [],
+      "id": "DS3QUjphw9GjaGH34M5B",
+      "selectedNatureOfWork": {
+        "name": "BELT_CONGRETE_BEEM",
+        "id": "Belt-Congrete"
+      },
+      "paidAmountList": [],
+      "status": "",
+      "materialAmtList": [
+        {
+          "amount": 858,
+          "price": "85",
+          "qty": "10.100",
+          "name": "8MM sirags",
+          "comment": "float error avoid",
+          "charges": "8"
+        },
+        {
+          "name": "6mm Sirags",
+          "amount": 5787,
+          "price": 90,
+          "charges": 27,
+          "comment": "",
+          "qty": 64
+        },
+        {
+          "name": "12mm",
+          "comment": "",
+          "charges": 0,
+          "qty": 1,
+          "price": 829,
+          "amount": 829
+        },
+        {
+          "qty": 1,
+          "amount": 1475,
+          "name": "16mm",
+          "comment": "",
+          "price": 1475,
+          "charges": 0
+        },
+        {
+          "amount": 770,
+          "comment": "",
+          "price": 385,
+          "name": "8mm",
+          "qty": 2,
+          "charges": 0
+        },
+        {
+          "name": "10mm",
+          "price": 587,
+          "charges": 0,
+          "qty": 35,
+          "amount": 20545,
+          "comment": ""
+        },
+        {
+          "charges": 0,
+          "comment": "",
+          "price": 100,
+          "name": "KattuKambi",
+          "qty": 5,
+          "amount": 500
+        },
+        {
+          "comment": "",
+          "price": 300,
+          "name": "Vadagai",
+          "charges": 0,
+          "qty": 1,
+          "amount": 300
+        }
+      ],
+      "totalPaidAmt": 0,
+      "discount": 0
+    },
+    {
+      "isSelected": false,
+      "material": "",
+      "comment": "",
+      "selectedNatureOfWork": {
+        "id": "Belt-Congrete",
+        "name": "BELT_CONGRETE_BEEM"
+      },
+      "entryType": "MATERIALS",
+      "billAmount": 6400,
+      "vendorName": "Kannan",
+      "pendingAmount": 6400,
+      "discount": 0,
+      "materialAmtList": [
+        {
+          "amount": 2700,
+          "name": "Jalli",
+          "price": 2700,
+          "charges": 0,
+          "qty": 1,
+          "comment": ""
+        },
+        {
+          "amount": 3700,
+          "charges": 0,
+          "comment": "",
+          "name": "m-sand-black",
+          "qty": 1,
+          "price": 3700
+        }
+      ],
+      "materialType": "Tracter",
+      "date": "2023-09-21",
+      "natureOfWorks": [],
+      "totalPaidAmt": 0,
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "vendorType": "",
+      "vendorList": "",
+      "paidAmountList": [],
+      "wagesAmtList": [],
+      "status": "",
+      "id": "DoDfto1ZwRa6nwpStaar"
+    },
+    {
+      "materialType": "",
+      "paidAmountList": [],
+      "id": "EkK0NGJK8xmJXbjcaYVI",
+      "selectedNatureOfWork": {
+        "name": "SENGAL_KATTU",
+        "id": "Sengal-katty"
+      },
+      "material": "",
+      "vendorName": "Suresh",
+      "comment": "",
+      "isSelected": false,
+      "totalPaidAmt": 0,
+      "natureOfWorks": [],
+      "shopList": "",
+      "billAmount": 2000,
+      "pendingAmount": 2000,
+      "entryType": "vendorS",
+      "vendorType": "Mason",
+      "status": "",
+      "date": "2023-09-23",
+      "materialAmtList": [
+        {
+          "qty": 1,
+          "comment": "",
+          "charges": 0,
+          "amount": 2000,
+          "name": "PeriyaKothanaar",
+          "price": 2000
+        }
+      ],
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "discount": 0,
+      "wagesAmtList": []
+    },
+    {
+      "paidAmountList": [],
+      "vendorType": "",
+      "pendingAmount": 4250,
+      "status": "",
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "material": "",
+      "comment": "",
+      "isSelected": false,
+      "vendorName": "Kannan",
+      "natureOfWorks": [],
+      "selectedNatureOfWork": {
+        "id": "basemate-002",
+        "name": "BASE_FILL_PANNA"
+      },
+      "materialType": "Tracter",
+      "vendorList": "",
+      "materialAmtList": [
+        {
+          "price": 4250,
+          "amount": 4250,
+          "qty": 1,
+          "name": "Udai-Kal",
+          "charges": 0
+        }
+      ],
+      "date": "2023-09-09",
+      "wagesAmtList": [],
+      "discount": 0,
+      "entryType": "MATERIALS",
+      "billAmount": 4250,
+      "totalPaidAmt": 0,
+      "id": "FGxPohp5TDDkOwQR5udf"
+    },
+    {
+      "status": "",
+      "billAmount": 8140,
+      "discount": 0,
+      "comment": "",
+      "wagesAmtList": [],
+      "pendingAmount": 8140,
+      "vendorType": "",
+      "natureOfWorks": [],
+      "paidAmountList": [],
+      "materialAmtList": [
+        {
+          "price": 350,
+          "comment": "",
+          "amount": 8140,
+          "name": "Ramco",
+          "charges": 440,
+          "qty": 22
+        }
+      ],
+      "vendorName": "PapuRaja_Ramco",
+      "totalPaidAmt": 0,
+      "material": "",
+      "entryType": "MATERIALS",
+      "materialType": "Cement",
+      "isSelected": false,
+      "selectedNatureOfWork": {
+        "name": "BASE_FILL_PANNA",
+        "id": "basemate-002"
+      },
+      "vendorList": "",
+      "date": "2023-08-25",
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "id": "FqPzfYh63ynHfxCYh4x5"
+    },
+    {
+      "materialAmtList": [
+        {
+          "price": 350,
+          "name": "Ramco",
+          "charges": 0,
+          "amount": 2800,
+          "qty": 8,
+          "comment": ""
+        }
+      ],
+      "natureOfWorks": [],
+      "paidAmountList": [],
+      "status": "",
+      "wagesAmtList": [],
+      "isSelected": false,
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "comment": "",
+      "vendorList": "",
+      "selectedNatureOfWork": {
+        "id": "basemate-003",
+        "name": "KALVARI"
+      },
+      "pendingAmount": 2800,
+      "vendorName": "PapuRaja_Ramco",
+      "entryType": "MATERIALS",
+      "material": "",
+      "totalPaidAmt": 0,
+      "discount": 0,
+      "vendorType": "",
+      "date": "2023-09-11",
+      "billAmount": 2800,
+      "materialType": "Cement",
+      "id": "KZvyxVbdwtZONdmuPno0"
+    },
+    {
+      "material": "",
+      "isSelected": false,
+      "vendorType": "",
+      "selectedNatureOfWork": {
+        "name": "KALVARI",
+        "id": "basemate-003"
+      },
+      "billAmount": 2550,
+      "comment": "",
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "materialType": "Tracter",
+      "vendorName": "Kannan",
+      "discount": 0,
+      "wagesAmtList": [],
+      "date": "2023-09-19",
+      "materialAmtList": [
+        {
+          "qty": 150,
+          "comment": "",
+          "name": "Udai kal",
+          "amount": 2550,
+          "price": 17,
+          "charges": 0
+        }
+      ],
+      "pendingAmount": 2550,
+      "entryType": "MATERIALS",
+      "natureOfWorks": [],
+      "vendorList": "",
+      "totalPaidAmt": 0,
+      "paidAmountList": [],
+      "status": "",
+      "id": "LfsbA9SkpMPLAsdvd5qp"
+    },
+    {
+      "selectedNatureOfWork": {
+        "name": "JCP_WORK",
+        "id": "JCP_WORK"
+      },
+      "material": "",
+      "discount": 0,
+      "vendorType": "",
+      "paidAmountList": [],
+      "status": "",
+      "materialAmtList": [
+        {
+          "qty": 1,
+          "name": "JCB",
+          "comment": "",
+          "price": 1000,
+          "amount": 1000,
+          "charges": 0
+        }
+      ],
+      "totalPaidAmt": 0,
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "billAmount": 1000,
+      "comment": "",
+      "vendorList": "",
+      "pendingAmount": 1000,
+      "materialType": "Tracter",
+      "entryType": "MATERIALS",
+      "natureOfWorks": [],
+      "wagesAmtList": [],
+      "date": "2023-09-23",
+      "vendorName": "Kannan",
+      "isSelected": false,
+      "id": "MYjmNdBmdDzBFjDdTLPE"
+    },
+    {
+      "wagesAmtList": [],
+      "status": "",
+      "materialAmtList": [
+        {
+          "comment": "",
+          "price": 800,
+          "name": "Kothanaar",
+          "charges": 0,
+          "amount": 2400,
+          "qty": "3"
+        },
+        {
+          "name": "PeriAal",
+          "price": 700,
+          "qty": "3",
+          "comment": "",
+          "amount": 2100,
+          "charges": 0
+        },
+        {
+          "name": "SithaAl",
+          "amount": 450,
+          "charges": 0,
+          "qty": 1,
+          "comment": "",
+          "price": 450
+        }
+      ],
+      "billAmount": 4950,
+      "materialType": "",
+      "id": "NOhzzRK4HTgHUXUUNo8L",
+      "discount": 0,
+      "comment": "East Side wall",
+      "paidAmountList": [],
+      "natureOfWorks": [],
+      "shopList": "",
+      "selectedNatureOfWork": {
+        "id": "Sengal-katty",
+        "name": "SENGAL_KATTU"
+      },
+      "entryType": "vendorS",
+      "vendorName": "Suresh",
+      "pendingAmount": 4950,
+      "vendorType": "Mason",
+      "totalPaidAmt": 0,
+      "isSelected": false,
+      "material": "",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "date": "2023-09-23"
+    },
+    {
+      "selectedNatureOfWork": {
+        "id": "Sengal-katty",
+        "name": "SENGAL_KATTU"
+      },
+      "vendorType": "",
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "materialType": "Cement",
+      "materialAmtList": [
+        {
+          "price": 340,
+          "name": "Dalmia",
+          "comment": "",
+          "amount": 2160,
+          "qty": "6",
+          "charges": "120"
+        }
+      ],
+      "wagesAmtList": [],
+      "status": "",
+      "isSelected": false,
+      "billAmount": 2160,
+      "vendorName": "Arunjunai",
+      "entryType": "MATERIALS",
+      "discount": 0,
+      "vendorList": "",
+      "natureOfWorks": [],
+      "date": "2023-09-22",
+      "id": "NclN3eUQOa0X7Jul4jEi",
+      "totalPaidAmt": 0,
+      "paidAmountList": [],
+      "pendingAmount": 2160,
+      "material": "",
+      "comment": ""
+    },
+    {
+      "materialType": "Tracter",
+      "discount": 0,
+      "natureOfWorks": [],
+      "wagesAmtList": [],
+      "material": "",
+      "date": "2023-09-21",
+      "isSelected": false,
+      "comment": "",
+      "materialAmtList": [
+        {
+          "name": "m-sand-white",
+          "price": "4400",
+          "amount": 4400,
+          "charges": 0,
+          "comment": "",
+          "qty": 1
+        }
+      ],
+      "entryType": "MATERIALS",
+      "status": "",
+      "id": "O4VS3jY0uiRU26fgYFwF",
+      "selectedNatureOfWork": {
+        "name": "SENGAL_KATTU",
+        "id": "Sengal-katty"
+      },
+      "paidAmountList": [],
+      "vendorName": "Kannan",
+      "vendorType": "",
+      "pendingAmount": 4400,
+      "vendorList": "",
+      "totalPaidAmt": 0,
+      "billAmount": 4400,
+      "shopList": [
+        "Kannan",
+        ""
+      ]
+    },
+    {
+      "wagesAmtList": [],
+      "billAmount": 6600,
+      "natureOfWorks": [],
+      "date": "2023-09-15",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "materialAmtList": [
+        {
+          "price": 800,
+          "amount": 1600,
+          "name": "Kothanaar",
+          "comment": "",
+          "qty": "2",
+          "charges": 0
+        },
+        {
+          "amount": 3500,
+          "qty": "5",
+          "charges": 0,
+          "price": 700,
+          "name": "PeriAal",
+          "comment": ""
+        },
+        {
+          "amount": 900,
+          "charges": 0,
+          "comment": "",
+          "qty": "2",
+          "price": 450,
+          "name": "SithaAl"
+        },
+        {
+          "charges": 0,
+          "qty": 1,
+          "name": "Chinna_PeriAal",
+          "amount": 600,
+          "comment": "",
+          "price": 600
+        }
+      ],
+      "entryType": "vendorS",
+      "status": "",
+      "paidAmountList": [],
+      "material": "",
+      "materialType": "",
+      "pendingAmount": 6600,
+      "totalPaidAmt": 0,
+      "isSelected": false,
+      "discount": 0,
+      "comment": "",
+      "selectedNatureOfWork": {
+        "name": "KALVARI",
+        "id": "basemate-003"
+      },
+      "vendorName": "Suresh",
+      "shopList": "",
+      "vendorType": "Mason",
+      "id": "OJCItNYOCilPJaAYVBs3"
+    },
+    {
+      "material": "",
+      "shopList": "",
+      "vendorType": "Mason",
+      "entryType": "vendorS",
+      "discount": 0,
+      "pendingAmount": 4450,
+      "vendorName": "Suresh",
+      "billAmount": 4450,
+      "comment": "",
+      "materialAmtList": [
+        {
+          "comment": "",
+          "charges": 0,
+          "amount": 2400,
+          "price": 800,
+          "name": "Kothanar",
+          "qty": 3
+        },
+        {
+          "qty": 1,
+          "amount": 700,
+          "name": "periAal",
+          "comment": "",
+          "price": 700,
+          "charges": 0
+        },
+        {
+          "charges": 0,
+          "price": 450,
+          "amount": 1350,
+          "comment": "",
+          "name": "Sithaal",
+          "qty": 3
+        }
+      ],
+      "date": "2023-09-20",
+      "materialType": "",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "totalPaidAmt": 0,
+      "natureOfWorks": [],
+      "selectedNatureOfWork": {
+        "name": "SEPTIC_TANK",
+        "id": "septictank-001"
+      },
+      "status": "",
+      "paidAmountList": [],
+      "wagesAmtList": [],
+      "isSelected": false,
+      "id": "P4psLQ7fmS4hmGFbmFgv"
+    },
+    {
+      "pendingAmount": 5850,
+      "wagesAmtList": [],
+      "natureOfWorks": [],
+      "entryType": "vendorS",
+      "billAmount": 5850,
+      "status": "",
+      "date": "2023-09-12",
+      "discount": 0,
+      "paidAmountList": [],
+      "selectedNatureOfWork": {
+        "name": "KALVARI",
+        "id": "basemate-003"
+      },
+      "vendorName": "Suresh",
+      "isSelected": false,
+      "comment": "",
+      "materialAmtList": [
+        {
+          "name": "Kothanaar",
+          "price": 800,
+          "amount": 2400,
+          "qty": "3",
+          "charges": 0,
+          "comment": ""
+        },
+        {
+          "charges": 0,
+          "name": "PeriAal",
+          "qty": "3",
+          "price": 700,
+          "comment": "",
+          "amount": 2100
+        },
+        {
+          "amount": 1350,
+          "qty": "3",
+          "comment": "",
+          "name": "SithaAl",
+          "price": 450,
+          "charges": 0
+        }
+      ],
+      "shopList": "",
+      "materialType": "",
+      "totalPaidAmt": 0,
+      "vendorType": "Mason",
+      "material": "",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "id": "QAX1xEetPQxxj1PVJiXW"
+    },
+    {
+      "materialAmtList": [
+        {
+          "amount": 1600,
+          "name": "Kothanaar",
+          "comment": "",
+          "qty": "2",
+          "price": 800,
+          "charges": "0"
+        },
+        {
+          "charges": 0,
+          "amount": 1400,
+          "qty": "2",
+          "price": 700,
+          "comment": "",
+          "name": "PeriAal"
+        },
+        {
+          "charges": 0,
+          "amount": 900,
+          "qty": "2",
+          "name": "SithaAl",
+          "price": 450,
+          "comment": ""
+        }
+      ],
+      "selectedNatureOfWork": {
+        "id": "Sengal-katty",
+        "name": "SENGAL_KATTU"
+      },
+      "material": "",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "paidAmountList": [],
+      "id": "QsPWgpyouweUwms2Orwl",
+      "pendingAmount": 3900,
+      "discount": 0,
+      "vendorType": "Mason",
+      "vendorName": "Suresh",
+      "totalPaidAmt": 0,
+      "isSelected": false,
+      "wagesAmtList": [],
+      "shopList": "",
+      "status": "",
+      "entryType": "vendorS",
+      "billAmount": 3900,
+      "natureOfWorks": [],
+      "comment": "",
+      "materialType": "",
+      "date": "2023-09-25"
+    },
+    {
+      "id": "R0r9CvwkEdPoVhksdVBs",
+      "billAmount": 6660,
+      "comment": "",
+      "materialType": "Cement",
+      "vendorType": "",
+      "materialAmtList": [
+        {
+          "charges": "360",
+          "qty": "18",
+          "price": "350",
+          "name": "Ramco",
+          "amount": 6660
+        }
+      ],
+      "status": "",
+      "entryType": "MATERIALS",
+      "date": "2023-08-24",
+      "discount": 0,
+      "totalPaidAmt": 0,
+      "natureOfWorks": [],
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        ""
+      ],
+      "wagesAmtList": [],
+      "isSelected": false,
+      "pendingAmount": 6660,
+      "selectedNatureOfWork": {
+        "id": "basemate-002",
+        "name": "BASE_FILL_PANNA"
+      },
+      "paidAmountList": [],
+      "vendorList": "",
+      "material": "",
+      "vendorName": "PapuRaja_Ramco"
+    },
+    {
+      "selectedNatureOfWork": {
+        "name": "BASE_FILL_PANNA",
+        "id": "basemate-002"
+      },
+      "materialType": "Cement",
+      "billAmount": 3700,
+      "discount": 0,
+      "paidAmountList": [],
+      "isSelected": false,
+      "entryType": "MATERIALS",
+      "comment": "",
+      "totalPaidAmt": 0,
+      "pendingAmount": 3700,
+      "vendorList": "",
+      "materialAmtList": [
+        {
+          "price": 350,
+          "charges": 200,
+          "name": "Dalmia",
+          "amount": 3700,
+          "qty": 10,
+          "comment": ""
+        }
+      ],
+      "date": "2023-08-25",
+      "material": "",
+      "vendorName": "Arunjunai",
+      "natureOfWorks": [],
+      "vendorType": "",
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "wagesAmtList": [],
+      "status": "",
+      "id": "U5LXyw4m7a0NdJO0AW7r"
+    },
+    {
+      "date": "2023-09-21",
+      "materialAmtList": [
+        {
+          "name": "Dalmia DSP",
+          "comment": "",
+          "price": 360,
+          "amount": 5320,
+          "qty": 14,
+          "charges": 280
+        }
+      ],
+      "materialType": "Cement",
+      "billAmount": 5320,
+      "comment": "",
+      "selectedNatureOfWork": {
+        "id": "Belt-Congrete",
+        "name": "BELT_CONGRETE_BEEM"
+      },
+      "vendorName": "Arunjunai",
+      "totalPaidAmt": 0,
+      "discount": 0,
+      "pendingAmount": 5320,
+      "status": "",
+      "natureOfWorks": [],
+      "vendorList": "",
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "isSelected": false,
+      "paidAmountList": [],
+      "vendorType": "",
+      "wagesAmtList": [],
+      "material": "",
+      "entryType": "MATERIALS",
+      "id": "U6vhMOJQDt5nQTvx5wx7"
+    },
+    {
+      "comment": "",
+      "totalPaidAmt": 0,
+      "status": "",
+      "wagesAmtList": [],
+      "material": "",
+      "isSelected": false,
+      "shopList": "",
+      "discount": 0,
+      "date": "2023-09-26",
+      "materialAmtList": [
+        {
+          "amount": 1600,
+          "charges": 0,
+          "comment": "",
+          "name": "Kothanaar",
+          "qty": "2",
+          "price": 800
+        },
+        {
+          "name": "PeriAal",
+          "amount": 1400,
+          "comment": "",
+          "qty": "2",
+          "charges": 0,
+          "price": 700
+        },
+        {
+          "price": 450,
+          "amount": 900,
+          "charges": 0,
+          "qty": "2",
+          "comment": "",
+          "name": "SithaAl"
+        }
+      ],
+      "entryType": "vendorS",
+      "pendingAmount": 3900,
+      "id": "UL7bxsd9GXnktncgnpPK",
+      "vendorName": "Suresh",
+      "paidAmountList": [],
+      "natureOfWorks": [],
+      "materialType": "",
+      "vendorType": "Mason",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "billAmount": 3900,
+      "selectedNatureOfWork": {}
+    },
+    {
+      "vendorType": "",
+      "materialAmtList": [
+        {
+          "qty": 1,
+          "name": "Udai-Kal",
+          "charges": 0,
+          "price": 4250,
+          "amount": 4250
+        },
+        {
+          "name": "Adaippu-Jalli",
+          "price": 2100,
+          "amount": 2100,
+          "charges": 0,
+          "qty": 1
+        },
+        {
+          "qty": 1,
+          "price": 3700,
+          "name": "M-Sand-Black",
+          "amount": 3700,
+          "charges": 0
+        }
+      ],
+      "selectedNatureOfWork": {
+        "name": "BASE_FILL_PANNA",
+        "id": "basemate-002"
+      },
+      "billAmount": 10050,
+      "paidAmountList": [],
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "materialType": "Tracter",
+      "isSelected": false,
+      "totalPaidAmt": 0,
+      "vendorList": "",
+      "comment": "udai-kal 17/per_kal",
+      "date": "2023-09-11",
+      "entryType": "MATERIALS",
+      "pendingAmount": 10050,
+      "status": "",
+      "vendorName": "Kannan",
+      "natureOfWorks": [],
+      "material": "",
+      "discount": 0,
+      "wagesAmtList": [],
+      "id": "UMAFcYYnqWlxFIJsafBw"
+    },
+    {
+      "entryType": "MATERIALS",
+      "wagesAmtList": [],
+      "comment": "",
+      "totalPaidAmt": 0,
+      "billAmount": 3700,
+      "vendorName": "Kannan",
+      "discount": 0,
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "selectedNatureOfWork": {},
+      "status": "",
+      "date": "2023-09-27",
+      "paidAmountList": [],
+      "material": "",
+      "isSelected": false,
+      "materialType": "Tracter",
+      "pendingAmount": 3700,
+      "materialAmtList": [
+        {
+          "comment": "",
+          "qty": 1,
+          "amount": 3700,
+          "price": 3700,
+          "charges": 0,
+          "name": "M-Sand-Black"
+        }
+      ],
+      "natureOfWorks": [],
+      "vendorList": "",
+      "vendorType": "",
+      "id": "UUgkcd8tjmD99pv9j36d"
+    },
+    {
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "materialType": "Cement",
+      "materialAmtList": [
+        {
+          "comment": "",
+          "amount": 720,
+          "name": "Dalmia",
+          "qty": 2,
+          "charges": 40,
+          "price": 340
+        }
+      ],
+      "discount": 0,
+      "pendingAmount": 720,
+      "isSelected": false,
+      "paidAmountList": [],
+      "selectedNatureOfWork": {},
+      "material": "",
+      "status": "",
+      "vendorType": "",
+      "vendorName": "Arunjunai",
+      "billAmount": 720,
+      "wagesAmtList": [],
+      "date": "2023-09-26",
+      "comment": "",
+      "entryType": "MATERIALS",
+      "totalPaidAmt": 0,
+      "natureOfWorks": [],
+      "vendorList": "",
+      "id": "UsEMbMBPXntAIQ2n2Bra"
+    },
+    {
+      "isSelected": false,
+      "entryType": "vendorS",
+      "comment": "",
+      "materialAmtList": [
+        {
+          "qty": 385,
+          "name": "Congreet work",
+          "price": 25,
+          "amount": 9625,
+          "charges": 0,
+          "comment": ""
+        }
+      ],
+      "vendorName": "Suresh",
+      "material": "",
+      "paidAmountList": [],
+      "materialType": "",
+      "shopList": "",
+      "vendorType": "Mason",
+      "status": "",
+      "pendingAmount": 9625,
+      "billAmount": 9625,
+      "totalPaidAmt": 0,
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "natureOfWorks": [],
+      "wagesAmtList": [],
+      "date": "2023-09-21",
+      "discount": 0,
+      "selectedNatureOfWork": {
+        "id": "Belt-Congrete",
+        "name": "BELT_CONGRETE_BEEM"
+      },
+      "id": "VHGzAW5J0t0nvMm3r2uv"
+    },
+    {
+      "paidAmountList": [],
+      "date": "2023-09-27",
+      "isSelected": false,
+      "totalPaidAmt": 0,
+      "billAmount": 1950,
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "vendorName": "Suresh",
+      "materialType": "",
+      "natureOfWorks": [],
+      "status": "",
+      "pendingAmount": 1950,
+      "discount": 0,
+      "vendorType": "Mason",
+      "shopList": "",
+      "material": "",
+      "materialAmtList": [
+        {
+          "price": 800,
+          "name": "Kothanaar",
+          "charges": 0,
+          "comment": "",
+          "qty": 1,
+          "amount": 800
+        },
+        {
+          "price": 700,
+          "comment": "",
+          "qty": 1,
+          "amount": 700,
+          "name": "PeriAal",
+          "charges": 0
+        },
+        {
+          "comment": "",
+          "amount": 450,
+          "price": 450,
+          "qty": 1,
+          "charges": 0,
+          "name": "SithaAl"
+        }
+      ],
+      "selectedNatureOfWork": {},
+      "entryType": "vendorS",
+      "comment": "",
+      "wagesAmtList": [],
+      "id": "Vgu68dHVWdx1WLjQF7di"
+    },
+    {
+      "paidAmountList": [],
+      "material": "",
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "comment": "",
+      "natureOfWorks": [],
+      "status": "",
+      "selectedNatureOfWork": {
+        "id": "basemate-003",
+        "name": "KALVARI"
+      },
+      "date": "2023-09-18",
+      "pendingAmount": 1080,
+      "wagesAmtList": [],
+      "billAmount": 1080,
+      "discount": 0,
+      "totalPaidAmt": 0,
+      "materialType": "Cement",
+      "vendorType": "",
+      "entryType": "MATERIALS",
+      "vendorName": "Arunjunai",
+      "materialAmtList": [
+        {
+          "charges": 60,
+          "comment": "",
+          "price": 340,
+          "name": "Dalmia",
+          "qty": 3,
+          "amount": 1080
+        }
+      ],
+      "vendorList": "",
+      "isSelected": false,
+      "id": "WovI70B9kJPZ70TGfOgH"
+    },
+    {
+      "paidAmountList": [],
+      "materialAmtList": [
+        {
+          "price": 340,
+          "qty": 6,
+          "amount": 2160,
+          "comment": "",
+          "charges": 120,
+          "name": "Dalmia"
+        }
+      ],
+      "vendorType": "",
+      "materialType": "Cement",
+      "selectedNatureOfWork": {
+        "name": "SENGAL_KATTU",
+        "id": "Sengal-katty"
+      },
+      "billAmount": 2160,
+      "discount": 0,
+      "date": "2023-09-25",
+      "status": "",
+      "isSelected": false,
+      "entryType": "MATERIALS",
+      "id": "XHACHmoOfxeVdzAZZyTY",
+      "vendorName": "Arunjunai",
+      "totalPaidAmt": 0,
+      "comment": "",
+      "material": "",
+      "pendingAmount": 2160,
+      "wagesAmtList": [],
+      "vendorList": "",
+      "natureOfWorks": [],
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ]
+    },
+    {
+      "material": "",
+      "billAmount": 30200,
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "natureOfWorks": [],
+      "comment": "",
+      "totalPaidAmt": 0,
+      "materialAmtList": [
+        {
+          "comment": "Normal Kallu",
+          "qty": 2000,
+          "charges": 1400,
+          "name": "Sengal",
+          "price": 6.7,
+          "amount": 14800
+        },
+        {
+          "charges": 1400,
+          "name": "Sengal",
+          "comment": "Tappa kallu",
+          "amount": 15400,
+          "qty": 2000,
+          "price": 7
+        }
+      ],
+      "vendorType": "",
+      "date": "2023-09-22",
+      "discount": 0,
+      "pendingAmount": 30200,
+      "selectedNatureOfWork": {
+        "name": "SENGAL_KATTU",
+        "id": "Sengal-katty"
+      },
+      "materialType": "Tracter",
+      "entryType": "MATERIALS",
+      "vendorList": "",
+      "status": "",
+      "vendorName": "Kannan",
+      "paidAmountList": [],
+      "wagesAmtList": [],
+      "isSelected": false,
+      "id": "ZKpYvBqokezN9DKkRyTo"
+    },
+    {
+      "isSelected": false,
+      "wagesAmtList": [],
+      "date": "2023-09-11",
+      "comment": "",
+      "entryType": "vendorS",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "selectedNatureOfWork": {
+        "name": "KALVARI",
+        "id": "basemate-003"
+      },
+      "status": "",
+      "billAmount": 6450,
+      "materialAmtList": [
+        {
+          "amount": 2400,
+          "qty": "3",
+          "name": "Kothanaar",
+          "charges": 0,
+          "comment": "",
+          "price": 800
+        },
+        {
+          "name": "PeriAal",
+          "charges": 0,
+          "qty": "3",
+          "price": 700,
+          "amount": 2100,
+          "comment": ""
+        },
+        {
+          "price": 450,
+          "name": "SithaAl",
+          "qty": "3",
+          "charges": 0,
+          "amount": 1350,
+          "comment": ""
+        },
+        {
+          "name": "Chinna_PeriAal",
+          "price": 600,
+          "amount": 600,
+          "charges": 0,
+          "comment": "",
+          "qty": 1
+        }
+      ],
+      "pendingAmount": 6450,
+      "paidAmountList": [],
+      "discount": 0,
+      "vendorType": "Mason",
+      "vendorName": "Suresh",
+      "totalPaidAmt": 0,
+      "material": "",
+      "shopList": "",
+      "natureOfWorks": [],
+      "materialType": "",
+      "id": "a8gLH8ghzMesN2BBthkJ"
+    },
+    {
+      "paidAmountList": [],
+      "vendorType": "",
+      "vendorName": "Kannan",
+      "wagesAmtList": [],
+      "date": "2023-09-15",
+      "billAmount": 23700,
+      "isSelected": false,
+      "natureOfWorks": [],
+      "totalPaidAmt": 0,
+      "vendorList": "",
+      "materialAmtList": [
+        {
+          "amount": 12200,
+          "name": "cement_sengal",
+          "qty": 1,
+          "price": 10800,
+          "charges": 1400
+        },
+        {
+          "name": "Metal",
+          "amount": 2100,
+          "qty": 1,
+          "price": 2100,
+          "charges": 0
+        },
+        {
+          "amount": 3700,
+          "charges": 0,
+          "qty": 1,
+          "name": "m-sand-black",
+          "price": 3700
+        },
+        {
+          "name": "aralai",
+          "qty": 1,
+          "price": 2000,
+          "amount": 2000,
+          "charges": 0
+        },
+        {
+          "qty": 1,
+          "name": "m-sand-black",
+          "price": 3700,
+          "amount": 3700,
+          "charges": 0
+        }
+      ],
+      "entryType": "MATERIALS",
+      "selectedNatureOfWork": {
+        "name": "SEPTIC_TANK",
+        "id": "septictank-001"
+      },
+      "comment": "cement sengal 5.40/per sengal\nvandi vadagai 1400\n",
+      "materialType": "Tracter",
+      "status": "",
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "pendingAmount": 23700,
+      "discount": 0,
+      "material": "",
+      "id": "bsmB7JePiCmINX5xiBff"
+    },
+    {
+      "totalPaidAmt": 0,
+      "id": "cwiDIBhEfGJ2e2efSsdD",
+      "materialType": "",
+      "vendorName": "Suresh",
+      "comment": "",
+      "pendingAmount": 2750,
+      "selectedNatureOfWork": {
+        "name": "SEPTIC_TANK",
+        "id": "septictank-001"
+      },
+      "discount": 0,
+      "isSelected": false,
+      "material": "",
+      "date": "2023-09-21",
+      "billAmount": 2750,
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "paidAmountList": [],
+      "vendorType": "Mason",
+      "status": "",
+      "wagesAmtList": [],
+      "shopList": "",
+      "materialAmtList": [
+        {
+          "comment": "",
+          "charges": 0,
+          "name": "kothanaar",
+          "qty": "2",
+          "amount": 1600,
+          "price": 800
+        },
+        {
+          "charges": 0,
+          "name": "periAal",
+          "amount": 700,
+          "comment": "",
+          "qty": "1",
+          "price": 700
+        },
+        {
+          "comment": "",
+          "charges": 0,
+          "price": 450,
+          "qty": "1",
+          "name": "Sithaal",
+          "amount": 450
+        }
+      ],
+      "natureOfWorks": [],
+      "entryType": "vendorS"
+    },
+    {
+      "paidAmountList": [],
+      "totalPaidAmt": 0,
+      "isSelected": false,
+      "id": "duzDysTvXtDPsn3D8l8q",
+      "status": "",
+      "shopList": "",
+      "pendingAmount": 3200,
+      "entryType": "vendorS",
+      "comment": "",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "discount": 0,
+      "materialAmtList": [
+        {
+          "amount": 1600,
+          "comment": "",
+          "charges": 0,
+          "qty": 2,
+          "name": "kothanaar",
+          "price": 800
+        },
+        {
+          "price": "700",
+          "qty": 1,
+          "charges": 0,
+          "amount": 700,
+          "comment": "",
+          "name": "periAal"
+        },
+        {
+          "name": "Sithal",
+          "qty": 2,
+          "comment": "",
+          "price": 450,
+          "charges": 0,
+          "amount": 900
+        }
+      ],
+      "selectedNatureOfWork": {
+        "id": "basemate-003",
+        "name": "KALVARI"
+      },
+      "vendorType": "Mason",
+      "billAmount": 3200,
+      "vendorName": "Suresh",
+      "material": "",
+      "wagesAmtList": [],
+      "natureOfWorks": [],
+      "materialType": "",
+      "date": "2023-09-18"
+    },
+    {
+      "isSelected": false,
+      "vendorName": "Arunjunai",
+      "materialType": "Cement",
+      "comment": "",
+      "id": "eSGCZTzkovGSWAucEn7G",
+      "wagesAmtList": [],
+      "vendorType": "",
+      "pendingAmount": 3070,
+      "paidAmountList": [],
+      "discount": 0,
+      "entryType": "MATERIALS",
+      "vendorList": "",
+      "status": "",
+      "material": "",
+      "selectedNatureOfWork": {
+        "name": "KALVARI",
+        "id": "basemate-003"
+      },
+      "totalPaidAmt": 0,
+      "materialAmtList": [
+        {
+          "charges": 100,
+          "qty": 5,
+          "comment": "",
+          "name": "Valimai",
+          "price": 310,
+          "amount": 1650
+        },
+        {
+          "amount": 1420,
+          "charges": 60,
+          "qty": 4,
+          "price": "340",
+          "name": "Ramco",
+          "comment": ""
+        }
+      ],
+      "natureOfWorks": [],
+      "date": "2023-09-15",
+      "billAmount": 3070,
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ]
+    },
+    {
+      "discount": 0,
+      "pendingAmount": 8750,
+      "selectedNatureOfWork": {
+        "name": "BASE_FILL_PANNA",
+        "id": "basemate-002"
+      },
+      "billAmount": 8750,
+      "materialType": "",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "status": "",
+      "paidAmountList": [],
+      "vendorName": "Daily_vendor",
+      "entryType": "vendorS",
+      "totalPaidAmt": 0,
+      "date": "2023-08-25",
+      "material": "",
+      "materialAmtList": [
+        {
+          "name": "Periya Kothanaar",
+          "comment": "",
+          "qty": 1,
+          "amount": 750,
+          "price": "700",
+          "charges": "050"
+        },
+        {
+          "name": "PeriAal",
+          "charges": 0,
+          "comment": "",
+          "price": 700,
+          "amount": 3500,
+          "qty": "5"
+        },
+        {
+          "price": 450,
+          "charges": 0,
+          "comment": "",
+          "name": "SithaAl",
+          "qty": "10",
+          "amount": 4500
+        }
+      ],
+      "isSelected": false,
+      "natureOfWorks": [],
+      "wagesAmtList": [],
+      "vendorType": "Mason",
+      "shopList": "",
+      "comment": "",
+      "id": "ej8hw6wlEFeI4VD7Jeil"
+    },
+    {
+      "vendorType": "",
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "date": "2023-09-19",
+      "vendorList": "",
+      "discount": 0,
+      "vendorName": "Kannan",
+      "selectedNatureOfWork": {
+        "id": "Sengal-katty",
+        "name": "SENGAL_KATTU"
+      },
+      "pendingAmount": 14800,
+      "comment": "",
+      "wagesAmtList": [],
+      "material": "",
+      "materialType": "Tracter",
+      "isSelected": false,
+      "status": "",
+      "natureOfWorks": [],
+      "totalPaidAmt": 0,
+      "materialAmtList": [
+        {
+          "price": 6.7,
+          "charges": 1400,
+          "qty": 2000,
+          "comment": "",
+          "amount": 14800,
+          "name": "Sengal"
+        }
+      ],
+      "entryType": "MATERIALS",
+      "billAmount": 14800,
+      "id": "ekUmxrS4emjNrhr0lyeR",
+      "paidAmountList": []
+    },
+    {
+      "vendorName": "PapuRaja_Ramco",
+      "natureOfWorks": [],
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "paidAmountList": [],
+      "comment": "",
+      "materialAmtList": [
+        {
+          "amount": 3150,
+          "name": "Ramco",
+          "charges": 0,
+          "comment": "",
+          "qty": 9,
+          "price": 350
+        }
+      ],
+      "pendingAmount": 3150,
+      "entryType": "MATERIALS",
+      "discount": 0,
+      "vendorType": "",
+      "wagesAmtList": [],
+      "totalPaidAmt": 0,
+      "selectedNatureOfWork": {
+        "id": "basemate-003",
+        "name": "KALVARI"
+      },
+      "date": "2023-09-12",
+      "material": "",
+      "materialType": "Cement",
+      "billAmount": 3150,
+      "status": "",
+      "vendorList": "",
+      "isSelected": false,
+      "id": "frjefn1u5Ezo6W1c61wE"
+    },
+    {
+      "natureOfWorks": [],
+      "materialType": "Cement",
+      "date": "2023-08-29",
+      "wagesAmtList": [],
+      "status": "",
+      "selectedNatureOfWork": {
+        "name": "BASE_FILL_PANNA",
+        "id": "basemate-002"
+      },
+      "comment": "",
+      "material": "",
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "pendingAmount": 2220,
+      "paidAmountList": [],
+      "materialAmtList": [
+        {
+          "qty": 6,
+          "charges": 120,
+          "amount": 2220,
+          "name": "Ramco",
+          "price": 350,
+          "comment": ""
+        }
+      ],
+      "entryType": "MATERIALS",
+      "totalPaidAmt": 0,
+      "vendorName": "PapuRaja_Ramco",
+      "billAmount": 2220,
+      "isSelected": false,
+      "discount": 0,
+      "vendorType": "",
+      "vendorList": "",
+      "id": "gGQLH3TddjDYrcPccont"
+    },
+    {
+      "billAmount": 3700,
+      "material": "",
+      "date": "2023-10-04",
+      "entryType": "MATERIALS",
+      "vendorType": "",
+      "selectedNatureOfWork": {},
+      "materialType": "Tracter",
+      "totalPaidAmt": 0,
+      "wagesAmtList": [],
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "status": "",
+      "materialAmtList": [
+        {
+          "amount": 3700,
+          "qty": 1,
+          "name": "M-Sand-black",
+          "price": 3700,
+          "comment": "",
+          "charges": 0
+        }
+      ],
+      "comment": "",
+      "isSelected": false,
+      "pendingAmount": 3700,
+      "paidAmountList": [],
+      "vendorList": "",
+      "discount": 0,
+      "natureOfWorks": [],
+      "vendorName": "Kannan",
+      "id": "h4BaR6MDVHX1KgbdHXUo"
+    },
+    {
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "id": "iUB1b8S4mtnTBvrEm8ah",
+      "pendingAmount": 48800,
+      "paidAmountList": [],
+      "natureOfWorks": [],
+      "comment": "",
+      "discount": 0,
+      "billAmount": 48800,
+      "entryType": "MATERIALS",
+      "materialAmtList": [
+        {
+          "comment": "",
+          "price": 6.7,
+          "name": "Sengal",
+          "amount": 44400,
+          "charges": 4200,
+          "qty": 6000
+        },
+        {
+          "comment": "",
+          "name": "M-Sand-white",
+          "amount": 4400,
+          "qty": 1,
+          "price": 4400,
+          "charges": 0
+        }
+      ],
+      "material": "",
+      "vendorList": "",
+      "date": "2023-09-25",
+      "selectedNatureOfWork": {
+        "name": "SENGAL_KATTU",
+        "id": "Sengal-katty"
+      },
+      "totalPaidAmt": 0,
+      "vendorType": "",
+      "materialType": "Tracter",
+      "status": "",
+      "wagesAmtList": [],
+      "isSelected": false,
+      "vendorName": "Kannan"
+    },
+    {
+      "entryType": "MATERIALS",
+      "natureOfWorks": [],
+      "materialAmtList": [
+        {
+          "amount": 1420,
+          "name": "Dalmia",
+          "charges": 60,
+          "price": 340,
+          "qty": 4,
+          "comment": ""
+        }
+      ],
+      "materialType": "Cement",
+      "discount": 0,
+      "material": "",
+      "isSelected": false,
+      "vendorList": "",
+      "totalPaidAmt": 0,
+      "comment": "",
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "vendorName": "Arunjunai",
+      "selectedNatureOfWork": {
+        "name": "SENGAL_KATTU",
+        "id": "Sengal-katty"
+      },
+      "status": "",
+      "date": "2023-09-23",
+      "billAmount": 1420,
+      "vendorType": "",
+      "pendingAmount": 1420,
+      "paidAmountList": [],
+      "wagesAmtList": [],
+      "id": "kmY2eI5XPp0AFodwA8bO"
+    },
+    {
+      "selectedNatureOfWork": {
+        "id": "basemate-003",
+        "name": "KALVARI"
+      },
+      "entryType": "MATERIALS",
+      "vendorName": "Arunjunai",
+      "material": "",
+      "materialAmtList": [
+        {
+          "amount": 2160,
+          "comment": "",
+          "price": 340,
+          "charges": 120,
+          "qty": 6,
+          "name": "Ramco"
+        }
+      ],
+      "totalPaidAmt": 0,
+      "vendorType": "",
+      "date": "2023-09-19",
+      "materialType": "Cement",
+      "pendingAmount": 2160,
+      "paidAmountList": [],
+      "status": "",
+      "isSelected": false,
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "discount": 0,
+      "comment": "",
+      "vendorList": "",
+      "wagesAmtList": [],
+      "natureOfWorks": [],
+      "billAmount": 2160,
+      "id": "komzkwumMZyyCX6cvlP3"
+    },
+    {
+      "pendingAmount": 4850,
+      "natureOfWorks": [],
+      "selectedNatureOfWork": {
+        "id": "basemate-003",
+        "name": "KALVARI"
+      },
+      "billAmount": 4850,
+      "paidAmountList": [],
+      "date": "2023-09-04",
+      "isSelected": false,
+      "material": "",
+      "totalPaidAmt": 0,
+      "comment": "",
+      "wagesAmtList": [],
+      "discount": 0,
+      "status": "",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "vendorName": "Suresh",
+      "vendorType": "Mason",
+      "materialType": "",
+      "shopList": "",
+      "materialAmtList": [
+        {
+          "price": 800,
+          "name": "Kothanar",
+          "amount": 2400,
+          "comment": "",
+          "qty": 3,
+          "charges": 0
+        },
+        {
+          "price": 700,
+          "charges": 0,
+          "amount": 1400,
+          "comment": "",
+          "qty": 2,
+          "name": "PeriAal"
+        },
+        {
+          "comment": "",
+          "charges": 0,
+          "amount": 450,
+          "price": 450,
+          "qty": 1,
+          "name": "Sithal"
+        },
+        {
+          "name": "Small_PeriAal",
+          "qty": 1,
+          "price": 600,
+          "comment": "",
+          "amount": 600,
+          "charges": 0
+        }
+      ],
+      "entryType": "vendorS",
+      "id": "mte86U2JDDV3le9uoL9v"
+    },
+    {
+      "vendorType": "",
+      "vendorName": "Kannan",
+      "materialType": "Tracter",
+      "totalPaidAmt": 0,
+      "natureOfWorks": [],
+      "comment": "",
+      "date": "2023-09-23",
+      "pendingAmount": 14800,
+      "status": "",
+      "wagesAmtList": [],
+      "paidAmountList": [],
+      "billAmount": 14800,
+      "vendorList": "",
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "discount": 0,
+      "material": "",
+      "selectedNatureOfWork": {
+        "name": "SENGAL_KATTU",
+        "id": "Sengal-katty"
+      },
+      "materialAmtList": [
+        {
+          "name": "Sengal",
+          "price": 6.7,
+          "comment": "",
+          "amount": 14800,
+          "charges": "01400",
+          "qty": 2000
+        }
+      ],
+      "entryType": "MATERIALS",
+      "id": "nF8lYnxhVnB9UBKHoKfM",
+      "isSelected": false
+    },
+    {
+      "materialType": "Cement",
+      "isSelected": false,
+      "status": "",
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "vendorList": "",
+      "pendingAmount": 2160,
+      "entryType": "MATERIALS",
+      "wagesAmtList": [],
+      "natureOfWorks": [],
+      "material": "",
+      "totalPaidAmt": 0,
+      "billAmount": 2160,
+      "materialAmtList": [
+        {
+          "name": "Ramco",
+          "qty": 6,
+          "amount": 2160,
+          "price": 340,
+          "charges": 120,
+          "comment": ""
+        }
+      ],
+      "selectedNatureOfWork": {
+        "id": "basemate-003",
+        "name": "KALVARI"
+      },
+      "discount": 0,
+      "paidAmountList": [],
+      "vendorType": "",
+      "vendorName": "Arunjunai",
+      "date": "2023-09-20",
+      "comment": "",
+      "id": "nJNVPD5Talg28XqvBzWK"
+    },
+    {
+      "materialAmtList": [
+        {
+          "name": "Dalmia",
+          "qty": "5",
+          "amount": 1900,
+          "comment": "",
+          "price": "360",
+          "charges": 100
+        }
+      ],
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "wagesAmtList": [],
+      "vendorList": "",
+      "status": "",
+      "billAmount": 1900,
+      "material": "",
+      "selectedNatureOfWork": {},
+      "totalPaidAmt": 0,
+      "date": "2023-09-28",
+      "natureOfWorks": [],
+      "discount": 0,
+      "pendingAmount": 1900,
+      "comment": "",
+      "vendorName": "Arunjunai",
+      "paidAmountList": [],
+      "materialType": "Cement",
+      "id": "oUCdXk0pMwv0LigUcwqe",
+      "entryType": "MATERIALS",
+      "isSelected": false,
+      "vendorType": ""
+    },
+    {
+      "comment": "",
+      "materialType": "",
+      "date": "2023-09-22",
+      "vendorType": "Mason",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "material": "",
+      "discount": 0,
+      "natureOfWorks": [],
+      "materialAmtList": [
+        {
+          "price": 800,
+          "charges": 0,
+          "qty": "3",
+          "amount": 2400,
+          "comment": "",
+          "name": "Kothanaar"
+        },
+        {
+          "qty": "3",
+          "comment": "",
+          "charges": "50",
+          "name": "PeriAal",
+          "amount": 2150,
+          "price": 700
+        },
+        {
+          "name": "Sithaal",
+          "amount": 1350,
+          "price": 450,
+          "charges": 0,
+          "qty": 3,
+          "comment": ""
+        }
+      ],
+      "selectedNatureOfWork": {
+        "id": "Sengal-katty",
+        "name": "SENGAL_KATTU"
+      },
+      "paidAmountList": [],
+      "pendingAmount": 5900,
+      "status": "",
+      "wagesAmtList": [],
+      "shopList": "",
+      "totalPaidAmt": 0,
+      "isSelected": false,
+      "billAmount": 5900,
+      "vendorName": "Suresh",
+      "entryType": "vendorS",
+      "id": "sv6yXcSWZrHbBiz808RK"
+    },
+    {
+      "material": "",
+      "selectedNatureOfWork": {
+        "id": "basemate-002",
+        "name": "BASE_FILL_PANNA"
+      },
+      "status": "",
+      "entryType": "vendorS",
+      "materialAmtList": [
+        {
+          "charges": 0,
+          "amount": 800,
+          "qty": 1,
+          "comment": "",
+          "name": "Kothanaar",
+          "price": 800
+        },
+        {
+          "comment": "",
+          "amount": 3500,
+          "qty": "5",
+          "price": 700,
+          "name": "PeriAal",
+          "charges": 0
+        },
+        {
+          "price": 450,
+          "charges": 0,
+          "qty": "6",
+          "amount": 2700,
+          "name": "SithaAl",
+          "comment": ""
+        }
+      ],
+      "billAmount": 7000,
+      "vendorType": "Mason",
+      "wagesAmtList": [],
+      "isSelected": false,
+      "materialType": "",
+      "id": "uuUfHkfuxIbsK98c4Rcy",
+      "totalPaidAmt": 0,
+      "comment": "",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "pendingAmount": 7000,
+      "vendorName": "Daily_vendor",
+      "discount": 0,
+      "natureOfWorks": [],
+      "paidAmountList": [],
+      "shopList": "",
+      "date": "2023-08-29"
+    },
+    {
+      "pendingAmount": 5050,
+      "shopList": "",
+      "status": "",
+      "comment": "",
+      "billAmount": 5050,
+      "materialType": "",
+      "isSelected": false,
+      "materialAmtList": [
+        {
+          "comment": "",
+          "amount": 2400,
+          "name": "Kothanaar",
+          "qty": 3,
+          "charges": 0,
+          "price": 800
+        },
+        {
+          "comment": "",
+          "charges": 0,
+          "amount": 1300,
+          "qty": "2",
+          "name": "PeriAal",
+          "price": "650"
+        },
+        {
+          "qty": 3,
+          "comment": "",
+          "charges": 0,
+          "name": "Sithaal",
+          "price": 450,
+          "amount": 1350
+        }
+      ],
+      "totalPaidAmt": 0,
+      "material": "",
+      "vendorType": "Mason",
+      "selectedNatureOfWork": {
+        "id": "septictank-001",
+        "name": "SEPTIC_TANK"
+      },
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "wagesAmtList": [],
+      "id": "vKEDSPsY7YrEvrOtVZ74",
+      "paidAmountList": [],
+      "entryType": "vendorS",
+      "vendorName": "Suresh",
+      "discount": 0,
+      "natureOfWorks": [],
+      "date": "2023-09-19"
+    },
+    {
+      "natureOfWorks": [],
+      "wagesAmtList": [],
+      "entryType": "MATERIALS",
+      "pendingAmount": 5920,
+      "discount": 0,
+      "materialType": "Cement",
+      "shopList": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "vendorName": "Arunjunai",
+      "isSelected": false,
+      "totalPaidAmt": 0,
+      "billAmount": 5920,
+      "paidAmountList": [],
+      "vendorType": "",
+      "material": "",
+      "selectedNatureOfWork": {
+        "name": "BASE_FILL_PANNA",
+        "id": "basemate-002"
+      },
+      "date": "2023-08-29",
+      "vendorList": "",
+      "status": "",
+      "materialAmtList": [
+        {
+          "comment": "",
+          "amount": 5920,
+          "qty": 16,
+          "name": "Dalmia",
+          "price": 350,
+          "charges": 320
+        }
+      ],
+      "comment": "",
+      "id": "vpILkuqZJHdbmSdOCMlr"
+    },
+    {
+      "natureOfWorks": [],
+      "isSelected": false,
+      "materialType": "",
+      "vendorList": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "entryType": "vendorS",
+      "wagesAmtList": [],
+      "status": "",
+      "totalPaidAmt": 0,
+      "shopList": "",
+      "pendingAmount": 2400,
+      "materialAmtList": [
+        {
+          "name": "Kothanaar",
+          "charges": 0,
+          "qty": 1,
+          "amount": 800,
+          "price": 800,
+          "comment": ""
+        },
+        {
+          "name": "PeriAal",
+          "amount": 700,
+          "charges": 0,
+          "qty": 1,
+          "price": 700,
+          "comment": ""
+        },
+        {
+          "qty": "2",
+          "price": 450,
+          "amount": 900,
+          "name": "SithaAl",
+          "charges": 0,
+          "comment": ""
+        }
+      ],
+      "selectedNatureOfWork": {},
+      "vendorName": "Suresh",
+      "discount": 0,
+      "vendorType": "Mason",
+      "comment": "",
+      "paidAmountList": [],
+      "material": "",
+      "billAmount": 2400,
+      "date": "2023-09-28",
+      "id": "wD1m49w3t4TVmoBbziE1"
+    },
+    {
+      "natureOfWorks": [],
+      "billAmount": 6350,
+      "shopList": [
+        "Kannan",
+        ""
+      ],
+      "vendorName": "Kannan",
+      "isSelected": false,
+      "selectedNatureOfWork": {
+        "name": "BASE_FILL_PANNA",
+        "id": "basemate-002"
+      },
+      "comment": "",
+      "vendorList": "",
+      "entryType": "MATERIALS",
+      "status": "",
+      "materialType": "Tracter",
+      "wagesAmtList": [],
+      "paidAmountList": [],
+      "date": "2023-09-12",
+      "materialAmtList": [
+        {
+          "qty": 1,
+          "charges": 0,
+          "name": "Adaippu-jalli",
+          "price": 2100,
+          "amount": 2100
+        },
+        {
+          "qty": 1,
+          "charges": 0,
+          "price": 4250,
+          "amount": 4250,
+          "name": "udai-kal"
+        }
+      ],
+      "pendingAmount": 6350,
+      "material": "",
+      "vendorType": "",
+      "discount": 0,
+      "totalPaidAmt": 0,
+      "id": "zSicT36dZKhdtleESCaZ"
+    }
+  ]

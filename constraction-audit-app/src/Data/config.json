@@ -1,0 +1,118 @@
+[
+    {
+      "natureOfWork": [],
+      "vendorNames": [
+        "TATA_TISCON_DPM",
+        "AMAN_TRI_Arunjunai",
+        ""
+      ],
+      "entryType": "MATERIALS",
+      "materials": [
+        ""
+      ],
+      "configId": 1695562426999,
+      "vendorName": "",
+      "vendorType": "",
+      "materialType": "Steel",
+      "id": "AlECJ03U1iPUVy9XV6gb"
+    },
+    {
+      "materialType": "Cement",
+      "vendorType": "",
+      "natureOfWork": [],
+      "vendorName": "",
+      "configId": 1694332580060,
+      "id": "Epca8vbphduSfSepWezC",
+      "entryType": "MATERIALS",
+      "materials": [
+        ""
+      ],
+      "vendorNames": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ]
+    },
+    {
+      "materials": [
+        ""
+      ],
+      "id": "JWXY8o2BMRLX3lCjnR5c",
+      "entryType": "vendorS",
+      "vendorName": "",
+      "materialType": "",
+      "configId": 1695488170379,
+      "vendorType": "SNACKS",
+      "natureOfWork": [],
+      "vendorNames": [
+        "Snacks",
+        ""
+      ]
+    },
+    {
+      "vendorNames": [
+        "Annamalai",
+        ""
+      ],
+      "materialType": "Electricals",
+      "vendorName": "",
+      "configId": 1695563326216,
+      "entryType": "MATERIALS",
+      "id": "Zkkcw6t5PHZoblIGq1Ec",
+      "vendorType": "",
+      "natureOfWork": [],
+      "materials": [
+        ""
+      ]
+    },
+    {
+      "vendorType": "",
+      "id": "dD4amRLDRljBEBlt85ku",
+      "materials": [
+        ""
+      ],
+      "natureOfWork": [],
+      "vendorNames": [
+        "Arjunjunai",
+        ""
+      ],
+      "vendorName": "",
+      "materialType": "KadappaKal",
+      "entryType": "MATERIALS",
+      "configId": 1695486359395
+    },
+    {
+      "vendorName": "",
+      "vendorNames": [
+        "Kannan",
+        ""
+      ],
+      "vendorType": "",
+      "natureOfWork": [],
+      "entryType": "MATERIALS",
+      "materialType": "Tracter",
+      "id": "vzkh1MSCs0KNKCgMIboY",
+      "materials": [
+        ""
+      ],
+      "configId": 1694927678577
+    },
+    {
+      "natureOfWork": [],
+      "entryType": "vendorS",
+      "id": "zJT5XGz8GkTzxwLpojd8",
+      "materialType": "",
+      "vendorName": "",
+      "vendorNames": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "configId": 1694951567352,
+      "materials": [
+        ""
+      ],
+      "vendorType": "Mason"
+    }
+  ]
