@@ -1,118 +1,151 @@
 [
-    {
-      "natureOfWork": [],
-      "vendorNames": [
-        "TATA_TISCON_DPM",
-        "AMAN_TRI_Arunjunai",
-        ""
-      ],
-      "entryType": "MATERIALS",
-      "materials": [
-        ""
-      ],
-      "configId": 1695562426999,
-      "vendorName": "",
-      "vendorType": "",
-      "materialType": "Steel",
-      "id": "AlECJ03U1iPUVy9XV6gb"
-    },
-    {
-      "materialType": "Cement",
-      "vendorType": "",
-      "natureOfWork": [],
-      "vendorName": "",
-      "configId": 1694332580060,
-      "id": "Epca8vbphduSfSepWezC",
-      "entryType": "MATERIALS",
-      "materials": [
-        ""
-      ],
-      "vendorNames": [
-        "PapuRaja_Ramco",
-        "Arunjunai",
-        "Thalamuthu",
-        ""
-      ]
-    },
-    {
-      "materials": [
-        ""
-      ],
-      "id": "JWXY8o2BMRLX3lCjnR5c",
-      "entryType": "vendorS",
-      "vendorName": "",
-      "materialType": "",
-      "configId": 1695488170379,
-      "vendorType": "SNACKS",
-      "natureOfWork": [],
-      "vendorNames": [
-        "Snacks",
-        ""
-      ]
-    },
-    {
-      "vendorNames": [
-        "Annamalai",
-        ""
-      ],
-      "materialType": "Electricals",
-      "vendorName": "",
-      "configId": 1695563326216,
-      "entryType": "MATERIALS",
-      "id": "Zkkcw6t5PHZoblIGq1Ec",
-      "vendorType": "",
-      "natureOfWork": [],
-      "materials": [
-        ""
-      ]
-    },
-    {
-      "vendorType": "",
-      "id": "dD4amRLDRljBEBlt85ku",
-      "materials": [
-        ""
-      ],
-      "natureOfWork": [],
-      "vendorNames": [
-        "Arjunjunai",
-        ""
-      ],
-      "vendorName": "",
-      "materialType": "KadappaKal",
-      "entryType": "MATERIALS",
-      "configId": 1695486359395
-    },
-    {
-      "vendorName": "",
-      "vendorNames": [
-        "Kannan",
-        ""
-      ],
-      "vendorType": "",
-      "natureOfWork": [],
-      "entryType": "MATERIALS",
-      "materialType": "Tracter",
-      "id": "vzkh1MSCs0KNKCgMIboY",
-      "materials": [
-        ""
-      ],
-      "configId": 1694927678577
-    },
-    {
-      "natureOfWork": [],
-      "entryType": "vendorS",
-      "id": "zJT5XGz8GkTzxwLpojd8",
-      "materialType": "",
-      "vendorName": "",
-      "vendorNames": [
-        "Suresh",
-        "Daily_vendor",
-        ""
-      ],
-      "configId": 1694951567352,
-      "materials": [
-        ""
-      ],
-      "vendorType": "Mason"
-    }
-  ]
+  {
+    "vendorType": "",
+    "vendorName": "",
+    "materialType": "Steel",
+    "materials": [
+      ""
+    ],
+    "natureOfWork": [],
+    "configId": 1695562426999,
+    "vendorNames": [
+      "TATA_TISCON_DPM",
+      "AMAN_TRI_Arunjunai",
+      ""
+    ],
+    "entryType": "MATERIALS",
+    "id": "AlECJ03U1iPUVy9XV6gb"
+  },
+  {
+    "materials": [
+      ""
+    ],
+    "configId": 1694332580060,
+    "vendorName": "",
+    "vendorType": "",
+    "id": "Epca8vbphduSfSepWezC",
+    "vendorNames": [
+      "PapuRaja_Ramco",
+      "Arunjunai",
+      "Thalamuthu",
+      ""
+    ],
+    "natureOfWork": [],
+    "materialType": "Cement",
+    "entryType": "MATERIALS"
+  },
+  {
+    "vendorNames": [
+      "Snacks",
+      ""
+    ],
+    "entryType": "vendorS",
+    "materials": [
+      ""
+    ],
+    "configId": 1695488170379,
+    "natureOfWork": [],
+    "vendorName": "",
+    "vendorType": "SNACKS",
+    "id": "JWXY8o2BMRLX3lCjnR5c",
+    "materialType": ""
+  },
+  {
+    "id": "Zkkcw6t5PHZoblIGq1Ec",
+    "vendorName": "",
+    "materials": [
+      ""
+    ],
+    "vendorNames": [
+      "Annamalai",
+      ""
+    ],
+    "configId": 1695563326216,
+    "entryType": "MATERIALS",
+    "vendorType": "",
+    "natureOfWork": [],
+    "materialType": "Electricals"
+  },
+  {
+    "vendorName": "",
+    "natureOfWork": [],
+    "materialType": "KadappaKal",
+    "entryType": "MATERIALS",
+    "vendorType": "",
+    "vendorNames": [
+      "Arjunjunai",
+      ""
+    ],
+    "configId": 1695486359395,
+    "materials": [
+      ""
+    ],
+    "id": "dD4amRLDRljBEBlt85ku"
+  },
+  {
+    "entryType": "MATERIALS",
+    "materialType": "Wood",
+    "id": "fDxMOgcsk4t8xT6yrCjL",
+    "materials": [
+      ""
+    ],
+    "vendorNames": [
+      "PothiLingam",
+      ""
+    ],
+    "configId": 1696750750273,
+    "vendorType": "",
+    "vendorName": "",
+    "natureOfWork": []
+  },
+  {
+    "materials": [
+      ""
+    ],
+    "entryType": "MATERIALS",
+    "natureOfWork": [],
+    "vendorType": "",
+    "vendorName": "",
+    "id": "tjTbxB0HkNaSPNKXPmQt",
+    "materialType": "Gate-Steel",
+    "configId": 1697963864541,
+    "vendorNames": [
+      "Muthu_Settur",
+      ""
+    ]
+  },
+  {
+    "materialType": "Tracter",
+    "vendorName": "",
+    "id": "vzkh1MSCs0KNKCgMIboY",
+    "natureOfWork": [],
+    "entryType": "MATERIALS",
+    "materials": [
+      ""
+    ],
+    "configId": 1694927678577,
+    "vendorType": "",
+    "vendorNames": [
+      "Kannan",
+      "MM Sengal",
+      ""
+    ]
+  },
+  {
+    "configId": 1694951567352,
+    "materialType": "",
+    "materials": [
+      ""
+    ],
+    "vendorName": "",
+    "entryType": "vendorS",
+    "vendorType": "Mason",
+    "id": "zJT5XGz8GkTzxwLpojd8",
+    "natureOfWork": [],
+    "vendorNames": [
+      "Suresh",
+      "Daily_vendor",
+      ""
+    ]
+  }
+]

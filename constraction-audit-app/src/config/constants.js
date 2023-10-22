@@ -125,6 +125,22 @@ export const INIT_DATE_RANGE=[
 
 export const NATURE_OF_WORKS = [
     {
+        id:"periya-kothanaar",
+        name:"PERIYA_KOTHANAAR"
+    },
+    {
+        id:"Sengal-katty",
+        name:"SENGAL_KATTU"
+    },
+    {
+        id:"loft0congrete",
+        name:"LOFT_Roof_lindal_congrete"
+    },
+    {
+        id:"Belt-Congrete",
+        name:"BELT_CONGRETE_BEEM"
+    },
+    {
         id:"basemate-001",
         name:"THONDA"
     },
@@ -156,12 +172,17 @@ export const NATURE_OF_WORKS = [
         id:"JCP_WORK",
         name:"JCP_WORK"
     },
+    
     {
-        id:"Sengal-katty",
-        name:"SENGAL_KATTU"
+        id:"2Inch_Congrete",
+        name:"2INCH_MID_CONGRETE"
     },
     {
-        id:"Belt-Congrete",
-        name:"BELT_CONGRETE_BEEM"
-    }
+        id:"Wood_Doors",
+        name:"Wood_Doors"
+    },
+    {
+        id:"GATE_STEEL",
+        name:"GATE_STEEL"
+    },
 ]
