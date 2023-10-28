@@ -129,6 +129,10 @@ export const NATURE_OF_WORKS = [
         name:"PERIYA_KOTHANAAR"
     },
     {
+        id:"Pusa",
+        name:"PUSA"
+    },
+    {
         id:"Sengal-katty",
         name:"SENGAL_KATTU"
     },
