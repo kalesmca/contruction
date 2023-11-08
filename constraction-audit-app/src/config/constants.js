@@ -137,6 +137,18 @@ export const NATURE_OF_WORKS = [
         name:"SENGAL_KATTU"
     },
     {
+        id:"Electrical-work",
+        name:"Electrical-work"
+    },
+    {
+        id:"Wood_Doors",
+        name:"Wood_Doors"
+    },
+    {
+        id:"GATE_STEEL",
+        name:"GATE_STEEL"
+    },
+    {
         id:"loft0congrete",
         name:"LOFT_Roof_lindal_congrete"
     },
@@ -181,12 +193,9 @@ export const NATURE_OF_WORKS = [
         id:"2Inch_Congrete",
         name:"2INCH_MID_CONGRETE"
     },
+    
     {
-        id:"Wood_Doors",
-        name:"Wood_Doors"
-    },
-    {
-        id:"GATE_STEEL",
-        name:"GATE_STEEL"
-    },
+        id:"ROOF_CONGRETE",
+        name:"ROOF_CONGRETE"
+    }
 ]

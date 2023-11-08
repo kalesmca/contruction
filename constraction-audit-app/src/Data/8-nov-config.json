@@ -1,0 +1,200 @@
+[
+    {
+      "natureOfWork": [],
+      "materials": [
+        ""
+      ],
+      "configId": 1699460153930,
+      "vendorName": "",
+      "vendorType": "Borewell",
+      "entryType": "vendorS",
+      "id": "0VN3SRh8RUd4Lhmb6oD2",
+      "materialType": "",
+      "vendorNames": [
+        "Drilling Borewells",
+        ""
+      ]
+    },
+    {
+      "vendorType": "",
+      "configId": 1695562426999,
+      "materials": [
+        ""
+      ],
+      "vendorNames": [
+        "TATA_TISCON_DPM",
+        "AMAN_TRI_Arunjunai",
+        ""
+      ],
+      "natureOfWork": [],
+      "vendorName": "",
+      "id": "AlECJ03U1iPUVy9XV6gb",
+      "materialType": "Steel",
+      "entryType": "MATERIALS"
+    },
+    {
+      "id": "Epca8vbphduSfSepWezC",
+      "natureOfWork": [],
+      "vendorName": "",
+      "vendorNames": [
+        "PapuRaja_Ramco",
+        "Arunjunai",
+        "Thalamuthu",
+        ""
+      ],
+      "materialType": "Cement",
+      "configId": 1694332580060,
+      "materials": [
+        ""
+      ],
+      "vendorType": "",
+      "entryType": "MATERIALS"
+    },
+    {
+      "entryType": "vendorS",
+      "vendorNames": [
+        "Snacks",
+        ""
+      ],
+      "materialType": "",
+      "vendorType": "SNACKS",
+      "configId": 1695488170379,
+      "vendorName": "",
+      "materials": [
+        ""
+      ],
+      "natureOfWork": [],
+      "id": "JWXY8o2BMRLX3lCjnR5c"
+    },
+    {
+      "materials": [
+        ""
+      ],
+      "entryType": "MATERIALS",
+      "vendorName": "",
+      "vendorType": "",
+      "vendorNames": [
+        "Annamalai",
+        "Ranjith Electricals",
+        ""
+      ],
+      "materialType": "Electricals",
+      "configId": 1695563326216,
+      "natureOfWork": [],
+      "id": "Zkkcw6t5PHZoblIGq1Ec"
+    },
+    {
+      "entryType": "MATERIALS",
+      "natureOfWork": [],
+      "vendorType": "",
+      "materialType": "KadappaKal",
+      "id": "dD4amRLDRljBEBlt85ku",
+      "vendorName": "",
+      "vendorNames": [
+        "Arjunjunai",
+        ""
+      ],
+      "configId": 1695486359395,
+      "materials": [
+        ""
+      ]
+    },
+    {
+      "vendorNames": [
+        "PothiLingam",
+        ""
+      ],
+      "configId": 1696750750273,
+      "materialType": "Wood",
+      "materials": [
+        ""
+      ],
+      "entryType": "MATERIALS",
+      "vendorName": "",
+      "vendorType": "",
+      "natureOfWork": [],
+      "id": "fDxMOgcsk4t8xT6yrCjL"
+    },
+    {
+      "id": "tjTbxB0HkNaSPNKXPmQt",
+      "materials": [
+        ""
+      ],
+      "entryType": "MATERIALS",
+      "natureOfWork": [],
+      "materialType": "Gate-Steel",
+      "configId": 1697963864541,
+      "vendorNames": [
+        "Muthu_Settur",
+        ""
+      ],
+      "vendorName": "",
+      "vendorType": ""
+    },
+    {
+      "materialType": "EB office",
+      "natureOfWork": [],
+      "id": "vXfilDEn0go42hVVCscX",
+      "configId": 1699460672050,
+      "vendorType": "",
+      "materials": [
+        ""
+      ],
+      "vendorNames": [
+        "EB office",
+        ""
+      ],
+      "vendorName": "",
+      "entryType": "MATERIALS"
+    },
+    {
+      "materialType": "",
+      "entryType": "vendorS",
+      "materials": [
+        ""
+      ],
+      "vendorName": "",
+      "configId": 1699459237285,
+      "vendorType": "Electricion",
+      "id": "vkuLW5qRXUFQMHZ5pPoN",
+      "natureOfWork": [],
+      "vendorNames": [
+        "Balamurugan",
+        ""
+      ]
+    },
+    {
+      "configId": 1694927678577,
+      "id": "vzkh1MSCs0KNKCgMIboY",
+      "vendorNames": [
+        "Kannan",
+        "MM Sengal",
+        ""
+      ],
+      "materials": [
+        ""
+      ],
+      "natureOfWork": [],
+      "vendorName": "",
+      "vendorType": "",
+      "materialType": "Tracter",
+      "entryType": "MATERIALS"
+    },
+    {
+      "natureOfWork": [],
+      "vendorNames": [
+        "Suresh",
+        "Daily_vendor",
+        ""
+      ],
+      "vendorType": "Mason",
+      "id": "zJT5XGz8GkTzxwLpojd8",
+      "materials": [
+        ""
+      ],
+      "materialType": "",
+      "configId": 1694951567352,
+      "vendorName": "",
+      "entryType": "vendorS"
+    }
+  ]
