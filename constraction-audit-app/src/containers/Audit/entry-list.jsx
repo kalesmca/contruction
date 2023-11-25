@@ -34,7 +34,7 @@ const EntryListComponent = () => {
         let tempObj = JSON.parse(JSON.stringify(INIT_TOTAL_OBJ)) 
         list.map((item)=>{
             tempObj.billAmt += item.billAmount; 
-            tempObj.paidAmt += item.totalPaidAmt; 
+            tempObj.paidAmt += parseInt(item.totalPaidAmt); 
             tempObj.pendingAmt += item.pendingAmount; 
         })
         console.log(tempObj);

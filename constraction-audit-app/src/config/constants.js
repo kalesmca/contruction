@@ -197,5 +197,9 @@ export const NATURE_OF_WORKS = [
     {
         id:"ROOF_CONGRETE",
         name:"ROOF_CONGRETE"
-    }
+    },
+{
+    id:"TERRACE_SHEET",
+    name:"TERRACE_SHEET" 
+}
 ]
