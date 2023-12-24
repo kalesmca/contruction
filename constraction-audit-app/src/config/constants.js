@@ -129,6 +129,22 @@ export const NATURE_OF_WORKS = [
         name:"PERIYA_KOTHANAAR"
     },
     {
+        id:"painting",
+        name:"PAINTING"
+    },
+    {
+        id:"thotti",
+        name:"THOTTI"
+    },
+    {
+        id:"bathroom",
+        name:"BATHROOM"
+    },
+    {
+        id:"tiles",
+        name:"TILES"
+    },
+    {
         id:"Pusa",
         name:"PUSA"
     },
