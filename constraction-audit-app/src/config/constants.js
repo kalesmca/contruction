@@ -136,10 +136,7 @@ export const NATURE_OF_WORKS = [
         id:"thotti",
         name:"THOTTI"
     },
-    {
-        id:"bathroom",
-        name:"BATHROOM"
-    },
+    
     {
         id:"tiles",
         name:"TILES"
@@ -217,5 +214,9 @@ export const NATURE_OF_WORKS = [
 {
     id:"TERRACE_SHEET",
     name:"TERRACE_SHEET" 
+},
+{
+    id:"OTHERS",
+    name:"OTHERS"
 }
 ]
